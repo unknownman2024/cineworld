@@ -1,27 +1,101 @@
-name: Cineworld API Test
+name: Cineworld SeatPlan
 
 on:
   workflow_dispatch:
-  push:
+
+permissions:
+  contents: read
 
 jobs:
-  test:
+  cineworld-seatplan:
+
     runs-on: ubuntu-latest
 
+    timeout-minutes: 10
+
     steps:
-      - name: Checkout repo
+
+      # ==========================================================
+      # CHECKOUT
+      # ==========================================================
+
+      - name: Checkout repository
         uses: actions/checkout@v4
+
+
+      # ==========================================================
+      # PYTHON
+      # ==========================================================
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
+          cache: "pip"
 
-      - name: Install dependencies
+
+      # ==========================================================
+      # INSTALL DEPENDENCIES
+      # ==========================================================
+
+      - name: Install Python dependencies
+        shell: bash
         run: |
           python -m pip install --upgrade pip
-          pip install requests
+          pip install playwright
 
-      - name: Run Cineworld test
+
+      # ==========================================================
+      # INSTALL PLAYWRIGHT CHROMIUM
+      # ==========================================================
+
+      - name: Install Playwright Chromium
+        shell: bash
         run: |
-          python test_cineworld.py
+          python -m playwright install chromium
+          python -m playwright install-deps chromium
+
+
+      # ==========================================================
+      # RUN CINEWORLD SCRAPER
+      # ==========================================================
+
+      - name: Run Cineworld SeatPlan scraper
+        shell: bash
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          python cineworld.py
+
+
+      # ==========================================================
+      # SHOW OUTPUT
+      # ==========================================================
+
+      - name: List generated files
+        if: always()
+        shell: bash
+        run: |
+          echo "========================================"
+          echo "Generated files"
+          echo "========================================"
+
+          find cineworld_output \
+            -maxdepth 2 \
+            -type f \
+            -print \
+            2>/dev/null || true
+
+
+      # ==========================================================
+      # UPLOAD RESULTS
+      # ==========================================================
+
+      - name: Upload Cineworld results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cineworld-seatplan
+          path: cineworld_output/
+          if-no-files-found: warn
+          retention-days: 7
