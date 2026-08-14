@@ -1,12 +1,9 @@
-
-
-
 import asyncio
 import json
-import os
 import re
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse, parse_qs
 
 from playwright.async_api import (
     async_playwright,
@@ -16,20 +13,30 @@ from playwright.async_api import (
 
 # ============================================================
 # CONFIGURATION
-# ============================================================ \
+# ============================================================
 
 BOOKING_URL = (
     "https://experience.cineworld.co.uk/"
     "select-tickets?sitecode=105&site=104&id=193321"
 )
 
+CINEWORLD_HOME = "https://www.cineworld.co.uk/"
+
+SEATPLAN_PATH = "/api/SeatPlan"
+
 OUTPUT_DIR = Path("cineworld_output")
 
 PAGE_TIMEOUT = 45_000
+
 SEATPLAN_TIMEOUT = 45_000
 
+WARMUP_TIMEOUT = 30_000
 
-# Cineworld status codes
+
+# ============================================================
+# STATUS MAP
+# ============================================================
+
 STATUS_MAP = {
     0: "Available",
     1: "Sold / Reserved",
@@ -41,8 +48,19 @@ STATUS_MAP = {
 
 
 # ============================================================
-# CHROME-LIKE HEADERS
-# ============================================================ \
+# USER AGENT
+# ============================================================
+
+USER_AGENT = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) "
+    "Chrome/151.0.0.0 Safari/537.36"
+)
+
+
+# ============================================================
+# HEADERS
+# ============================================================
 
 HEADERS = {
     "accept": (
@@ -61,91 +79,50 @@ HEADERS = {
     "pragma":
         "no-cache",
 
-    "sec-ch-ua":
-        '"Not=A?Brand";v="99", '
-        '"Google Chrome";v="151", '
-        '"Chromium";v="151"',
-
-    "sec-ch-ua-arch":
-        '"x86"',
-
-    "sec-ch-ua-bitness":
-        '"64"',
-
-    "sec-ch-ua-full-version":
-        '"151.0.7922.109"',
-
-    "sec-ch-ua-full-version-list":
-        '"Not=A?Brand";v="99.0.0.0", '
-        '"Google Chrome";v="151.0.7922.109", '
-        '"Chromium";v="151.0.7922.109"',
-
-    "sec-ch-ua-mobile":
-        "?0",
-
-    "sec-ch-ua-model":
-        '""',
-
-    "sec-ch-ua-platform":
-        '"Windows"',
-
-    "sec-ch-ua-platform-version":
-        '"19.0.0"',
-
-    "sec-fetch-dest":
-        "document",
-
-    "sec-fetch-mode":
-        "navigate",
-
-    "sec-fetch-site":
-        "none",
-
-    "sec-fetch-user":
-        "?1",
-
-    "upgrade-insecure-requests":
-        "1",
-
     "user-agent":
-        (
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/151.0.0.0 Safari/537.36"
-        ),
+        USER_AGENT,
 }
 
 
 # ============================================================
 # LOGGING
-# ============================================================ \
+# ============================================================
 
 def log(message):
+
     print(
         f"[{datetime.now().strftime('%H:%M:%S')}] "
-        f"{message}"
+        f"{message}",
+        flush=True
     )
 
 
 def warn(message):
+
     print(
         f"[{datetime.now().strftime('%H:%M:%S')}] "
-        f"WARNING: {message}"
+        f"WARNING: {message}",
+        flush=True
     )
 
 
 # ============================================================
-# UTILITY
-# ============================================================ \
+# OUTPUT
+# ============================================================
 
 def ensure_output():
+
     OUTPUT_DIR.mkdir(
         parents=True,
         exist_ok=True
     )
 
 
-def save_json(filename, data):
+def save_json(
+    filename,
+    data
+):
+
     ensure_output()
 
     path = OUTPUT_DIR / filename
@@ -162,149 +139,310 @@ def save_json(filename, data):
             indent=2
         )
 
-    log(f"Saved: {path}")
+    log(
+        f"Saved: {path}"
+    )
 
     return path
 
 
 # ============================================================
-# FIND TICKET
-# ============================================================ \
+# SAVE DIAGNOSTICS
+# ============================================================
 
-async def find_ticket(page):
-    """
-    Find any available Cineworld ticket.
+async def save_diagnostics(
+    page,
+    reason
+):
 
-    Priority:
-        1. Adult
-        2. Any other available ticket
-
-    Therefore all of these work:
-
-        Adult
-        Adult Superscreen
-        Adult IMAX
-        Adult 4DX
-        Adult VIP
-
-    If Adult doesn't exist, the first available
-    ticket is selected.
-    """
-
-    log("Searching for ticket types...")
-
-    await page.wait_for_selector(
-        ".select-tickets_row",
-        timeout=PAGE_TIMEOUT
-    )
-
-    rows = page.locator(
-        ".select-tickets_row"
-    )
-
-    count = await rows.count()
-
-    candidates = []
-
-    for i in range(count):
-
-        row = rows.nth(i)
-
-        try:
-            description = (
-                await row.locator(
-                    ".select-tickets_row-description"
-                ).inner_text()
-            ).strip()
-
-        except Exception:
-            description = ""
-
-        description = re.sub(
-            r"\s+",
-            " ",
-            description
-        )
-
-        add_buttons = row.locator(
-            'button[aria-label^="Add "]'
-        )
-
-        if await add_buttons.count() == 0:
-            continue
-
-        add_button = add_buttons.first
-
-        try:
-
-            if not await add_button.is_visible():
-                continue
-
-            if not await add_button.is_enabled():
-                continue
-
-        except Exception:
-            continue
-
-        try:
-
-            quantity = (
-                await row.locator(
-                    ".select-tickets_quantity"
-                ).inner_text()
-            ).strip()
-
-        except Exception:
-
-            quantity = "0"
-
-        candidates.append({
-            "row": row,
-            "description": description,
-            "button": add_button,
-            "quantity": quantity,
-        })
-
-    if not candidates:
-
-        raise RuntimeError(
-            "No addable Cineworld ticket found."
-        )
-
-    # Prefer Adult
-    adult = next(
-        (
-            item
-            for item in candidates
-            if re.match(
-                r"^adult\b",
-                item["description"],
-                re.IGNORECASE
-            )
-        ),
-        None
-    )
-
-    selected = adult or candidates[0]
+    ensure_output()
 
     log(
-        f"Selected ticket: "
-        f"{selected['description']}"
+        f"Saving diagnostics: {reason}"
     )
 
-    log(
-        f"Current quantity: "
-        f"{selected['quantity']}"
-    )
+    try:
 
-    return selected
+        html =
+            await page.content()
+
+        html_path =
+            OUTPUT_DIR / "diagnostic.html"
+
+        html_path.write_text(
+            html,
+            encoding="utf-8"
+        )
+
+        log(
+            f"Saved: {html_path}"
+        )
+
+    except Exception as exc:
+
+        warn(
+            f"Could not save HTML: {exc}"
+        )
+
+
+    try:
+
+        await page.screenshot(
+            path=str(
+                OUTPUT_DIR /
+                "diagnostic.png"
+            ),
+            full_page=True
+        )
+
+        log(
+            "Saved: cineworld_output/diagnostic.png"
+        )
+
+    except Exception as exc:
+
+        warn(
+            f"Could not save screenshot: {exc}"
+        )
+
+
+    try:
+
+        info = {
+
+            "url":
+                page.url,
+
+            "title":
+                await page.title(),
+
+            "reason":
+                reason,
+
+        }
+
+        save_json(
+            "diagnostic.json",
+            info
+        )
+
+    except Exception:
+        pass
 
 
 # ============================================================
-# CLICK GUEST
-# ============================================================ \
+# WARM UP CINEWORLD
+# ============================================================
 
-async def handle_guest(page):
+async def warmup_cineworld(
+    page
+):
+
+    log(
+        "Warming up Cineworld main website..."
+    )
+
+    try:
+
+        response =
+            await page.goto(
+                CINEWORLD_HOME,
+                wait_until="domcontentloaded",
+                timeout=WARMUP_TIMEOUT
+            )
+
+        if response:
+
+            log(
+                f"Cineworld home status: "
+                f"{response.status}"
+            )
+
+            log(
+                f"Cineworld home URL: "
+                f"{page.url}"
+            )
+
+    except Exception as exc:
+
+        warn(
+            f"Cineworld warm-up failed: {exc}"
+        )
+
+
+    await page.wait_for_timeout(
+        2_000
+    )
+
+
+    try:
+
+        cookies =
+            await page.context.cookies()
+
+        log(
+            f"Cineworld cookies after warm-up: "
+            f"{len(cookies)}"
+        )
+
+        for cookie in cookies:
+
+            log(
+                f"  cookie: {cookie['name']}"
+            )
+
+    except Exception as exc:
+
+        warn(
+            f"Could not inspect cookies: {exc}"
+        )
+
+
+# ============================================================
+# OPEN BOOKING PAGE
+# ============================================================
+
+async def open_booking_page(
+    page
+):
+
+    log(
+        "Opening Cineworld booking:"
+    )
+
+    log(
+        BOOKING_URL
+    )
+
+    response =
+        await page.goto(
+            BOOKING_URL,
+            wait_until="domcontentloaded",
+            timeout=PAGE_TIMEOUT
+        )
+
+    if response:
+
+        log(
+            f"Booking HTTP status: "
+            f"{response.status}"
+        )
+
+
+    log(
+        f"Final URL: {page.url}"
+    )
+
+
+    title =
+        await page.title()
+
+    log(
+        f"Page title: {title}"
+    )
+
+
+    await page.wait_for_timeout(
+        3_000
+    )
+
+
+# ============================================================
+# DETECT POSSIBLE BLOCK
+# ============================================================
+
+async def inspect_page(
+    page
+):
+
+    title =
+        (
+            await page.title()
+        ).strip()
+
+
+    text =
+        await page.locator(
+            "body"
+        ).inner_text(
+            timeout=10_000
+        )
+
+
+    lower =
+        text.lower()
+
+
+    indicators = [
+
+        "access denied",
+
+        "forbidden",
+
+        "verify you are human",
+
+        "checking your browser",
+
+        "just a moment",
+
+        "captcha",
+
+        "cloudflare",
+
+        "unusual traffic",
+
+        "request blocked",
+
+        "bot detection",
+
+        "security check",
+
+    ]
+
+
+    found = [
+
+        item
+        for item in indicators
+        if item in lower
+    ]
+
+
+    if found:
+
+        warn(
+            "Possible blocking/challenge detected:"
+        )
+
+        for item in found:
+
+            warn(
+                f"  - {item}"
+            )
+
+
+        return False
+
+
+    log(
+        "No obvious block/challenge text detected."
+    )
+
+    log(
+        f"Page text length: {len(text):,}"
+    )
+
+
+    return True
+
+
+# ============================================================
+# HANDLE GUEST
+# ============================================================
+
+async def handle_guest(
+    page
+):
 
     log(
         "Checking for 'Continue as a guest'..."
@@ -312,237 +450,493 @@ async def handle_guest(page):
 
     try:
 
-        guest = page.get_by_role(
-            "button",
-            name=re.compile(
-                r"continue as a guest",
-                re.IGNORECASE
+        guest =
+            page.get_by_role(
+                "button",
+                name=re.compile(
+                    r"continue as a guest",
+                    re.IGNORECASE
+                )
             )
-        )
+
 
         await guest.wait_for(
             state="visible",
-            timeout=5_000
+            timeout=7_000
         )
+
 
         log(
-            "Guest button found."
+            "Continue as a guest found."
         )
 
+
         await guest.click()
+
 
         await page.wait_for_timeout(
             1_000
         )
 
+
         log(
             "Continued as guest."
         )
 
+
+        return True
+
+
     except PlaywrightTimeoutError:
 
         log(
-            "Guest button not present."
+            "Continue as a guest not present."
         )
+
+        return False
+
 
     except Exception as exc:
 
         warn(
-            f"Guest handling failed: {exc}"
+            f"Guest handling error: {exc}"
         )
+
+        return False
+
+
+# ============================================================
+# FIND TICKET
+# ============================================================
+
+async def find_ticket(
+    page
+):
+
+    log(
+        "Searching for ticket types..."
+    )
+
+
+    try:
+
+        await page.wait_for_selector(
+            ".select-tickets_row",
+            timeout=PAGE_TIMEOUT
+        )
+
+    except PlaywrightTimeoutError:
+
+        await save_diagnostics(
+            page,
+            "Ticket rows not found"
+        )
+
+        raise RuntimeError(
+            "Cineworld ticket rows were not found."
+        )
+
+
+    rows =
+        page.locator(
+            ".select-tickets_row"
+        )
+
+
+    count =
+        await rows.count()
+
+
+    log(
+        f"Ticket rows found: {count}"
+    )
+
+
+    candidates = []
+
+
+    for i in range(count):
+
+        row =
+            rows.nth(i)
+
+
+        try:
+
+            description =
+                await row.locator(
+                    ".select-tickets_row-description"
+                ).inner_text()
+
+            description =
+                re.sub(
+                    r"\s+",
+                    " ",
+                    description
+                ).strip()
+
+        except Exception:
+
+            description = ""
+
+
+        buttons =
+            row.locator(
+                'button[aria-label^="Add "]'
+            )
+
+
+        if await buttons.count() == 0:
+
+            continue
+
+
+        button =
+            buttons.first
+
+
+        try:
+
+            if not await button.is_visible():
+
+                continue
+
+
+            if not await button.is_enabled():
+
+                continue
+
+
+        except Exception:
+
+            continue
+
+
+        try:
+
+            quantity =
+                await row.locator(
+                    ".select-tickets_quantity"
+                ).inner_text()
+
+            quantity =
+                quantity.strip()
+
+        except Exception:
+
+            quantity = "0"
+
+
+        log(
+            f"  Ticket: "
+            f"{description} | "
+            f"quantity={quantity}"
+        )
+
+
+        candidates.append({
+
+            "row":
+                row,
+
+            "description":
+                description,
+
+            "button":
+                button,
+
+            "quantity":
+                quantity,
+
+        })
+
+
+    if not candidates:
+
+        await save_diagnostics(
+            page,
+            "No addable ticket buttons found"
+        )
+
+        raise RuntimeError(
+            "No addable Cineworld ticket found."
+        )
+
+
+    # --------------------------------------------------------
+    # Prefer Adult
+    # --------------------------------------------------------
+
+    adult =
+        next(
+            (
+                item
+                for item in candidates
+                if re.match(
+                    r"^adult\b",
+                    item["description"],
+                    re.IGNORECASE
+                )
+            ),
+            None
+        )
+
+
+    selected =
+        adult or candidates[0]
+
+
+    log(
+        f"Selected ticket: "
+        f"{selected['description']}"
+    )
+
+
+    return selected
 
 
 # ============================================================
 # ADD TICKET
-# ============================================================ \
+# ============================================================
 
 async def add_ticket(
     page,
     ticket
 ):
 
-    button = ticket["button"]
-
     log(
-        f"Adding: "
+        f"Adding ticket: "
         f"{ticket['description']}"
     )
 
+
+    button =
+        ticket["button"]
+
+
     await button.scroll_into_view_if_needed()
+
 
     await button.click()
 
+
     await page.wait_for_timeout(
-        700
+        750
     )
 
-    # Verify quantity
+
     try:
 
-        quantity_locator = ticket["row"].locator(
-            ".select-tickets_quantity"
+        quantity =
+            await ticket["row"].locator(
+                ".select-tickets_quantity"
+            ).inner_text()
+
+
+        log(
+            f"Quantity after click: "
+            f"{quantity.strip()}"
         )
 
-        await page.wait_for_function(
-            """
-            (el) => {
-                if (!el) return false;
 
-                const value = \
-                    parseInt(
-                        el.textContent.trim(),
-                        10
-                    );
+    except Exception as exc:
 
-                return !isNaN(value) && value > 0;
-            }
-            """,
-            await quantity_locator.element_handle(),
-            timeout=10_000
+        warn(
+            f"Could not read quantity: {exc}"
         )
-
-    except Exception:
-
-        # Fallback verification
-        try:
-
-            quantity = (
-                await ticket["row"]
-                .locator(
-                    ".select-tickets_quantity"
-                )
-                .inner_text()
-            ).strip()
-
-            log(
-                f"Ticket quantity now: {quantity}"
-            )
-
-        except Exception:
-
-            warn(
-                "Could not verify ticket quantity."
-            )
-
-    log(
-        "Ticket added."
-    )
 
 
 # ============================================================
 # CONFIRM TICKETS
-# ============================================================ \
+# ============================================================
 
-async def confirm_tickets(page):
+async def confirm_tickets(
+    page
+):
 
     log(
         "Waiting for Confirm Tickets..."
     )
 
-    confirm = page.get_by_role(
-        "button",
-        name=re.compile(
-            r"confirm tickets",
-            re.IGNORECASE
+
+    try:
+
+        confirm =
+            page.get_by_role(
+                "button",
+                name=re.compile(
+                    r"confirm tickets",
+                    re.IGNORECASE
+                )
+            )
+
+
+        await confirm.wait_for(
+            state="visible",
+            timeout=PAGE_TIMEOUT
         )
-    )
 
-    await confirm.wait_for(
-        state="visible",
-        timeout=PAGE_TIMEOUT
-    )
 
-    await confirm.scroll_into_view_if_needed()
+        await confirm.scroll_into_view_if_needed()
 
-    log(
-        "Clicking Confirm Tickets..."
-    )
 
-    await confirm.click()
+        log(
+            "Clicking Confirm Tickets..."
+        )
 
-    log(
-        "Tickets confirmed."
-    )
+
+        await confirm.click()
+
+
+        log(
+            "Tickets confirmed."
+        )
+
+
+    except Exception as exc:
+
+        await save_diagnostics(
+            page,
+            "Confirm Tickets button not found"
+        )
+
+        raise RuntimeError(
+            f"Could not confirm tickets: {exc}"
+        )
 
 
 # ============================================================
 # PARSE SEATPLAN
-# ============================================================ \
+# ============================================================
 
-def parse_seatplan(data):
+def parse_seatplan(
+    data
+):
 
-    seat_layout = \
+    seat_layout =
         data.get(
             "SeatLayoutData",
             {}
         )
 
-    areas = \
+
+    if not isinstance(
+        seat_layout,
+        dict
+    ):
+
+        raise ValueError(
+            "SeatLayoutData is not an object."
+        )
+
+
+    areas =
         seat_layout.get(
             "Areas",
             []
         )
 
-    if not isinstance(areas, list):
+
+    if not isinstance(
+        areas,
+        list
+    ):
 
         raise ValueError(
             "SeatLayoutData.Areas is not a list."
         )
 
+
     seats = []
+
 
     for area in areas:
 
-        if not isinstance(area, dict):
+        if not isinstance(
+            area,
+            dict
+        ):
+
             continue
 
-        area_number = area.get(
-            "Number"
-        )
 
-        area_name = (
-            area.get("Description")
-            or area.get("DescriptionAlt")
-            or f"Area {area_number}"
-        )
+        area_number =
+            area.get(
+                "Number"
+            )
 
-        rows = area.get(
-            "Rows",
-            []
-        )
 
-        if not isinstance(rows, list):
+        area_name =
+            (
+                area.get(
+                    "Description"
+                )
+                or
+                area.get(
+                    "DescriptionAlt"
+                )
+                or
+                f"Area {area_number}"
+            )
+
+
+        rows =
+            area.get(
+                "Rows",
+                []
+            )
+
+
+        if not isinstance(
+            rows,
+            list
+        ):
+
             continue
+
 
         for row in rows:
 
-            if not isinstance(row, dict):
+            if not isinstance(
+                row,
+                dict
+            ):
+
                 continue
 
-            row_name = (
-                row.get("PhysicalName")
-                or str(
+
+            row_index =
+                row.get(
+                    "RowIndexZeroBased"
+                )
+
+
+            row_name =
+                (
                     row.get(
-                        "RowIndexZeroBased",
-                        ""
+                        "PhysicalName"
+                    )
+                    or
+                    str(
+                        row_index
                     )
                 )
-            )
 
-            row_index = row.get(
-                "RowIndexZeroBased"
-            )
 
-            row_seats = row.get(
-                "Seats",
-                []
-            )
+            row_seats =
+                row.get(
+                    "Seats",
+                    []
+                )
+
 
             if not isinstance(
                 row_seats,
                 list
             ):
+
                 continue
+
 
             for seat in row_seats:
 
@@ -550,74 +944,97 @@ def parse_seatplan(data):
                     seat,
                     dict
                 ):
+
                     continue
 
-                position = seat.get(
-                    "Position"
-                ) or {}
 
-                status = seat.get(
-                    "Status"
-                )
+                position =
+                    seat.get(
+                        "Position"
+                    ) or {}
+
+
+                if not isinstance(
+                    position,
+                    dict
+                ):
+
+                    position = {}
+
+
+                status =
+                    seat.get(
+                        "Status"
+                    )
+
 
                 try:
-                    status = int(status)
+
+                    status =
+                        int(status)
+
                 except (
                     TypeError,
                     ValueError
                 ):
+
                     status = -1
 
-                original_status = seat.get(
-                    "OriginalStatus",
-                    status
-                )
+
+                original_status =
+                    seat.get(
+                        "OriginalStatus",
+                        status
+                    )
+
 
                 try:
-                    original_status = int(
-                        original_status
-                    )
+
+                    original_status =
+                        int(
+                            original_status
+                        )
+
                 except (
                     TypeError,
                     ValueError
                 ):
+
                     original_status = status
 
-                actual_row_index = (
+
+                actual_row_index =
                     position.get(
                         "RowIndex"
                     )
-                    if isinstance(
-                        position,
-                        dict
-                    )
-                    else None
-                )
 
-                if actual_row_index is None:
-                    actual_row_index = row_index
 
-                column = (
+                if (
+                    actual_row_index
+                    is None
+                ):
+
+                    actual_row_index =
+                        row_index
+
+
+                column =
                     position.get(
                         "ColumnIndex"
                     )
-                    if isinstance(
-                        position,
-                        dict
-                    )
-                    else None
-                )
 
-                unique_key = (
+
+                key = (
                     f"{area_number}:"
                     f"{actual_row_index}:"
                     f"{column}"
                 )
 
+
                 seats.append({
 
                     "key":
-                        unique_key,
+                        key,
 
                     "areaNumber":
                         area_number,
@@ -664,18 +1081,21 @@ def parse_seatplan(data):
                     "seatsInGroup":
                         seat.get(
                             "SeatsInGroup"
-                        )
+                        ),
 
                 })
+
 
     return seats
 
 
 # ============================================================
-# CALCULATE STATS
-# ============================================================ \
+# STATISTICS
+# ============================================================
 
-def calculate_stats(seats):
+def calculate_stats(
+    seats
+):
 
     stats = {
 
@@ -698,12 +1118,16 @@ def calculate_stats(seats):
             0,
 
         "unknown":
-            0
+            0,
+
     }
+
 
     for seat in seats:
 
-        status = seat["status"]
+        status =
+            seat["status"]
+
 
         if status == 0:
 
@@ -729,52 +1153,75 @@ def calculate_stats(seats):
 
             stats["unknown"] += 1
 
+
     stats["occupancy"] = (
-        (
-            stats["sold"] /
-            stats["total"]
-        ) * 100
+
+        stats["sold"] /
+        stats["total"] *
+        100
+
         if stats["total"]
+
         else 0
+
     )
+
 
     return stats
 
 
 # ============================================================
-# AREA STATS
-# ============================================================ \
+# AREA STATISTICS
+# ============================================================
 
-def calculate_area_stats(seats):
+def calculate_area_stats(
+    seats
+):
 
     result = {}
 
+
     for seat in seats:
 
-        name = seat["areaName"]
+        name =
+            seat["areaName"]
+
 
         if name not in result:
 
             result[name] = {
 
-                "total": 0,
+                "total":
+                    0,
 
-                "available": 0,
+                "available":
+                    0,
 
-                "sold": 0,
+                "sold":
+                    0,
 
-                "blocked": 0,
+                "blocked":
+                    0,
 
-                "wheelchair": 0,
+                "wheelchair":
+                    0,
 
-                "companion": 0
+                "companion":
+                    0,
+
             }
 
-        area = result[name]
+
+        area =
+            result[name]
+
 
         area["total"] += 1
 
-        status = seat["status"]
+
+        status =
+            seat["status"]
+
 
         if status == 0:
 
@@ -796,27 +1243,33 @@ def calculate_area_stats(seats):
 
             area["companion"] += 1
 
+
     for area in result.values():
 
         area["occupancy"] = (
-            (
-                area["sold"] /
-                area["total"]
-            ) * 100
+
+            area["sold"] /
+            area["total"] *
+            100
+
             if area["total"]
+
             else 0
+
         )
+
 
     return result
 
 
 # ============================================================
 # MAIN
-# ============================================================ \
+# ============================================================
 
 async def main():
 
     ensure_output()
+
 
     async with async_playwright() as p:
 
@@ -824,82 +1277,125 @@ async def main():
             "Launching Chromium..."
         )
 
-        browser = await p.chromium.launch(
-            headless=True,
-            args=[
-                "--disable-blink-features=AutomationControlled",
-                "--no-sandbox",
-                "--disable-dev-shm-usage",
-            ]
-        )
 
-        context = await browser.new_context(
+        browser =
+            await p.chromium.launch(
 
-            user_agent=HEADERS[
-                "user-agent"
-            ],
+                headless=True,
 
-            locale="en-IN",
+                args=[
 
-            extra_http_headers={
-                k: v
-                for k, v in HEADERS.items()
-                if not k.startswith(
-                    "sec-"
-                )
-                and k not in {
-                    "accept",
-                    "cache-control",
-                    "pragma",
-                    "upgrade-insecure-requests",
-                }
-            },
+                    "--no-sandbox",
 
-            viewport={
-                "width": 1440,
-                "height": 900
-            }
+                    "--disable-dev-shm-usage",
 
-        )
+                    "--disable-blink-features="
+                    "AutomationControlled",
 
-        page = await context.new_page()
+                ]
+
+            )
 
 
-        # ==================================================== \
-        # SEATPLAN RESPONSE CAPTURE
-        # ==================================================== \
-        seatplan_response = None
+        context =
+            await browser.new_context(
+
+                user_agent=
+                    USER_AGENT,
+
+                locale=
+                    "en-GB",
+
+                extra_http_headers={
+
+                    "accept":
+                        HEADERS["accept"],
+
+                    "accept-language":
+                        HEADERS["accept-language"],
+
+                    "cache-control":
+                        "no-cache",
+
+                    "pragma":
+                        "no-cache",
+
+                },
+
+                viewport={
+
+                    "width":
+                        1440,
+
+                    "height":
+                        900,
+
+                },
+
+            )
 
 
-        async def response_handler(response):
+        page =
+            await context.new_page()
+
+
+        # ====================================================
+        # NETWORK DEBUGGING
+        # ====================================================
+
+        seatplan_response =
+            None
+
+
+        async def response_handler(
+            response
+        ):
 
             nonlocal seatplan_response
+
 
             try:
 
                 if (
-                    CONFIG["SEATPLAN_PATH"]
+                    SEATPLAN_PATH
                     not in response.url
                 ):
+
                     return
 
+
                 log(
-                    "SeatPlan response detected:"
+                    "================================"
                 )
 
                 log(
-                    response.url
+                    "SEATPLAN RESPONSE DETECTED"
                 )
+
+                log(
+                    f"URL: {response.url}"
+                )
+
+                log(
+                    f"HTTP: {response.status}"
+                )
+
 
                 try:
 
-                    data = await response.json()
+                    data =
+                        await response.json()
 
                 except Exception:
 
-                    text = await response.text()
+                    text =
+                        await response.text()
 
-                    data = json.loads(text)
+                    data =
+                        json.loads(
+                            text
+                        )
+
 
                 seatplan_response = {
 
@@ -910,8 +1406,15 @@ async def main():
                         response.status,
 
                     "data":
-                        data
+                        data,
+
                 }
+
+
+                log(
+                    "SeatPlan JSON captured."
+                )
+
 
             except Exception as exc:
 
@@ -926,48 +1429,61 @@ async def main():
         )
 
 
-        # ==================================================== \
-        # OPEN BOOKING PAGE
-        # ==================================================== \
-        log(
-            "Opening Cineworld:"
-        )
+        # ====================================================
+        # WARM-UP
+        # ====================================================
 
-        log(
-            BOOKING_URL
+        await warmup_cineworld(
+            page
         )
 
 
-        await page.goto(
-            BOOKING_URL,
-            wait_until="domcontentloaded",
-            timeout=PAGE_TIMEOUT
+        # ====================================================
+        # BOOKING
+        # ====================================================
+
+        await open_booking_page(
+            page
         )
 
 
-        log(
-            "Booking page loaded."
-        )
+        # ====================================================
+        # INSPECT
+        # ====================================================
+
+        page_ok =
+            await inspect_page(
+                page
+            )
 
 
-        # Give React time to render
-        await page.wait_for_timeout(
-            2_000
-        )
+        if not page_ok:
+
+            await save_diagnostics(
+                page,
+                "Possible Cineworld block"
+            )
+
+            raise RuntimeError(
+                "Cineworld appears to have returned "
+                "a challenge/block page."
+            )
 
 
-        # ==================================================== \
+        # ====================================================
         # GUEST
-        # ==================================================== \
+        # ====================================================
+
         await handle_guest(
             page
         )
 
 
-        # ==================================================== \
+        # ====================================================
         # TICKET
-        # ==================================================== \
-        ticket = \
+        # ====================================================
+
+        ticket =
             await find_ticket(
                 page
             )
@@ -979,34 +1495,40 @@ async def main():
         )
 
 
-        # ==================================================== \
+        # ====================================================
         # CONFIRM
-        # ==================================================== \
+        # ====================================================
+
         await confirm_tickets(
             page
         )
 
 
-        # ==================================================== \
+        # ====================================================
         # WAIT FOR SEATPLAN
-        # ==================================================== \
+        # ====================================================
+
         log(
             "Waiting for SeatPlan API..."
         )
 
 
-        started = \
-            asyncio.get_event_loop().time()
+        start =
+            asyncio.get_running_loop().time()
 
 
         while (
             seatplan_response is None
             and
             (
-                asyncio.get_event_loop().time()
-                - started
+                asyncio.get_running_loop().time()
+                - start
             )
-            < SEATPLAN_TIMEOUT / 1000
+            <
+            (
+                SEATPLAN_TIMEOUT /
+                1000
+            )
         ):
 
             await page.wait_for_timeout(
@@ -1014,23 +1536,28 @@ async def main():
             )
 
 
-        # ==================================================== \
-        # FALLBACK: PERFORMANCE RESOURCE
-        # ==================================================== \
+        # ====================================================
+        # FALLBACK RESOURCE CHECK
+        # ====================================================
+
         if seatplan_response is None:
 
-            warn(
-                "No SeatPlan response captured yet."
+            log(
+                "Checking Performance Resource Timing..."
             )
 
-            resources = \
+
+            resources =
                 await page.evaluate(
                     """
                     () => performance
                         .getEntriesByType("resource")
                         .map(x => x.name)
-                        .filter(x =>
-                            x.includes("/api/SeatPlan")
+                        .filter(
+                            x =>
+                                x.includes(
+                                    "/api/SeatPlan"
+                                )
                         )
                     """
                 )
@@ -1038,54 +1565,70 @@ async def main():
 
             if resources:
 
-                url = \
+                url =
                     resources[-1]
 
-                log(
-                    "SeatPlan resource found:"
-                )
 
                 log(
-                    url
+                    f"SeatPlan resource found: {url}"
                 )
 
 
-                response = \
-                    await context.request.get(
-                        url
+                try:
+
+                    response =
+                        await context.request.get(
+                            url
+                        )
+
+
+                    if response.ok:
+
+                        data =
+                            await response.json()
+
+
+                        seatplan_response = {
+
+                            "url":
+                                url,
+
+                            "status":
+                                response.status,
+
+                            "data":
+                                data,
+
+                        }
+
+                except Exception as exc:
+
+                    warn(
+                        f"Resource fallback failed: {exc}"
                     )
 
 
-                if response.ok:
-
-                    data = \
-                        await response.json()
-
-
-                    seatplan_response = {
-
-                        "url":
-                            url,
-
-                        "status":
-                            response.status,
-
-                        "data":
-                            data
-                    }
-
+        # ====================================================
+        # FINAL CHECK
+        # ====================================================
 
         if seatplan_response is None:
+
+            await save_diagnostics(
+                page,
+                "SeatPlan response not captured"
+            )
 
             raise RuntimeError(
                 "SeatPlan API response was not obtained."
             )
 
 
-        # ==================================================== \
-        # RAW DATA
-        # ==================================================== \
-        raw_data = \
+        # ====================================================
+        # RAW
+        # ====================================================
+
+        raw_data =
             seatplan_response["data"]
 
 
@@ -1095,15 +1638,16 @@ async def main():
         )
 
 
-        # ==================================================== \
+        # ====================================================
         # PARSE
-        # ==================================================== \
+        # ====================================================
+
         log(
             "Parsing SeatPlan..."
         )
 
 
-        seats = \
+        seats =
             parse_seatplan(
                 raw_data
             )
@@ -1116,68 +1660,58 @@ async def main():
             )
 
 
-        stats = \
+        stats =
             calculate_stats(
                 seats
             )
 
 
-        area_stats = \
+        area_stats =
             calculate_area_stats(
                 seats
             )
 
 
-        # ==================================================== \
-        # SESSION INFO
-        # ==================================================== \
-        seatplan_url = \
+        # ====================================================
+        # SESSION
+        # ====================================================
+
+        seatplan_url =
             seatplan_response[
                 "url"
             ]
 
 
-        from urllib.parse import (
-            urlparse,
-            parse_qs
-        )
-
-
-        parsed = \
+        parsed =
             urlparse(
                 seatplan_url
             )
 
 
-        query = \
+        query =
             parse_qs(
                 parsed.query
             )
 
 
-        theatre_code = \
-            (
-                query
-                .get(
-                    "theatreCode",
-                    [None]
-                )[0]
-            )
+        theatre_code =
+            query.get(
+                "theatreCode",
+                [None]
+            )[0]
 
 
-        vista_session = \
-            (
-                query
-                .get(
-                    "vistaSession",
-                    [None]
-                )[0]
-            )
+        vista_session =
+            query.get(
+                "vistaSession",
+                [None]
+            )[0]
 
 
-        # ==================================================== \
+        # ====================================================
         # FINAL RESULT
-        # ==================================================== \
+        # ====================================================
+
         result = {
 
             "timestamp":
@@ -1205,7 +1739,8 @@ async def main():
                 area_stats,
 
             "seats":
-                seats
+                seats,
+
         }
 
 
@@ -1215,15 +1750,22 @@ async def main():
         )
 
 
-        # ==================================================== \
-        # PRINT SUMMARY
-        # ==================================================== \
+        # ====================================================
+        # SUMMARY
+        # ====================================================
+
         print()
-        print("=" * 65)
+        print(
+            "=" * 65
+        )
+
         print(
             "CINEWORLD SEAT INTELLIGENCE"
         )
-        print("=" * 65)
+
+        print(
+            "=" * 65
+        )
 
         print(
             f"Ticket       : "
@@ -1271,70 +1813,25 @@ async def main():
         )
 
         print(
-            f"Unknown      : "
-            f"{stats['unknown']:,}"
-        )
-
-        print(
             f"Occupancy    : "
             f"{stats['occupancy']:.2f}%"
         )
 
-        print("=" * 65)
-
-
-        print()
         print(
-            "AREA SUMMARY"
-        )
-
-        print("-" * 65)
-
-
-        for name, area in area_stats.items():
-
-            print(
-                f"{name}: "
-                f"{area['sold']}/"
-                f"{area['total']} sold "
-                f"({area['occupancy']:.2f}%)"
-            )
-
-
-        print("-" * 65)
-
-
-        # ==================================================== \
-        # KEEP BROWSER OPEN
-        # ==================================================== \
-        log(
-            "Browser will remain open."
-        )
-
-        log(
-            "Press CTRL+C to exit."
+            "=" * 65
         )
 
 
-        try:
-
-            while True:
-
-                await asyncio.sleep(
-                    3600
-                )
-
-        except KeyboardInterrupt:
-
-            pass
-
+        # ====================================================
+        # KEEP ALIVE
+        # ====================================================
 
         await browser.close()
 
 
 # ============================================================
 # ENTRY POINT
-# ============================================================ \
+# ============================================================
 
 if __name__ == "__main__":
 
@@ -1354,8 +1851,7 @@ if __name__ == "__main__":
 
         print()
         print(
-            "ERROR:",
-            exc
+            f"ERROR: {exc}"
         )
 
         raise
