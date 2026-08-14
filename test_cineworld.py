@@ -822,7 +822,7 @@ async def main():
         )
 
         browser = await p.chromium.launch(
-            headless=False,
+            headless=True,
             channel="chrome",
             args=[
                 "--disable-blink-features=AutomationControlled",
