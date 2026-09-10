@@ -1,26 +1,192 @@
-name: Landmark SeatMap Test
+# .github/workflows/landmark-seatmap-test.yml
+#
+#  Landmark Cinemas – Hindi movies scraper
+#  • Runs landmark-seatmap-test.py on a GitHub-hosted runner
+#  • Dependencies installed inline (no requirements.txt)
+#  • Live-updates the Actions console with BOTH python stdout AND logs.txt
+#  • Always uploads logs.txt + seatmapdump/ as artifacts, even on failure
+#  • GitHub streams job output to the browser in real time; running python
+#    with -u and tailing logs.txt keeps everything truly live.
+# ============================================================
+
+name: Landmark Seatmap Scraper
 
 on:
   workflow_dispatch:
+    inputs:
+      debug_tail:
+        description: 'Stream logs.txt into the console live'
+        type: boolean
+        required: false
+        default: true
+
+  # Optional: nightly run at 02:00 UTC
+  schedule:
+    - cron: '0 2 * * *'
+
+# Prevent two scrapers from hammering Landmark at the same time
+concurrency:
+  group: landmark-seatmap-scraper
+  cancel-in-progress: false
+
+permissions:
+  contents: read
 
 jobs:
-  test:
+  scrape:
+    name: Run landmark-seatmap-test.py
     runs-on: ubuntu-latest
+    timeout-minutes: 180
+
+    env:
+      PYTHONUNBUFFERED: "1"        # <-- makes python print() stream live
+      PYTHONIOENCODING: "utf-8"
+      PYTHONDONTWRITEBYTECODE: "1"
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: '3.12'
 
-      - name: Install requests
+      - name: Install dependencies (no requirements.txt)
         run: |
           python -m pip install --upgrade pip
-          pip install requests
+          pip install --no-cache-dir requests
 
-      - name: Test Landmark SeatMap
+      - name: Show workspace contents
         run: |
-          python landmark-seatmap-test.py
+          echo "--- repo root ---"
+          ls -la
+          echo "--- script present? ---"
+          test -f landmark-seatmap-test.py && echo "OK: landmark-seatmap-test.py" \
+            || { echo "::error::landmark-seatmap-test.py not found"; exit 1; }
+
+      - name: Prepare log/dump files
+        run: |
+          : > logs.txt
+          mkdir -p seatmapdump
+          echo "logs.txt initialised at $(date -u +%FT%TZ)"
+
+      # ----------------------------------------------------------------
+      # LIVE LOG STREAMING
+      #   • `python3 -u`          -> stdout/stderr unbuffered => live
+      #   • `tail -F logs.txt`    -> the file the script writes to is
+      #                              mirrored into the Actions console
+      #   • we kill the tail after the run so the job can finish
+      # ----------------------------------------------------------------
+      - name: Run landmark-seatmap-test.py (live logs)
+        id: run
+        continue-on-error: true
+        run: |
+          set -o pipefail
+
+          TAIL_PID=""
+
+          if [ "${{ github.event.inputs.debug_tail || 'true' }}" = "true" ]; then
+            echo "::group::live tail of logs.txt"
+            tail -n +1 -F logs.txt 2>/dev/null &
+            TAIL_PID=$!
+            echo "tail started (pid=$TAIL_PID)"
+          fi
+
+          # Kill the tail no matter how python exits
+          cleanup() {
+            if [ -n "$TAIL_PID" ]; then
+              kill "$TAIL_PID" 2>/dev/null || true
+              wait "$TAIL_PID" 2>/dev/null || true
+            fi
+          }
+          trap cleanup EXIT
+
+          set +e
+          python3 -u landmark-seatmap-test.py
+          STATUS=$?
+          set -e
+
+          echo "exit_code=$STATUS" >> "$GITHUB_OUTPUT"
+          echo "::notice::scraper exit code: $STATUS"
+
+          cleanup
+          trap - EXIT
+
+          exit $STATUS
+
+      - name: Show tail of logs.txt
+        if: always()
+        run: |
+          echo "::group::logs.txt (last 300 lines)"
+          if [ -s logs.txt ]; then
+            tail -n 300 logs.txt
+          else
+            echo "(logs.txt is empty)"
+          fi
+          echo "::endgroup::"
+
+      - name: Show CSV head (if produced)
+        if: always()
+        run: |
+          if [ -f landmark_hindi_results.csv ]; then
+            echo "::group::landmark_hindi_results.csv (first 50 lines)"
+            head -n 50 landmark_hindi_results.csv
+            echo "::endgroup::"
+          else
+            echo "no CSV produced"
+          fi
+
+      - name: Collect run summary
+        if: always()
+        run: |
+          {
+            echo "## 🍁 Landmark Seatmap Scraper"
+            echo ""
+            echo "| item | value |"
+            echo "|---|---|"
+            echo "| script | \`landmark-seatmap-test.py\` |"
+            echo "| exit code | \`${{ steps.run.outputs.exit_code }}\` |"
+            echo "| logs.txt size | $(wc -c < logs.txt 2>/dev/null || echo 0) bytes |"
+            echo "| seatmap dumps | $(ls -1 seatmapdump 2>/dev/null | wc -l) files |"
+            echo "| CSV present | $( [ -f landmark_hindi_results.csv ] && echo yes || echo no ) |"
+            echo ""
+            echo "### 📊 Per-movie / per-theatre summary"
+            echo '```'
+            grep -E '^(🎬|🏢|📈|Total|Overall)' -A 40 logs.txt 2>/dev/null | tail -n 60 || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # ------------------------- ARTIFACTS -------------------------
+      - name: Upload logs.txt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-${{ github.run_number }}
+          path: logs.txt
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Upload seatmap dumps
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: seatmapdump-${{ github.run_number }}
+          path: seatmapdump/
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Upload results CSV
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-csv-${{ github.run_number }}
+          path: landmark_hindi_results.csv
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Fail job if scraper failed
+        if: steps.run.outputs.exit_code != '0'
+        run: |
+          echo "::error::landmark-seatmap-test.py exited with ${{ steps.run.outputs.exit_code }}"
+          exit 1
