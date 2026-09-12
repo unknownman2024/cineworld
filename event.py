@@ -3,24 +3,49 @@
 Event Cinemas Australia scraper - anti-detect edition.
 
 Features:
-  * Cloudscraper-enhanced engine (Cloudflare v2/v3, brotli, stealth mode)
+  * Cloudscraper (falls back gracefully between enhanced and base)
   * Automatic proxy rotation with self-IP fallback
   * Randomized browser headers per request
-  * Random human-like delays
-  * Seat-map aggregation -> EVENTdata.json
+  * Australia/Sydney "today" for correct date windows
+  * 3-day window starting at max(today_au, movie_release_date)
+  * Verbose progress logging - works on Replit, GitHub Actions, or locally
 """
 
 import json
 import os
 import random
 import re
+import sys
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from typing import Dict, List, Optional, Set, Tuple
 
-import cloudscraper  # from cloudscraper-enhanced
+try:
+    from zoneinfo import ZoneInfo  # Python 3.9+
+except ImportError:
+    ZoneInfo = None  # type: ignore
+
+import cloudscraper
+
+
+# ------------------------------------------------------------------
+# 0. Logging
+# ------------------------------------------------------------------
+def log(msg: str, level: str = "INFO"):
+    ts = datetime.now(timezone.utc).strftime("%H:%M:%S")
+    tag = {
+        "INFO": "INFO ",
+        "OK":   "OK   ",
+        "WARN": "WARN ",
+        "ERR":  "ERROR",
+        "STEP": "STEP ",
+        "NET":  "NET  ",
+        "DATA": "DATA ",
+    }.get(level, "     ")
+    print(f"[{ts}] {tag} {msg}", flush=True)
+
 
 # ------------------------------------------------------------------
 # 1. Configuration
@@ -28,41 +53,45 @@ import cloudscraper  # from cloudscraper-enhanced
 KEYWORDS = {"hindi", "tamil", "telugu", "malayalam", "kannada"}
 CINE_INDIA_ATTRIBUTE = "cine india"
 
-MAX_WORKERS = 6               # lower because proxies add latency
+MAX_WORKERS = 6
 REQUEST_TIMEOUT = 40
 RETRY_ATTEMPTS = 3
 RETRY_BACKOFF = 3.0
+DAY_WINDOW = 3
+
+AU_TZ_NAME = "Australia/Sydney"
+if ZoneInfo is not None:
+    try:
+        AU_TZ = ZoneInfo(AU_TZ_NAME)
+    except Exception:
+        AU_TZ = timezone(timedelta(hours=10))
+else:
+    AU_TZ = timezone(timedelta(hours=10))
+
+
+def today_au() -> datetime:
+    return datetime.now(AU_TZ)
+
 
 # ------------------------------------------------------------------
-# 2. Proxy rotation (self IP fallback)
+# 2. Proxy rotation
 # ------------------------------------------------------------------
-# Read a comma-separated list from the environment.
-# Example: "http://user:pass@1.2.3.4:8080,http://5.6.7.8:3128"
-# Leave empty to use your own IP (self-IP mode).
 _raw_proxies = os.environ.get("EVENT_PROXIES", "").strip()
 PROXY_LIST: List[str] = [p.strip() for p in _raw_proxies.split(",") if p.strip()]
 
-# Track which proxies have failed recently so we stop hammering them.
 _bad_proxies: Dict[str, float] = {}
-_BAN_TIME = 300  # seconds before retrying a failed proxy
-
+_BAN_TIME = 300
 _rotation_lock = threading.Lock()
 _rotation_index = 0
 
 
 def _available_proxies() -> List[str]:
-    """Return proxies that are not currently banned. Empty list = self IP."""
     now = time.time()
     with _rotation_lock:
-        alive = [p for p in PROXY_LIST if _bad_proxies.get(p, 0) < now]
-    return alive
+        return [p for p in PROXY_LIST if _bad_proxies.get(p, 0) < now]
 
 
 def get_next_proxy() -> Optional[Dict[str, str]]:
-    """
-    Round-robin through healthy proxies. Returns None when the list is empty
-    or every proxy is banned -> caller falls back to the self IP.
-    """
     global _rotation_index
     alive = _available_proxies()
     if not alive:
@@ -74,10 +103,9 @@ def get_next_proxy() -> Optional[Dict[str, str]]:
 
 
 def mark_proxy_bad(proxy_url: str):
-    """Ban a proxy for _BAN_TIME seconds after a failure."""
     with _rotation_lock:
         _bad_proxies[proxy_url] = time.time() + _BAN_TIME
-        print(f"🚫 Proxy banned for {_BAN_TIME}s: {proxy_url}")
+        log(f"Proxy banned for {_BAN_TIME}s: {proxy_url}", "WARN")
 
 
 # ------------------------------------------------------------------
@@ -98,7 +126,6 @@ ACCEPT_LANGUAGES = ["en-AU,en;q=0.9", "en-US,en;q=0.9", "en-GB,en;q=0.9"]
 
 
 def build_headers() -> Dict[str, str]:
-    """Fresh randomized browser headers for every request."""
     ua = random.choice(USER_AGENTS)
     platform = "Windows"
     mobile = "?0"
@@ -114,8 +141,6 @@ def build_headers() -> Dict[str, str]:
 
     return {
         "Accept": "application/json, text/plain, */*",
-        # Brotli is handled by cloudscraper-enhanced, but we still avoid
-        # advertising it explicitly so the CDN chooses a format we control.
         "Accept-Encoding": "gzip, deflate",
         "Accept-Language": random.choice(ACCEPT_LANGUAGES),
         "Cache-Control": "no-cache",
@@ -134,69 +159,66 @@ def build_headers() -> Dict[str, str]:
 
 def create_session() -> cloudscraper.CloudScraper:
     """
-    Create a Cloudscraper session with stealth defaults.
+    Build a Cloudscraper session.
 
-    The `browser` dict is deliberately explicit so cloudscraper-enhanced
-    picks desktop Chrome UAs only, matching the rest of our headers.
+    Tries cloudscraper-enhanced's stealth kwargs first. If the installed
+    package is the original cloudscraper (no stealth support), falls back
+    to a plain create_scraper().
     """
-    return cloudscraper.create_scraper(
-        browser={
-            "browser": "chrome",
-            "platform": "windows",
-            "mobile": False,
-        },
-        enable_stealth=True,
-        stealth_options={
-            "min_delay": 1.0,
-            "max_delay": 4.0,
-            "human_like_delays": True,
-            "randomize_headers": True,
-            "browser_quirks": True,
-        },
-        # Brotli on in case the CDN forces Content-Encoding: br
-        allow_brotli=True,
-    )
+    try:
+        return cloudscraper.create_scraper(
+            browser={"browser": "chrome", "platform": "windows", "mobile": False},
+            enable_stealth=True,
+            stealth_options={
+                "min_delay": 1.0,
+                "max_delay": 4.0,
+                "human_like_delays": True,
+                "randomize_headers": True,
+                "browser_quirks": True,
+            },
+            allow_brotli=True,
+        )
+    except TypeError as e:
+        log(f"cloudscraper-enhanced kwargs rejected ({e}); "
+            f"falling back to base cloudscraper", "WARN")
+        scraper = cloudscraper.create_scraper(
+            browser={"browser": "chrome", "platform": "windows"},
+        )
+        try:
+            import brotli  # noqa: F401
+            log("brotli decoder available for fallback session", "INFO")
+        except ImportError:
+            log("brotli package missing - br responses will fail. "
+                "Install with: pip install brotli", "WARN")
+        return scraper
 
 
 # ------------------------------------------------------------------
 # 4. Resilient request wrapper
 # ------------------------------------------------------------------
-def request_with_retry(
-    method: str,
-    url: str,
-    session: cloudscraper.CloudScraper,
-    **kwargs,
-) -> "requests.Response":
-    """
-    Send a request through the current proxy (if any), retrying on failure.
-    On proxy errors the proxy is banned and the next attempt uses a fresh one
-    — eventually falling back to the self IP.
-    """
+def request_with_retry(method, url, session, **kwargs):
     headers = kwargs.pop("headers", {})
     headers.update(build_headers())
 
     last_exc: Optional[Exception] = None
-
     for attempt in range(RETRY_ATTEMPTS):
         proxy = get_next_proxy()
         proxy_url = proxy["http"] if proxy else None
+        via = proxy_url or "self-IP"
 
         try:
             resp = session.request(
                 method, url,
-                headers=headers,
-                proxies=proxy,
-                timeout=REQUEST_TIMEOUT,
-                **kwargs,
+                headers=headers, proxies=proxy,
+                timeout=REQUEST_TIMEOUT, **kwargs,
             )
             resp.raise_for_status()
             return resp
         except Exception as e:
             last_exc = e
             status = getattr(getattr(e, "response", None), "status_code", None)
-            via = proxy_url or "self-IP"
-            print(f"⚠️  Attempt {attempt + 1}/{RETRY_ATTEMPTS} via {via} "
-                  f"failed for {url} (status={status}): {e}")
+            log(f"Attempt {attempt + 1}/{RETRY_ATTEMPTS} via {via} failed "
+                f"(status={status}) for {url}: {e}", "WARN")
             if proxy_url:
                 mark_proxy_bad(proxy_url)
             if attempt < RETRY_ATTEMPTS - 1:
@@ -213,10 +235,9 @@ def safe_json(resp, label: str):
         ctype = resp.headers.get("Content-Type", "unknown")
         cenc = resp.headers.get("Content-Encoding", "none")
         preview = (resp.text or "")[:800].replace("\n", " ")
-        print(f"❌ {label}: non-JSON response")
-        print(f"   status={resp.status_code} content-type={ctype} "
-              f"content-encoding={cenc}")
-        print(f"   body[:800]={preview!r}")
+        log(f"{label}: non-JSON response "
+            f"(status={resp.status_code}, ct={ctype}, ce={cenc})", "ERR")
+        log(f"body[:800]={preview!r}", "ERR")
         raise e
 
 
@@ -224,11 +245,10 @@ def safe_json(resp, label: str):
 # 5. API endpoints
 # ------------------------------------------------------------------
 EVENT_BASE = "https://www.eventcinemas.com.au"
-TICKET_API = "https://www.eventcinemas.com.au"
-
 
 def fetch_now_showing(session) -> List[Dict]:
     url = f"{EVENT_BASE}/Movies/GetNowShowing"
+    log(f"GET {url}", "NET")
     resp = request_with_retry("GET", url, session)
     data = safe_json(resp, "fetch_now_showing")
     return (data.get("Data") or {}).get("Movies") or []
@@ -236,6 +256,7 @@ def fetch_now_showing(session) -> List[Dict]:
 
 def fetch_coming_soon(session) -> List[Dict]:
     url = f"{EVENT_BASE}/Movies/GetComingSoon"
+    log(f"GET {url}", "NET")
     resp = request_with_retry("GET", url, session)
     data = safe_json(resp, "fetch_coming_soon")
     return (data.get("Data") or {}).get("Movies") or []
@@ -243,7 +264,9 @@ def fetch_coming_soon(session) -> List[Dict]:
 
 def fetch_all_movies(session) -> List[Dict]:
     now = fetch_now_showing(session)
+    log(f"now-showing: {len(now)} movies", "DATA")
     soon = fetch_coming_soon(session)
+    log(f"coming-soon: {len(soon)} movies", "DATA")
     merged: Dict[int, Dict] = {}
     for m in now + soon:
         mid = m.get("Id")
@@ -256,14 +279,15 @@ def fetch_sessions_for_cinemas(session, cinema_ids: List[int], date_str: str) ->
     if not cinema_ids:
         return []
     params = "&".join(f"cinemaIds={cid}" for cid in cinema_ids)
-    url = f"{TICKET_API}/Cinemas/GetSessions?{params}&date={date_str}"
+    url = f"{EVENT_BASE}/Cinemas/GetSessions?{params}&date={date_str}"
+    log(f"GET sessions date={date_str} cinemas={len(cinema_ids)}", "NET")
     resp = request_with_retry("GET", url, session)
     data = safe_json(resp, f"fetch_sessions({date_str})")
     return (data.get("Data") or {}).get("Movies") or []
 
 
 def fetch_seat_map(session, session_id: int) -> Dict:
-    url = f"{TICKET_API}/api/ticketing/session?sessionId={session_id}"
+    url = f"{EVENT_BASE}/api/ticketing/session?sessionId={session_id}"
     resp = request_with_retry("GET", url, session)
     return safe_json(resp, f"fetch_seat_map({session_id})")
 
@@ -326,27 +350,53 @@ def parse_seat_map(seat_data: Dict) -> Tuple[int, int, int, float]:
 
 
 # ------------------------------------------------------------------
-# 8. Aggregation
+# 8. Date helpers
 # ------------------------------------------------------------------
-def date_range(days: int = 7) -> List[str]:
-    today = datetime.utcnow().date()
-    return [(today + timedelta(days=i)).isoformat() for i in range(days)]
+def parse_release_date(movie: Dict) -> Optional[datetime]:
+    raw = movie.get("ReleasedAt")
+    if not raw:
+        return None
+    for fmt in ("%Y-%m-%dT%H:%M", "%Y-%m-%dT%H:%M:%S", "%Y-%m-%d"):
+        try:
+            dt = datetime.strptime(raw, fmt)
+            return dt.replace(tzinfo=AU_TZ)
+        except ValueError:
+            continue
+    return None
 
 
-def collect_sessions_for_movie(session, movie: Dict, cinema_ids: List[int], dates: List[str]) -> List[Dict]:
+def build_date_window(movie: Dict, days: int = DAY_WINDOW) -> List[str]:
+    today = today_au().replace(hour=0, minute=0, second=0, microsecond=0)
+    release = parse_release_date(movie)
+
+    start = today
+    if release is not None and release > today:
+        start = release
+
+    return [(start + timedelta(days=i)).strftime("%Y-%m-%d")
+            for i in range(days)]
+
+
+# ------------------------------------------------------------------
+# 9. Session collection
+# ------------------------------------------------------------------
+def collect_sessions_for_movie(session, movie, cinema_ids, dates):
     movie_name = movie.get("Name", "")
     all_sessions: List[Dict] = []
     for date_str in dates:
         try:
             movies_on_date = fetch_sessions_for_cinemas(session, cinema_ids, date_str)
         except Exception as e:
-            print(f"⚠️  Sessions fetch failed for {date_str}: {e}")
+            log(f"Sessions fetch failed for {movie_name} @ {date_str}: {e}", "WARN")
             continue
+
+        matched_here = 0
         for m in movies_on_date:
             if (m.get("Name") or "").strip() != movie_name.strip():
                 continue
             for cinema in m.get("CinemaModels") or []:
                 for s in cinema.get("Sessions") or []:
+                    matched_here += 1
                     all_sessions.append({
                         "cinemaId": s.get("CinemaId"),
                         "cinemaName": cinema.get("Name"),
@@ -354,40 +404,56 @@ def collect_sessions_for_movie(session, movie: Dict, cinema_ids: List[int], date
                         "startTime": s.get("StartTime"),
                         "movieId": s.get("MovieId"),
                     })
+        log(f"  {movie_name} @ {date_str}: {matched_here} sessions", "DATA")
     return all_sessions
 
 
+# ------------------------------------------------------------------
+# 10. Aggregation
+# ------------------------------------------------------------------
 def process_movies(movies: List[Dict]) -> Dict:
-    # One session per thread to avoid cloudscraper state clashes.
-    # Cloudscraper sessions are not documented as thread-safe, so we create
-    # a fresh one inside each worker via thread-local storage.
     thread_local = threading.local()
 
-    def get_session() -> cloudscraper.CloudScraper:
+    def get_session():
         if not hasattr(thread_local, "session"):
             thread_local.session = create_session()
         return thread_local.session
 
-    dates = date_range(7)
-    tasks: List[Tuple[Dict, Dict]] = []
-
-    # Session discovery is done sequentially with the main session so we
-    # don't hammer the worker proxy pool with discovery traffic.
+    log("Phase 1 - session discovery", "STEP")
     main_session = create_session()
+    tasks: List[Tuple[Dict, Dict]] = []
+    per_movie_dates: Dict[int, List[str]] = {}
+
     for movie in movies:
+        movie_id = movie.get("Id")
         cinema_ids = movie.get("CinemaIds") or []
         if not cinema_ids:
+            log(f"  skip {movie.get('Name')}: no CinemaIds", "WARN")
             continue
+
+        dates = build_date_window(movie)
+        per_movie_dates[movie_id] = dates
+        release_str = movie.get("ReleasedAt") or "unknown"
+        log(f"  {movie.get('Name')} | release={release_str} | window={dates}")
+
         sessions = collect_sessions_for_movie(main_session, movie, cinema_ids, dates)
         for s in sessions:
             tasks.append((movie, s))
 
-    print(f"📡 Fetching seat maps for {len(tasks)} sessions...")
+    log(f"Discovered {len(tasks)} total sessions across "
+        f"{len(movies)} movie(s)", "OK")
+
+    if not tasks:
+        return {}
+
+    log(f"Phase 2 - fetching {len(tasks)} seat maps "
+        f"({MAX_WORKERS} workers)", "STEP")
 
     lock = threading.Lock()
     session_results: List[Dict] = []
+    done = [0]
 
-    def process_task(movie: Dict, session_info: Dict):
+    def process_task(movie, session_info):
         sid = session_info.get("sessionId")
         if sid is None:
             return None
@@ -395,6 +461,10 @@ def process_movies(movies: List[Dict]) -> Dict:
         try:
             seat_data = fetch_seat_map(sess, sid)
             total, sold, available, price = parse_seat_map(seat_data)
+            with lock:
+                done[0] += 1
+                if done[0] % 25 == 0 or done[0] == len(tasks):
+                    log(f"  progress: {done[0]}/{len(tasks)} seat maps", "DATA")
             return {
                 "movie": movie,
                 "session": session_info,
@@ -404,7 +474,9 @@ def process_movies(movies: List[Dict]) -> Dict:
                 "adultPrice": price,
             }
         except Exception as e:
-            print(f"⚠️  Failed seat map for session {sid}: {e}")
+            with lock:
+                done[0] += 1
+            log(f"  seat map failed for session {sid}: {e}", "WARN")
             return None
 
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
@@ -415,9 +487,11 @@ def process_movies(movies: List[Dict]) -> Dict:
                 with lock:
                     session_results.append(res)
 
-    print(f"✅ Successfully processed {len(session_results)} sessions.")
+    log(f"Seat maps OK: {len(session_results)}/{len(tasks)}", "OK")
 
+    log("Phase 3 - aggregating totals + day-wise", "STEP")
     agg: Dict[int, Dict] = {}
+
     for r in session_results:
         movie = r["movie"]
         movie_id = movie.get("Id")
@@ -433,6 +507,8 @@ def process_movies(movies: List[Dict]) -> Dict:
                 "slug": (movie.get("MovieUrl") or "").rstrip("/").split("/")[-1],
                 "languages": matched_languages(movie),
                 "rating": movie.get("Rating", ""),
+                "releaseDate": (movie.get("ReleasedAt") or "").split("T")[0],
+                "window": per_movie_dates.get(movie_id, []),
                 "totalShows": 0,
                 "totalSeats": 0,
                 "totalSold": 0,
@@ -465,28 +541,31 @@ def process_movies(movies: List[Dict]) -> Dict:
             day["occupancy"] = (
                 day["sold"] / day["seats"] * 100 if day["seats"] > 0 else 0.0
             )
+
+    log(f"Aggregated {len(agg)} movie(s)", "OK")
     return agg
 
 
 # ------------------------------------------------------------------
-# 9. Save & print
+# 11. Save & print
 # ------------------------------------------------------------------
 def save_results(agg: Dict, filename: str = "EVENTdata.json"):
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(agg, f, indent=2, ensure_ascii=False)
-    print(f"💾 Data saved to {filename}")
+    log(f"Data saved to {filename}", "OK")
 
 
 def print_summary(agg: Dict):
     if not agg:
-        print("No data to summarise.")
+        log("No data to summarise.", "WARN")
         return
     print("\n" + "=" * 80)
-    print(f"🎬 Event Cinemas AU - {len(agg)} Indian-language movies")
+    print(f"Event Cinemas AU - {len(agg)} Indian-language movies")
     print("=" * 80)
-    for movie_id, data in sorted(agg.items(), key=lambda x: x[1]["totalShows"], reverse=True):
+    for _, data in sorted(agg.items(), key=lambda x: x[1]["totalShows"], reverse=True):
         langs = ", ".join(data["languages"]) or "-"
-        print(f"\n📽️  {data['movieName']}  [{langs}]  ({data['rating']})")
+        print(f"\n  {data['movieName']}  [{langs}]  ({data['rating']})")
+        print(f"   Release: {data['releaseDate']}  Window: {data['window']}")
         print(f"   Shows: {data['totalShows']}")
         print(f"   Seats: {data['totalSeats']} total, {data['totalSold']} sold, "
               f"{data['totalAvailable']} available, "
@@ -501,26 +580,32 @@ def print_summary(agg: Dict):
 
 
 # ------------------------------------------------------------------
-# 10. Main
+# 12. Main
 # ------------------------------------------------------------------
 def main():
-    print("🚀 Event Cinemas AU scraper starting (anti-detect mode)...")
-    print(f"🔁 Proxy mode: {len(PROXY_LIST)} proxies configured"
-          if PROXY_LIST else "🔁 Proxy mode: self-IP (direct)")
+    started = time.time()
+    log("Event Cinemas AU scraper starting (anti-detect mode)", "STEP")
+    log(f"Host OS: {sys.platform} | Python {sys.version.split()[0]}")
+    log(f"Proxy mode: {len(PROXY_LIST)} proxies configured"
+        if PROXY_LIST else "Proxy mode: self-IP (direct)")
+    log(f"Reference 'today' (Australia/Sydney): "
+        f"{today_au().strftime('%Y-%m-%d %H:%M %Z')}")
+    log(f"Scrape window per movie: {DAY_WINDOW} days "
+        f"starting at max(today_au, release)")
 
     session = create_session()
 
-    print("📥 Fetching all movies (now showing + coming soon)...")
+    log("Fetching all movies (now showing + coming soon)", "STEP")
     all_movies = fetch_all_movies(session)
-    print(f"✅ Total movies: {len(all_movies)}")
+    log(f"Total movies: {len(all_movies)}", "OK")
 
     indian = [m for m in all_movies if is_indian_language(m)]
-    print(f"🎯 Found {len(indian)} Indian-language movies")
+    log(f"Indian-language matches: {len(indian)}", "OK")
     for m in indian:
-        print(f"   • {m.get('Name')} -> {matched_languages(m)}")
+        log(f"   - {m.get('Name')} -> {matched_languages(m)}")
 
     if not indian:
-        print("No matching movies found. Exiting.")
+        log("No matching movies found. Exiting.", "WARN")
         return
 
     agg = process_movies(indian)
@@ -528,7 +613,10 @@ def main():
         save_results(agg)
         print_summary(agg)
     else:
-        print("No data processed.")
+        log("No data processed.", "WARN")
+
+    elapsed = time.time() - started
+    log(f"Done in {elapsed:.1f}s", "OK")
 
 
 if __name__ == "__main__":
