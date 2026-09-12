@@ -21,7 +21,7 @@ import requests
 # 1. Configuration
 # ------------------------------------------------------------------
 KEYWORDS = {"hindi", "tamil", "telugu", "kannada", "malayalam"}
-MAX_WORKERS = 10          # lowered: CI runners get rate-limited fast
+MAX_WORKERS = 10          # CI runners get rate-limited fast
 REQUEST_TIMEOUT = 30
 RETRY_ATTEMPTS = 3
 RETRY_BACKOFF = 2.0       # seconds, doubled each attempt
@@ -33,8 +33,6 @@ PROXY_LIST = [PROXY] if PROXY else []
 # ------------------------------------------------------------------
 # 2. Auto-generative headers & proxy helpers
 # ------------------------------------------------------------------
-# NOTE: fake_useragent can emit UAs that Cloudflare flags. Use a small,
-# realistic pool instead so the API reliably returns JSON.
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
@@ -69,7 +67,10 @@ def get_random_headers() -> Dict[str, str]:
 
     return {
         "Accept": "application/json, text/plain, */*",
-        "Accept-Encoding": "gzip, deflate, br",
+        # Do NOT advertise "br" here unless the `brotli` package is
+        # installed - requests cannot decode brotli bodies on its own,
+        # and the Hoyts API will happily serve them if we ask.
+        "Accept-Encoding": "gzip, deflate",
         "Accept-Language": random.choice(ACCEPT_LANGUAGES),
         "Cache-Control": "no-cache",
         "Origin": "https://www.hoyts.com.au",
@@ -127,9 +128,10 @@ def safe_json(resp: requests.Response, label: str):
         return resp.json()
     except requests.exceptions.JSONDecodeError as e:
         ctype = resp.headers.get("Content-Type", "unknown")
+        cenc = resp.headers.get("Content-Encoding", "none")
         preview = (resp.text or "")[:800].replace("\n", " ")
         print(f"❌ {label}: non-JSON response")
-        print(f"   status={resp.status_code} content-type={ctype}")
+        print(f"   status={resp.status_code} content-type={ctype} content-encoding={cenc}")
         print(f"   body[:800]={preview!r}")
         raise e
 
