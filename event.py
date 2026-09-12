@@ -224,7 +224,7 @@ def safe_json(resp, label: str):
 # 5. API endpoints
 # ------------------------------------------------------------------
 EVENT_BASE = "https://www.eventcinemas.com.au"
-TICKET_API = "https://eventcinemas.text2024mail.workers.dev"
+TICKET_API = "https://www.eventcinemas.com.au"
 
 
 def fetch_now_showing(session) -> List[Dict]:
