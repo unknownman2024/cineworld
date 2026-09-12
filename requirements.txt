@@ -1,2 +1,7 @@
-requests>=2.31.0
-fake-useragent>=1.5.1
+# Both packages ship a module called `cloudscraper`; installing the base
+# first and enhanced second lets the fork's files win the name collision.
+cloudscraper==1.2.71
+cloudscraper-enhanced
+requests
+brotli
+tzdata
