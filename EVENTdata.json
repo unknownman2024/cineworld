@@ -60,36 +60,36 @@
     ],
     "totalShows": 50,
     "totalSeats": 8507,
-    "totalSold": 541,
-    "totalAvailable": 7713,
-    "totalGross": 12952.0,
+    "totalSold": 540,
+    "totalAvailable": 7714,
+    "totalGross": 12914.0,
     "days": {
       "2026-09-13": {
         "shows": 18,
         "seats": 3081,
-        "sold": 269,
-        "available": 2716,
-        "gross": 6530.0,
-        "occupancy": 8.730931515741643
+        "sold": 270,
+        "available": 2715,
+        "gross": 6554.0,
+        "occupancy": 8.763388510223953
       },
       "2026-09-14": {
         "shows": 13,
         "seats": 2173,
-        "sold": 105,
-        "available": 2005,
-        "gross": 2480.0,
-        "occupancy": 4.832029452369995
+        "sold": 103,
+        "available": 2007,
+        "gross": 2428.0,
+        "occupancy": 4.739990796134377
       },
       "2026-09-15": {
         "shows": 19,
         "seats": 3253,
         "sold": 167,
         "available": 2992,
-        "gross": 3942.0,
+        "gross": 3932.0,
         "occupancy": 5.133722717491547
       }
     },
-    "occupancy": 6.359468672857646
+    "occupancy": 6.347713647584342
   },
   "21439": {
     "movieName": "Singh vs Kaur 2",
@@ -288,17 +288,17 @@
     ],
     "totalShows": 22,
     "totalSeats": 3848,
-    "totalSold": 149,
-    "totalAvailable": 3570,
-    "totalGross": 3658.0,
+    "totalSold": 150,
+    "totalAvailable": 3569,
+    "totalGross": 3684.0,
     "days": {
       "2026-09-13": {
         "shows": 8,
         "seats": 1297,
-        "sold": 62,
-        "available": 1188,
-        "gross": 1542.0,
-        "occupancy": 4.780262143407865
+        "sold": 63,
+        "available": 1187,
+        "gross": 1568.0,
+        "occupancy": 4.857363145720894
       },
       "2026-09-14": {
         "shows": 6,
@@ -317,7 +317,7 @@
         "occupancy": 3.931750741839762
       }
     },
-    "occupancy": 3.8721413721413724
+    "occupancy": 3.898128898128898
   },
   "21444": {
     "movieName": "Epic - First Semester",
@@ -418,35 +418,35 @@
     ],
     "totalShows": 78,
     "totalSeats": 19520,
-    "totalSold": 1790,
-    "totalAvailable": 17288,
-    "totalGross": 52276.0,
+    "totalSold": 1810,
+    "totalAvailable": 17268,
+    "totalGross": 52956.0,
     "days": {
       "2026-09-17": {
         "shows": 25,
         "seats": 6258,
-        "sold": 608,
-        "available": 5508,
-        "gross": 18019.0,
-        "occupancy": 9.715564077980185
+        "sold": 612,
+        "available": 5504,
+        "gross": 18119.0,
+        "occupancy": 9.77948226270374
       },
       "2026-09-18": {
         "shows": 26,
         "seats": 6611,
-        "sold": 660,
-        "available": 5801,
-        "gross": 18888.0,
-        "occupancy": 9.983361064891847
+        "sold": 668,
+        "available": 5793,
+        "gross": 19136.0,
+        "occupancy": 10.104371502042051
       },
       "2026-09-19": {
         "shows": 27,
         "seats": 6651,
-        "sold": 522,
-        "available": 5979,
-        "gross": 15369.0,
-        "occupancy": 7.848443843031124
+        "sold": 530,
+        "available": 5971,
+        "gross": 15701.0,
+        "occupancy": 7.968726507292137
       }
     },
-    "occupancy": 9.170081967213115
+    "occupancy": 9.272540983606557
   }
 }
