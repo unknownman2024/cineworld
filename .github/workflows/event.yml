@@ -1,8 +1,8 @@
-name: Event Cinemas AU Scraper
+name: Event Cinemas AU Scraper (Anti-Detect)
 
 on:
   schedule:
-    - cron: '0 */6 * * *'      # every 6 hours
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -33,11 +33,19 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests brotli
+          # cloudscraper-enhanced bundles:
+          #   - Cloudflare v2/v3 challenge solving
+          #   - proxy rotation
+          #   - stealth mode
+          #   - brotli decompression
+          pip install cloudscraper-enhanced requests brotli
 
       - name: Run scraper
         env:
-          EVENT_PROXY: ${{ secrets.EVENT_PROXY }}
+          # Comma-separated list, e.g.:
+          #   http://user:pass@1.2.3.4:8080,http://5.6.7.8:3128
+          # Leave empty (or unset the secret) to run on the runner's own IP.
+          EVENT_PROXIES: ${{ secrets.EVENT_PROXIES }}
         run: python event.py
 
       - name: Show output file
