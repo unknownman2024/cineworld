@@ -60,17 +60,17 @@
     ],
     "totalShows": 45,
     "totalSeats": 7593,
-    "totalSold": 410,
-    "totalAvailable": 6963,
-    "totalGross": 9707.0,
+    "totalSold": 412,
+    "totalAvailable": 6961,
+    "totalGross": 9755.0,
     "days": {
       "2026-09-14": {
         "shows": 13,
         "seats": 2173,
-        "sold": 131,
-        "available": 1979,
-        "gross": 3110.0,
-        "occupancy": 6.028531983433042
+        "sold": 133,
+        "available": 1977,
+        "gross": 3158.0,
+        "occupancy": 6.120570639668661
       },
       "2026-09-15": {
         "shows": 19,
@@ -89,7 +89,7 @@
         "occupancy": 3.739612188365651
       }
     },
-    "occupancy": 5.399710259449493
+    "occupancy": 5.426050309495587
   },
   "21439": {
     "movieName": "Singh vs Kaur 2",
@@ -104,9 +104,9 @@
     ],
     "totalShows": 42,
     "totalSeats": 9219,
-    "totalSold": 327,
-    "totalAvailable": 8660,
-    "totalGross": 7495.0,
+    "totalSold": 328,
+    "totalAvailable": 8659,
+    "totalGross": 7514.0,
     "days": {
       "2026-09-14": {
         "shows": 13,
@@ -119,10 +119,10 @@
       "2026-09-15": {
         "shows": 15,
         "seats": 3197,
-        "sold": 107,
-        "available": 3004,
-        "gross": 2491.0,
-        "occupancy": 3.3468877072255236
+        "sold": 108,
+        "available": 3003,
+        "gross": 2510.0,
+        "occupancy": 3.3781670315921177
       },
       "2026-09-16": {
         "shows": 14,
@@ -133,7 +133,7 @@
         "occupancy": 3.750393948944217
       }
     },
-    "occupancy": 3.5470224536283763
+    "occupancy": 3.5578696170951294
   },
   "21349": {
     "movieName": "Bethlehem Kudumba Unit (Malayalam)",
@@ -150,17 +150,17 @@
     ],
     "totalShows": 33,
     "totalSeats": 6234,
-    "totalSold": 306,
-    "totalAvailable": 5760,
-    "totalGross": 7115.0,
+    "totalSold": 307,
+    "totalAvailable": 5759,
+    "totalGross": 7138.0,
     "days": {
       "2026-09-14": {
         "shows": 9,
         "seats": 1710,
-        "sold": 89,
-        "available": 1577,
-        "gross": 2085.0,
-        "occupancy": 5.204678362573099
+        "sold": 90,
+        "available": 1576,
+        "gross": 2108.0,
+        "occupancy": 5.263157894736842
       },
       "2026-09-15": {
         "shows": 15,
@@ -179,7 +179,7 @@
         "occupancy": 3.991252050300711
       }
     },
-    "occupancy": 4.908565928777671
+    "occupancy": 4.924606993904395
   },
   "21448": {
     "movieName": "Mandaadi",
@@ -410,9 +410,9 @@
     ],
     "totalShows": 78,
     "totalSeats": 19520,
-    "totalSold": 2442,
-    "totalAvailable": 16636,
-    "totalGross": 71896.0,
+    "totalSold": 2452,
+    "totalAvailable": 16626,
+    "totalGross": 72180.0,
     "days": {
       "2026-09-17": {
         "shows": 25,
@@ -425,20 +425,20 @@
       "2026-09-18": {
         "shows": 26,
         "seats": 6611,
-        "sold": 879,
-        "available": 5582,
-        "gross": 25272.0,
-        "occupancy": 13.296021781878686
+        "sold": 882,
+        "available": 5579,
+        "gross": 25339.0,
+        "occupancy": 13.341400695810012
       },
       "2026-09-19": {
         "shows": 27,
         "seats": 6651,
-        "sold": 686,
-        "available": 5815,
-        "gross": 20488.0,
-        "occupancy": 10.314238460381898
+        "sold": 693,
+        "available": 5808,
+        "gross": 20705.0,
+        "occupancy": 10.419485791610285
       }
     },
-    "occupancy": 12.510245901639344
+    "occupancy": 12.561475409836065
   }
 }
