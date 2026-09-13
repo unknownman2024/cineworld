@@ -14,17 +14,17 @@
     ],
     "totalShows": 61,
     "totalSeats": 11148,
-    "totalSold": 440,
-    "totalAvailable": 10420,
-    "totalGross": 10224.0,
+    "totalSold": 460,
+    "totalAvailable": 10400,
+    "totalGross": 10669.0,
     "days": {
       "2026-09-13": {
         "shows": 21,
         "seats": 3705,
-        "sold": 172,
-        "available": 3436,
-        "gross": 3964.0,
-        "occupancy": 4.6423751686909585
+        "sold": 190,
+        "available": 3418,
+        "gross": 4371.0,
+        "occupancy": 5.128205128205128
       },
       "2026-09-14": {
         "shows": 17,
@@ -37,13 +37,13 @@
       "2026-09-15": {
         "shows": 23,
         "seats": 4092,
-        "sold": 152,
-        "available": 3836,
-        "gross": 3565.0,
-        "occupancy": 3.714565004887586
+        "sold": 154,
+        "available": 3834,
+        "gross": 3603.0,
+        "occupancy": 3.763440860215054
       }
     },
-    "occupancy": 3.946896304269824
+    "occupancy": 4.126300681736635
   },
   "21402": {
     "movieName": "Mirzapur - The Movie",
@@ -58,38 +58,38 @@
       "2026-09-14",
       "2026-09-15"
     ],
-    "totalShows": 50,
-    "totalSeats": 8507,
-    "totalSold": 540,
-    "totalAvailable": 7714,
-    "totalGross": 12914.0,
+    "totalShows": 48,
+    "totalSeats": 8062,
+    "totalSold": 599,
+    "totalAvailable": 7220,
+    "totalGross": 14310.0,
     "days": {
       "2026-09-13": {
-        "shows": 18,
-        "seats": 3081,
-        "sold": 270,
-        "available": 2715,
-        "gross": 6554.0,
-        "occupancy": 8.763388510223953
+        "shows": 16,
+        "seats": 2636,
+        "sold": 325,
+        "available": 2225,
+        "gross": 7844.0,
+        "occupancy": 12.329286798179059
       },
       "2026-09-14": {
         "shows": 13,
         "seats": 2173,
-        "sold": 103,
-        "available": 2007,
-        "gross": 2428.0,
-        "occupancy": 4.739990796134377
+        "sold": 106,
+        "available": 2004,
+        "gross": 2500.0,
+        "occupancy": 4.878048780487805
       },
       "2026-09-15": {
         "shows": 19,
         "seats": 3253,
-        "sold": 167,
-        "available": 2992,
-        "gross": 3932.0,
-        "occupancy": 5.133722717491547
+        "sold": 168,
+        "available": 2991,
+        "gross": 3966.0,
+        "occupancy": 5.164463572087304
       }
     },
-    "occupancy": 6.347713647584342
+    "occupancy": 7.429918134457951
   },
   "21439": {
     "movieName": "Singh vs Kaur 2",
@@ -104,17 +104,17 @@
     ],
     "totalShows": 44,
     "totalSeats": 9345,
-    "totalSold": 337,
-    "totalAvailable": 8762,
-    "totalGross": 7790.0,
+    "totalSold": 361,
+    "totalAvailable": 8738,
+    "totalGross": 8382.0,
     "days": {
       "2026-09-13": {
         "shows": 16,
         "seats": 3299,
-        "sold": 129,
-        "available": 3080,
-        "gross": 2961.0,
-        "occupancy": 3.910275841163989
+        "sold": 153,
+        "available": 3056,
+        "gross": 3553.0,
+        "occupancy": 4.637769020915429
       },
       "2026-09-14": {
         "shows": 13,
@@ -133,7 +133,7 @@
         "occupancy": 3.3468877072255236
       }
     },
-    "occupancy": 3.6062065275548423
+    "occupancy": 3.86302835741038
   },
   "21349": {
     "movieName": "Bethlehem Kudumba Unit (Malayalam)",
@@ -148,27 +148,27 @@
       "2026-09-14",
       "2026-09-15"
     ],
-    "totalShows": 37,
-    "totalSeats": 6372,
-    "totalSold": 422,
-    "totalAvailable": 5777,
-    "totalGross": 9841.0,
+    "totalShows": 36,
+    "totalSeats": 6153,
+    "totalSold": 475,
+    "totalAvailable": 5511,
+    "totalGross": 11104.0,
     "days": {
       "2026-09-13": {
-        "shows": 13,
-        "seats": 1967,
-        "sold": 217,
-        "available": 1697,
-        "gross": 5075.0,
-        "occupancy": 11.032028469750891
+        "shows": 12,
+        "seats": 1748,
+        "sold": 263,
+        "available": 1438,
+        "gross": 6176.0,
+        "occupancy": 15.045766590389015
       },
       "2026-09-14": {
         "shows": 9,
         "seats": 1710,
-        "sold": 77,
-        "available": 1589,
-        "gross": 1797.0,
-        "occupancy": 4.502923976608187
+        "sold": 84,
+        "available": 1582,
+        "gross": 1959.0,
+        "occupancy": 4.912280701754386
       },
       "2026-09-15": {
         "shows": 15,
@@ -179,7 +179,7 @@
         "occupancy": 4.749536178107607
       }
     },
-    "occupancy": 6.622724419334588
+    "occupancy": 7.7198114740776855
   },
   "21450": {
     "movieName": "Sardar 2",
@@ -194,19 +194,19 @@
       "2026-09-14",
       "2026-09-15"
     ],
-    "totalShows": 32,
-    "totalSeats": 5217,
-    "totalSold": 208,
-    "totalAvailable": 4843,
-    "totalGross": 4984.0,
+    "totalShows": 31,
+    "totalSeats": 5143,
+    "totalSold": 212,
+    "totalAvailable": 4769,
+    "totalGross": 5088.0,
     "days": {
       "2026-09-13": {
-        "shows": 12,
-        "seats": 1834,
-        "sold": 73,
-        "available": 1701,
-        "gross": 1709.0,
-        "occupancy": 3.9803707742639043
+        "shows": 11,
+        "seats": 1760,
+        "sold": 77,
+        "available": 1627,
+        "gross": 1813.0,
+        "occupancy": 4.375
       },
       "2026-09-14": {
         "shows": 8,
@@ -225,7 +225,7 @@
         "occupancy": 4.291845493562231
       }
     },
-    "occupancy": 3.986965689093349
+    "occupancy": 4.122107719230021
   },
   "21448": {
     "movieName": "Mandaadi",
@@ -242,17 +242,17 @@
     ],
     "totalShows": 27,
     "totalSeats": 4292,
-    "totalSold": 281,
-    "totalAvailable": 3897,
-    "totalGross": 6769.0,
+    "totalSold": 347,
+    "totalAvailable": 3831,
+    "totalGross": 8361.0,
     "days": {
       "2026-09-13": {
         "shows": 9,
         "seats": 1687,
-        "sold": 138,
-        "available": 1507,
-        "gross": 3358.0,
-        "occupancy": 8.180201541197391
+        "sold": 204,
+        "available": 1441,
+        "gross": 4950.0,
+        "occupancy": 12.092471843509188
       },
       "2026-09-14": {
         "shows": 10,
@@ -271,7 +271,7 @@
         "occupancy": 6.5297138664710195
       }
     },
-    "occupancy": 6.547064305684995
+    "occupancy": 8.084808946877912
   },
   "21440": {
     "movieName": "America America 2",
@@ -288,17 +288,17 @@
     ],
     "totalShows": 22,
     "totalSeats": 3848,
-    "totalSold": 150,
-    "totalAvailable": 3569,
-    "totalGross": 3684.0,
+    "totalSold": 175,
+    "totalAvailable": 3545,
+    "totalGross": 4334.0,
     "days": {
       "2026-09-13": {
         "shows": 8,
         "seats": 1297,
-        "sold": 63,
-        "available": 1187,
-        "gross": 1568.0,
-        "occupancy": 4.857363145720894
+        "sold": 88,
+        "available": 1163,
+        "gross": 2218.0,
+        "occupancy": 6.784888203546647
       },
       "2026-09-14": {
         "shows": 6,
@@ -317,7 +317,7 @@
         "occupancy": 3.931750741839762
       }
     },
-    "occupancy": 3.898128898128898
+    "occupancy": 4.547817047817048
   },
   "21444": {
     "movieName": "Epic - First Semester",
@@ -378,20 +378,12 @@
       "2026-09-14",
       "2026-09-15"
     ],
-    "totalShows": 2,
-    "totalSeats": 466,
-    "totalSold": 6,
-    "totalAvailable": 448,
-    "totalGross": 156.0,
+    "totalShows": 1,
+    "totalSeats": 233,
+    "totalSold": 1,
+    "totalAvailable": 226,
+    "totalGross": 26.0,
     "days": {
-      "2026-09-13": {
-        "shows": 1,
-        "seats": 233,
-        "sold": 5,
-        "available": 222,
-        "gross": 130.0,
-        "occupancy": 2.1459227467811157
-      },
       "2026-09-15": {
         "shows": 1,
         "seats": 233,
@@ -401,7 +393,7 @@
         "occupancy": 0.4291845493562232
       }
     },
-    "occupancy": 1.2875536480686696
+    "occupancy": 0.4291845493562232
   },
   "21468": {
     "movieName": "Hanuman Ansh",
@@ -418,35 +410,35 @@
     ],
     "totalShows": 78,
     "totalSeats": 19520,
-    "totalSold": 1810,
-    "totalAvailable": 17268,
-    "totalGross": 52956.0,
+    "totalSold": 2047,
+    "totalAvailable": 17031,
+    "totalGross": 60302.0,
     "days": {
       "2026-09-17": {
         "shows": 25,
         "seats": 6258,
-        "sold": 612,
-        "available": 5504,
-        "gross": 18119.0,
-        "occupancy": 9.77948226270374
+        "sold": 729,
+        "available": 5387,
+        "gross": 21848.0,
+        "occupancy": 11.64908916586769
       },
       "2026-09-18": {
         "shows": 26,
         "seats": 6611,
-        "sold": 668,
-        "available": 5793,
-        "gross": 19136.0,
-        "occupancy": 10.104371502042051
+        "sold": 735,
+        "available": 5726,
+        "gross": 21192.0,
+        "occupancy": 11.11783391317501
       },
       "2026-09-19": {
         "shows": 27,
         "seats": 6651,
-        "sold": 530,
-        "available": 5971,
-        "gross": 15701.0,
-        "occupancy": 7.968726507292137
+        "sold": 583,
+        "available": 5918,
+        "gross": 17262.0,
+        "occupancy": 8.76559915802135
       }
     },
-    "occupancy": 9.272540983606557
+    "occupancy": 10.486680327868852
   }
 }
