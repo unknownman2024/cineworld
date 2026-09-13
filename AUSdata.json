@@ -1,4 +1,38 @@
 {
+  "HO00011364": {
+    "movieName": "Bethlehem Kudumba Unit (Malayalam, Eng Sub)",
+    "slug": "bethlehem-kudumba-unit-malayalam-eng-sub",
+    "totalShows": 35,
+    "totalSeats": 3395,
+    "totalSold": 265,
+    "days": {
+      "2026-09-13": {
+        "shows": 9,
+        "seats": 866,
+        "sold": 215,
+        "occupancy": 24.82678983833718
+      },
+      "2026-09-16": {
+        "shows": 9,
+        "seats": 880,
+        "sold": 1,
+        "occupancy": 0.11363636363636363
+      },
+      "2026-09-14": {
+        "shows": 8,
+        "seats": 774,
+        "sold": 26,
+        "occupancy": 3.359173126614987
+      },
+      "2026-09-15": {
+        "shows": 9,
+        "seats": 875,
+        "sold": 23,
+        "occupancy": 2.6285714285714286
+      }
+    },
+    "occupancy": 7.80559646539028
+  },
   "HO00011433": {
     "movieName": "Awarapan 2 (Hindi, Eng Sub)",
     "slug": "awarapan-2-hindi-eng-sub",
@@ -12,13 +46,13 @@
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-09-15": {
+      "2026-09-14": {
         "shows": 1,
         "seats": 93,
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-09-14": {
+      "2026-09-15": {
         "shows": 1,
         "seats": 93,
         "sold": 0,
@@ -26,40 +60,6 @@
       }
     },
     "occupancy": 0.0
-  },
-  "HO00011364": {
-    "movieName": "Bethlehem Kudumba Unit (Malayalam, Eng Sub)",
-    "slug": "bethlehem-kudumba-unit-malayalam-eng-sub",
-    "totalShows": 35,
-    "totalSeats": 3395,
-    "totalSold": 175,
-    "days": {
-      "2026-09-16": {
-        "shows": 9,
-        "seats": 880,
-        "sold": 1,
-        "occupancy": 0.11363636363636363
-      },
-      "2026-09-14": {
-        "shows": 8,
-        "seats": 774,
-        "sold": 5,
-        "occupancy": 0.6459948320413437
-      },
-      "2026-09-13": {
-        "shows": 9,
-        "seats": 866,
-        "sold": 146,
-        "occupancy": 16.859122401847575
-      },
-      "2026-09-15": {
-        "shows": 9,
-        "seats": 875,
-        "sold": 23,
-        "occupancy": 2.6285714285714286
-      }
-    },
-    "occupancy": 5.154639175257731
   },
   "HO00011438": {
     "movieName": "Daayra (Hindi, Eng Sub)",
@@ -86,12 +86,6 @@
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-09-21": {
-        "shows": 1,
-        "seats": 171,
-        "sold": 0,
-        "occupancy": 0.0
-      },
       "2026-09-22": {
         "shows": 1,
         "seats": 171,
@@ -103,6 +97,12 @@
         "seats": 171,
         "sold": 0,
         "occupancy": 0.0
+      },
+      "2026-09-21": {
+        "shows": 1,
+        "seats": 171,
+        "sold": 0,
+        "occupancy": 0.0
       }
     },
     "occupancy": 0.27497708524289644
@@ -110,73 +110,73 @@
   "HO00011437": {
     "movieName": "Haiwaan (Hindi, Eng Sub)",
     "slug": "haiwaan-hindi-eng-sub",
-    "totalShows": 70,
-    "totalSeats": 8691,
-    "totalSold": 38,
+    "totalShows": 69,
+    "totalSeats": 8596,
+    "totalSold": 114,
     "days": {
+      "2026-09-14": {
+        "shows": 18,
+        "seats": 2201,
+        "sold": 4,
+        "occupancy": 0.1817355747387551
+      },
+      "2026-09-15": {
+        "shows": 18,
+        "seats": 2263,
+        "sold": 17,
+        "occupancy": 0.7512152010605391
+      },
+      "2026-09-13": {
+        "shows": 16,
+        "seats": 1982,
+        "sold": 89,
+        "occupancy": 4.490413723511604
+      },
       "2026-09-16": {
         "shows": 17,
         "seats": 2150,
         "sold": 4,
         "occupancy": 0.18604651162790697
-      },
-      "2026-09-14": {
-        "shows": 18,
-        "seats": 2201,
-        "sold": 2,
-        "occupancy": 0.09086778736937755
-      },
-      "2026-09-13": {
-        "shows": 17,
-        "seats": 2077,
-        "sold": 23,
-        "occupancy": 1.1073663938372653
-      },
-      "2026-09-15": {
-        "shows": 18,
-        "seats": 2263,
-        "sold": 9,
-        "occupancy": 0.3977021652673442
       }
     },
-    "occupancy": 0.43723392014727885
+    "occupancy": 1.326198231735691
   },
   "HO00011535": {
     "movieName": "Hanuman Ansh (Hindi, Eng Sub)",
     "slug": "hanuman-ansh-hindi-eng-sub",
     "totalShows": 58,
     "totalSeats": 6440,
-    "totalSold": 1334,
+    "totalSold": 1772,
     "days": {
       "2026-09-18": {
         "shows": 13,
         "seats": 1548,
-        "sold": 419,
-        "occupancy": 27.067183462532302
+        "sold": 531,
+        "occupancy": 34.30232558139535
       },
       "2026-09-17": {
         "shows": 13,
         "seats": 1572,
-        "sold": 310,
-        "occupancy": 19.720101781170484
+        "sold": 434,
+        "occupancy": 27.608142493638677
       },
       "2026-09-19": {
         "shows": 13,
         "seats": 1531,
-        "sold": 435,
-        "occupancy": 28.412802090137163
+        "sold": 551,
+        "occupancy": 35.98954931417374
       },
       "2026-09-20": {
         "shows": 13,
         "seats": 1183,
-        "sold": 139,
-        "occupancy": 11.749788672865597
+        "sold": 223,
+        "occupancy": 18.850380388841927
       },
       "2026-09-21": {
         "shows": 2,
         "seats": 202,
-        "sold": 0,
-        "occupancy": 0.0
+        "sold": 2,
+        "occupancy": 0.9900990099009901
       },
       "2026-09-22": {
         "shows": 2,
@@ -191,26 +191,26 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 20.714285714285715
+    "occupancy": 27.51552795031056
   },
   "HO00011283": {
     "movieName": "I'm Game (Malayalam, Eng Sub)",
     "slug": "im-game-malayalam-eng-sub",
-    "totalShows": 10,
-    "totalSeats": 774,
+    "totalShows": 9,
+    "totalSeats": 685,
     "totalSold": 5,
     "days": {
-      "2026-09-16": {
+      "2026-09-13": {
         "shows": 2,
         "seats": 149,
-        "sold": 0,
-        "occupancy": 0.0
+        "sold": 3,
+        "occupancy": 2.013422818791946
       },
-      "2026-09-13": {
+      "2026-09-14": {
         "shows": 3,
         "seats": 238,
-        "sold": 3,
-        "occupancy": 1.2605042016806722
+        "sold": 1,
+        "occupancy": 0.42016806722689076
       },
       "2026-09-15": {
         "shows": 2,
@@ -218,45 +218,73 @@
         "sold": 1,
         "occupancy": 0.6711409395973155
       },
-      "2026-09-14": {
-        "shows": 3,
-        "seats": 238,
-        "sold": 1,
-        "occupancy": 0.42016806722689076
+      "2026-09-16": {
+        "shows": 2,
+        "seats": 149,
+        "sold": 0,
+        "occupancy": 0.0
       }
     },
-    "occupancy": 0.6459948320413437
+    "occupancy": 0.7299270072992701
+  },
+  "HO00011345": {
+    "movieName": "Irumudi (Telugu, Eng Sub)",
+    "slug": "irumudi-telugu-eng-sub",
+    "totalShows": 3,
+    "totalSeats": 204,
+    "totalSold": 1,
+    "days": {
+      "2026-09-14": {
+        "shows": 1,
+        "seats": 68,
+        "sold": 1,
+        "occupancy": 1.4705882352941175
+      },
+      "2026-09-15": {
+        "shows": 1,
+        "seats": 68,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-09-16": {
+        "shows": 1,
+        "seats": 68,
+        "sold": 0,
+        "occupancy": 0.0
+      }
+    },
+    "occupancy": 0.49019607843137253
   },
   "HO00011341": {
     "movieName": "Mirzapur: The Movie (Hindi, Eng Sub)",
     "slug": "mirzapur-the-movie-hindi-eng-sub",
-    "totalShows": 129,
-    "totalSeats": 14070,
-    "totalSold": 1583,
+    "totalShows": 131,
+    "totalSeats": 14246,
+    "totalSold": 2840,
     "days": {
-      "2026-09-13": {
-        "shows": 37,
-        "seats": 4053,
-        "sold": 1170,
-        "occupancy": 28.867505551443372
-      },
       "2026-09-15": {
         "shows": 31,
         "seats": 3387,
-        "sold": 249,
-        "occupancy": 7.351638618246235
+        "sold": 314,
+        "occupancy": 9.270741068792441
+      },
+      "2026-09-13": {
+        "shows": 39,
+        "seats": 4229,
+        "sold": 2317,
+        "occupancy": 54.78836604398203
       },
       "2026-09-14": {
         "shows": 30,
         "seats": 3281,
-        "sold": 92,
-        "occupancy": 2.804023163669613
+        "sold": 128,
+        "occupancy": 3.9012496190185915
       },
       "2026-09-16": {
         "shows": 30,
         "seats": 3259,
-        "sold": 70,
-        "occupancy": 2.1478981282602025
+        "sold": 79,
+        "occupancy": 2.4240564590365143
       },
       "2026-09-22": {
         "shows": 1,
@@ -265,56 +293,28 @@
         "occupancy": 2.2222222222222223
       }
     },
-    "occupancy": 11.25088841506752
-  },
-  "HO00011345": {
-    "movieName": "Irumudi (Telugu, Eng Sub)",
-    "slug": "irumudi-telugu-eng-sub",
-    "totalShows": 3,
-    "totalSeats": 204,
-    "totalSold": 0,
-    "days": {
-      "2026-09-14": {
-        "shows": 1,
-        "seats": 68,
-        "sold": 0,
-        "occupancy": 0.0
-      },
-      "2026-09-16": {
-        "shows": 1,
-        "seats": 68,
-        "sold": 0,
-        "occupancy": 0.0
-      },
-      "2026-09-15": {
-        "shows": 1,
-        "seats": 68,
-        "sold": 0,
-        "occupancy": 0.0
-      }
-    },
-    "occupancy": 0.0
+    "occupancy": 19.93542046890355
   },
   "HO00011491": {
     "movieName": "Romanchakam (Telugu, Eng Sub)",
     "slug": "romanchakam-telugu-eng-sub",
     "totalShows": 4,
     "totalSeats": 272,
-    "totalSold": 0,
+    "totalSold": 1,
     "days": {
       "2026-09-13": {
+        "shows": 1,
+        "seats": 68,
+        "sold": 1,
+        "occupancy": 1.4705882352941175
+      },
+      "2026-09-14": {
         "shows": 1,
         "seats": 68,
         "sold": 0,
         "occupancy": 0.0
       },
       "2026-09-15": {
-        "shows": 1,
-        "seats": 68,
-        "sold": 0,
-        "occupancy": 0.0
-      },
-      "2026-09-14": {
         "shows": 1,
         "seats": 68,
         "sold": 0,
@@ -327,40 +327,40 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 0.0
+    "occupancy": 0.3676470588235294
   },
   "HO00011406": {
     "movieName": "Sardar 2 (Tamil, Eng Sub)",
     "slug": "sardar-2-tamil-eng-sub",
     "totalShows": 40,
     "totalSeats": 4206,
-    "totalSold": 36,
+    "totalSold": 59,
     "days": {
-      "2026-09-13": {
-        "shows": 10,
-        "seats": 1086,
-        "sold": 28,
-        "occupancy": 2.578268876611418
-      },
       "2026-09-14": {
         "shows": 10,
         "seats": 1040,
-        "sold": 2,
-        "occupancy": 0.19230769230769232
+        "sold": 5,
+        "occupancy": 0.4807692307692308
       },
-      "2026-09-15": {
+      "2026-09-13": {
         "shows": 10,
-        "seats": 1040,
-        "sold": 6,
-        "occupancy": 0.576923076923077
+        "seats": 1086,
+        "sold": 48,
+        "occupancy": 4.41988950276243
       },
       "2026-09-16": {
         "shows": 10,
         "seats": 1040,
         "sold": 0,
         "occupancy": 0.0
+      },
+      "2026-09-15": {
+        "shows": 10,
+        "seats": 1040,
+        "sold": 6,
+        "occupancy": 0.576923076923077
       }
     },
-    "occupancy": 0.8559201141226819
+    "occupancy": 1.402757964812173
   }
 }
