@@ -14,17 +14,17 @@
     ],
     "totalShows": 30,
     "totalSeats": 6012,
-    "totalSold": 249,
-    "totalAvailable": 5610,
-    "totalGross": 5880.0,
+    "totalSold": 251,
+    "totalAvailable": 5608,
+    "totalGross": 5928.0,
     "days": {
       "2026-09-16": {
         "shows": 13,
         "seats": 2166,
-        "sold": 100,
-        "available": 2003,
-        "gross": 2354.0,
-        "occupancy": 4.616805170821792
+        "sold": 102,
+        "available": 2001,
+        "gross": 2402.0,
+        "occupancy": 4.7091412742382275
       },
       "2026-09-17": {
         "shows": 8,
@@ -43,7 +43,7 @@
         "occupancy": 3.8569032979318054
       }
     },
-    "occupancy": 4.141716566866267
+    "occupancy": 4.1749833666001335
   },
   "21448": {
     "movieName": "Mandaadi",
@@ -106,17 +106,17 @@
     ],
     "totalShows": 12,
     "totalSeats": 2303,
-    "totalSold": 96,
-    "totalAvailable": 2155,
-    "totalGross": 2201.0,
+    "totalSold": 99,
+    "totalAvailable": 2152,
+    "totalGross": 2273.0,
     "days": {
       "2026-09-16": {
         "shows": 9,
         "seats": 1829,
-        "sold": 81,
-        "available": 1700,
-        "gross": 1856.0,
-        "occupancy": 4.428649535265173
+        "sold": 84,
+        "available": 1697,
+        "gross": 1928.0,
+        "occupancy": 4.592673592126846
       },
       "2026-09-17": {
         "shows": 2,
@@ -135,7 +135,7 @@
         "occupancy": 4.054054054054054
       }
     },
-    "occupancy": 4.168475900998697
+    "occupancy": 4.298740772904907
   },
   "21445": {
     "movieName": "Haiwaan",
@@ -300,17 +300,17 @@
     ],
     "totalShows": 149,
     "totalSeats": 35167,
-    "totalSold": 3878,
-    "totalAvailable": 30478,
-    "totalGross": 109943.0,
+    "totalSold": 3885,
+    "totalAvailable": 30471,
+    "totalGross": 110218.0,
     "days": {
       "2026-09-17": {
         "shows": 51,
         "seats": 12180,
-        "sold": 1438,
-        "available": 10460,
-        "gross": 41132.0,
-        "occupancy": 11.80623973727422
+        "sold": 1442,
+        "available": 10456,
+        "gross": 41308.0,
+        "occupancy": 11.839080459770116
       },
       "2026-09-18": {
         "shows": 48,
@@ -323,13 +323,13 @@
       "2026-09-19": {
         "shows": 50,
         "seats": 11680,
-        "sold": 1097,
-        "available": 10318,
-        "gross": 31225.0,
-        "occupancy": 9.392123287671234
+        "sold": 1100,
+        "available": 10315,
+        "gross": 31324.0,
+        "occupancy": 9.417808219178083
       }
     },
-    "occupancy": 11.027383626695482
+    "occupancy": 11.047288651292405
   },
   "21492": {
     "movieName": "Hanuman Ansh (Telugu)",
