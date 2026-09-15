@@ -12,38 +12,38 @@
       "2026-09-16",
       "2026-09-17"
     ],
-    "totalShows": 40,
-    "totalSeats": 7476,
-    "totalSold": 446,
-    "totalAvailable": 6827,
-    "totalGross": 10695.0,
+    "totalShows": 39,
+    "totalSeats": 7161,
+    "totalSold": 510,
+    "totalAvailable": 6456,
+    "totalGross": 12264.0,
     "days": {
       "2026-09-15": {
-        "shows": 19,
-        "seats": 3254,
-        "sold": 288,
-        "available": 2872,
-        "gross": 6975.0,
-        "occupancy": 8.850645359557467
+        "shows": 18,
+        "seats": 2938,
+        "sold": 352,
+        "available": 2500,
+        "gross": 8559.0,
+        "occupancy": 11.980939414567732
       },
       "2026-09-16": {
         "shows": 13,
         "seats": 2166,
-        "sold": 86,
-        "available": 2017,
-        "gross": 2001.0,
-        "occupancy": 3.970452446906741
+        "sold": 88,
+        "available": 2015,
+        "gross": 2049.0,
+        "occupancy": 4.062788550323177
       },
       "2026-09-17": {
         "shows": 8,
-        "seats": 2056,
-        "sold": 72,
-        "available": 1938,
-        "gross": 1719.0,
-        "occupancy": 3.501945525291829
+        "seats": 2057,
+        "sold": 70,
+        "available": 1941,
+        "gross": 1656.0,
+        "occupancy": 3.4030140982012638
       }
     },
-    "occupancy": 5.965757089352595
+    "occupancy": 7.121910347716799
   },
   "21448": {
     "movieName": "Mandaadi",
@@ -60,17 +60,17 @@
     ],
     "totalShows": 25,
     "totalSeats": 3980,
-    "totalSold": 260,
-    "totalAvailable": 3613,
-    "totalGross": 6211.0,
+    "totalSold": 280,
+    "totalAvailable": 3593,
+    "totalGross": 6702.0,
     "days": {
       "2026-09-15": {
         "shows": 8,
         "seats": 1363,
-        "sold": 151,
-        "available": 1178,
-        "gross": 3758.0,
-        "occupancy": 11.078503301540719
+        "sold": 170,
+        "available": 1159,
+        "gross": 4230.0,
+        "occupancy": 12.472487160674982
       },
       "2026-09-16": {
         "shows": 10,
@@ -83,13 +83,13 @@
       "2026-09-17": {
         "shows": 7,
         "seats": 1375,
-        "sold": 43,
-        "available": 1297,
-        "gross": 962.0,
-        "occupancy": 3.127272727272727
+        "sold": 44,
+        "available": 1296,
+        "gross": 981.0,
+        "occupancy": 3.2
       }
     },
-    "occupancy": 6.532663316582915
+    "occupancy": 7.035175879396985
   },
   "21445": {
     "movieName": "Haiwaan",
@@ -104,30 +104,30 @@
       "2026-09-16",
       "2026-09-17"
     ],
-    "totalShows": 40,
-    "totalSeats": 7450,
-    "totalSold": 274,
-    "totalAvailable": 6985,
-    "totalGross": 6404.0,
+    "totalShows": 39,
+    "totalSeats": 7368,
+    "totalSold": 287,
+    "totalAvailable": 6896,
+    "totalGross": 6726.0,
     "days": {
       "2026-09-15": {
         "shows": 23,
         "seats": 4092,
-        "sold": 160,
-        "available": 3828,
-        "gross": 3757.0,
-        "occupancy": 3.9100684261974585
+        "sold": 173,
+        "available": 3815,
+        "gross": 4079.0,
+        "occupancy": 4.227761485826002
       },
       "2026-09-16": {
-        "shows": 17,
-        "seats": 3358,
+        "shows": 16,
+        "seats": 3276,
         "sold": 114,
-        "available": 3157,
+        "available": 3081,
         "gross": 2647.0,
-        "occupancy": 3.3948779035139967
+        "occupancy": 3.47985347985348
       }
     },
-    "occupancy": 3.6778523489932886
+    "occupancy": 3.8952225841476658
   },
   "21349": {
     "movieName": "Bethlehem Kudumba Unit (Malayalam)",
@@ -142,19 +142,19 @@
       "2026-09-16",
       "2026-09-17"
     ],
-    "totalShows": 26,
-    "totalSeats": 4850,
-    "totalSold": 257,
-    "totalAvailable": 4465,
-    "totalGross": 5985.0,
+    "totalShows": 23,
+    "totalSeats": 4355,
+    "totalSold": 253,
+    "totalAvailable": 3988,
+    "totalGross": 5882.0,
     "days": {
       "2026-09-15": {
-        "shows": 15,
-        "seats": 2695,
-        "sold": 172,
-        "available": 2447,
-        "gross": 4027.0,
-        "occupancy": 6.382189239332097
+        "shows": 12,
+        "seats": 2200,
+        "sold": 168,
+        "available": 1970,
+        "gross": 3924.0,
+        "occupancy": 7.636363636363637
       },
       "2026-09-16": {
         "shows": 9,
@@ -173,7 +173,7 @@
         "occupancy": 2.7607361963190185
       }
     },
-    "occupancy": 5.298969072164948
+    "occupancy": 5.809414466130884
   },
   "21439": {
     "movieName": "Singh vs Kaur 2",
@@ -186,11 +186,11 @@
       "2026-09-16",
       "2026-09-17"
     ],
-    "totalShows": 29,
-    "totalSeats": 6370,
-    "totalSold": 230,
-    "totalAvailable": 5978,
-    "totalGross": 5241.0,
+    "totalShows": 28,
+    "totalSeats": 6126,
+    "totalSold": 226,
+    "totalAvailable": 5742,
+    "totalGross": 5145.0,
     "days": {
       "2026-09-15": {
         "shows": 15,
@@ -201,15 +201,15 @@
         "occupancy": 3.3781670315921177
       },
       "2026-09-16": {
-        "shows": 14,
-        "seats": 3173,
-        "sold": 122,
-        "available": 2975,
-        "gross": 2731.0,
-        "occupancy": 3.844941695556256
+        "shows": 13,
+        "seats": 2929,
+        "sold": 118,
+        "available": 2739,
+        "gross": 2635.0,
+        "occupancy": 4.0286787299419595
       }
     },
-    "occupancy": 3.610675039246468
+    "occupancy": 3.6891936010447277
   },
   "21450": {
     "movieName": "Sardar 2",
@@ -226,17 +226,17 @@
     ],
     "totalShows": 20,
     "totalSeats": 3383,
-    "totalSold": 141,
-    "totalAvailable": 3136,
-    "totalGross": 3425.0,
+    "totalSold": 148,
+    "totalAvailable": 3129,
+    "totalGross": 3599.0,
     "days": {
       "2026-09-15": {
         "shows": 12,
         "seats": 2097,
-        "sold": 93,
-        "available": 1941,
-        "gross": 2228.0,
-        "occupancy": 4.434907010014307
+        "sold": 100,
+        "available": 1934,
+        "gross": 2402.0,
+        "occupancy": 4.768717215069147
       },
       "2026-09-16": {
         "shows": 8,
@@ -247,7 +247,7 @@
         "occupancy": 3.7325038880248838
       }
     },
-    "occupancy": 4.167898315104936
+    "occupancy": 4.37481525273426
   },
   "21440": {
     "movieName": "America America 2",
@@ -263,18 +263,18 @@
       "2026-09-17"
     ],
     "totalShows": 14,
-    "totalSeats": 2551,
-    "totalSold": 90,
-    "totalAvailable": 2379,
-    "totalGross": 2194.0,
+    "totalSeats": 2561,
+    "totalSold": 92,
+    "totalAvailable": 2387,
+    "totalGross": 2246.0,
     "days": {
       "2026-09-15": {
         "shows": 8,
-        "seats": 1348,
-        "sold": 53,
-        "available": 1250,
-        "gross": 1298.0,
-        "occupancy": 3.931750741839762
+        "seats": 1358,
+        "sold": 55,
+        "available": 1258,
+        "gross": 1350.0,
+        "occupancy": 4.0500736377025035
       },
       "2026-09-16": {
         "shows": 6,
@@ -285,7 +285,7 @@
         "occupancy": 3.0756442227763925
       }
     },
-    "occupancy": 3.528028224225794
+    "occupancy": 3.5923467395548614
   },
   "21444": {
     "movieName": "Epic - First Semester",
@@ -300,60 +300,30 @@
       "2026-09-16",
       "2026-09-17"
     ],
-    "totalShows": 12,
-    "totalSeats": 1809,
-    "totalSold": 70,
-    "totalAvailable": 1691,
-    "totalGross": 1698.0,
+    "totalShows": 11,
+    "totalSeats": 1722,
+    "totalSold": 74,
+    "totalAvailable": 1600,
+    "totalGross": 1794.0,
     "days": {
       "2026-09-15": {
         "shows": 7,
         "seats": 1225,
-        "sold": 53,
-        "available": 1140,
-        "gross": 1290.0,
-        "occupancy": 4.326530612244897
+        "sold": 57,
+        "available": 1136,
+        "gross": 1386.0,
+        "occupancy": 4.653061224489797
       },
       "2026-09-16": {
-        "shows": 5,
-        "seats": 584,
+        "shows": 4,
+        "seats": 497,
         "sold": 17,
-        "available": 551,
+        "available": 464,
         "gross": 408.0,
-        "occupancy": 2.910958904109589
+        "occupancy": 3.420523138832998
       }
     },
-    "occupancy": 3.8695411829740185
-  },
-  "21350": {
-    "movieName": "I'm Game",
-    "slug": "im-game",
-    "languages": [
-      "malayalam"
-    ],
-    "rating": "MA15+",
-    "releaseDate": "2026-09-03",
-    "window": [
-      "2026-09-15",
-      "2026-09-16",
-      "2026-09-17"
-    ],
-    "totalShows": 1,
-    "totalSeats": 233,
-    "totalSold": 1,
-    "totalAvailable": 226,
-    "totalGross": 26.0,
-    "days": {
-      "2026-09-15": {
-        "shows": 1,
-        "seats": 233,
-        "sold": 1,
-        "available": 226,
-        "gross": 26.0,
-        "occupancy": 0.4291845493562232
-      }
-    },
-    "occupancy": 0.4291845493562232
+    "occupancy": 4.29732868757259
   },
   "21468": {
     "movieName": "Hanuman Ansh",
@@ -368,38 +338,76 @@
       "2026-09-18",
       "2026-09-19"
     ],
-    "totalShows": 148,
-    "totalSeats": 34918,
-    "totalSold": 3428,
-    "totalAvailable": 30684,
-    "totalGross": 97638.0,
+    "totalShows": 149,
+    "totalSeats": 35167,
+    "totalSold": 3533,
+    "totalAvailable": 30823,
+    "totalGross": 100467.0,
     "days": {
       "2026-09-17": {
-        "shows": 50,
-        "seats": 12009,
-        "sold": 1273,
-        "available": 10459,
-        "gross": 36770.0,
-        "occupancy": 10.600383046048796
+        "shows": 51,
+        "seats": 12180,
+        "sold": 1303,
+        "available": 10595,
+        "gross": 37530.0,
+        "occupancy": 10.697865353037766
       },
       "2026-09-18": {
         "shows": 48,
-        "seats": 11369,
-        "sold": 1174,
-        "available": 9929,
-        "gross": 32804.0,
-        "occupancy": 10.326325974140206
+        "seats": 11307,
+        "sold": 1223,
+        "available": 9820,
+        "gross": 34215.0,
+        "occupancy": 10.816308481471655
       },
       "2026-09-19": {
         "shows": 50,
-        "seats": 11540,
-        "sold": 981,
-        "available": 10296,
-        "gross": 28064.0,
-        "occupancy": 8.500866551126517
+        "seats": 11680,
+        "sold": 1007,
+        "available": 10408,
+        "gross": 28722.0,
+        "occupancy": 8.621575342465754
       }
     },
-    "occupancy": 9.817286213414285
+    "occupancy": 10.046350271561407
+  },
+  "21492": {
+    "movieName": "Hanuman Ansh (Telugu)",
+    "slug": "hanuman-ansh-telugu",
+    "languages": [
+      "telugu"
+    ],
+    "rating": "PG",
+    "releaseDate": "2026-09-17",
+    "window": [
+      "2026-09-17",
+      "2026-09-18",
+      "2026-09-19"
+    ],
+    "totalShows": 2,
+    "totalSeats": 473,
+    "totalSold": 7,
+    "totalAvailable": 450,
+    "totalGross": 170.0,
+    "days": {
+      "2026-09-19": {
+        "shows": 1,
+        "seats": 240,
+        "sold": 6,
+        "available": 224,
+        "gross": 144.0,
+        "occupancy": 2.5
+      },
+      "2026-09-18": {
+        "shows": 1,
+        "seats": 233,
+        "sold": 1,
+        "available": 226,
+        "gross": 26.0,
+        "occupancy": 0.4291845493562232
+      }
+    },
+    "occupancy": 1.4799154334038054
   },
   "21475": {
     "movieName": "Daayra",
@@ -415,37 +423,37 @@
       "2026-09-20"
     ],
     "totalShows": 57,
-    "totalSeats": 10242,
-    "totalSold": 292,
-    "totalAvailable": 9673,
-    "totalGross": 6777.0,
+    "totalSeats": 10437,
+    "totalSold": 280,
+    "totalAvailable": 9889,
+    "totalGross": 6372.0,
     "days": {
       "2026-09-18": {
         "shows": 20,
-        "seats": 3509,
-        "sold": 102,
-        "available": 3312,
-        "gross": 2375.0,
-        "occupancy": 2.906811057281277
+        "seats": 3574,
+        "sold": 98,
+        "available": 3384,
+        "gross": 2240.0,
+        "occupancy": 2.7420257414661444
       },
       "2026-09-19": {
         "shows": 20,
-        "seats": 3657,
-        "sold": 98,
-        "available": 3460,
-        "gross": 2272.0,
-        "occupancy": 2.679792179382007
+        "seats": 3722,
+        "sold": 94,
+        "available": 3532,
+        "gross": 2137.0,
+        "occupancy": 2.525523911875336
       },
       "2026-09-20": {
         "shows": 17,
-        "seats": 3076,
-        "sold": 92,
-        "available": 2901,
-        "gross": 2130.0,
-        "occupancy": 2.990897269180754
+        "seats": 3141,
+        "sold": 88,
+        "available": 2973,
+        "gross": 1995.0,
+        "occupancy": 2.801655523718561
       }
     },
-    "occupancy": 2.851005662956454
+    "occupancy": 2.682763246143528
   },
   "21479": {
     "movieName": "Mitti De Putt",
@@ -458,38 +466,38 @@
       "2026-09-19",
       "2026-09-20"
     ],
-    "totalShows": 27,
-    "totalSeats": 4218,
-    "totalSold": 140,
-    "totalAvailable": 3932,
-    "totalGross": 3125.0,
+    "totalShows": 28,
+    "totalSeats": 4382,
+    "totalSold": 147,
+    "totalAvailable": 4083,
+    "totalGross": 3293.0,
     "days": {
       "2026-09-18": {
-        "shows": 10,
-        "seats": 1586,
-        "sold": 48,
-        "available": 1482,
-        "gross": 1074.0,
-        "occupancy": 3.0264817150063053
+        "shows": 11,
+        "seats": 1748,
+        "sold": 55,
+        "available": 1631,
+        "gross": 1242.0,
+        "occupancy": 3.1464530892448517
       },
       "2026-09-19": {
         "shows": 9,
-        "seats": 1482,
+        "seats": 1483,
         "sold": 47,
-        "available": 1383,
+        "available": 1384,
         "gross": 1050.0,
-        "occupancy": 3.1713900134952766
+        "occupancy": 3.169251517194875
       },
       "2026-09-20": {
         "shows": 8,
-        "seats": 1150,
+        "seats": 1151,
         "sold": 45,
-        "available": 1067,
+        "available": 1068,
         "gross": 1001.0,
-        "occupancy": 3.91304347826087
+        "occupancy": 3.909643788010426
       }
     },
-    "occupancy": 3.319108582266477
+    "occupancy": 3.3546325878594248
   },
   "21480": {
     "movieName": "Pradhama Drishtiya Kuttakkar",
@@ -506,36 +514,36 @@
     ],
     "totalShows": 24,
     "totalSeats": 4326,
-    "totalSold": 250,
-    "totalAvailable": 3958,
-    "totalGross": 5936.0,
+    "totalSold": 248,
+    "totalAvailable": 3960,
+    "totalGross": 5819.0,
     "days": {
       "2026-09-18": {
         "shows": 8,
         "seats": 1427,
-        "sold": 112,
-        "available": 1277,
-        "gross": 2726.0,
-        "occupancy": 7.848633496846531
+        "sold": 117,
+        "available": 1272,
+        "gross": 2840.0,
+        "occupancy": 8.199018920812893
       },
       "2026-09-19": {
         "shows": 6,
         "seats": 1081,
-        "sold": 57,
-        "available": 992,
-        "gross": 1289.0,
-        "occupancy": 5.272895467160037
+        "sold": 61,
+        "available": 988,
+        "gross": 1365.0,
+        "occupancy": 5.642923219241443
       },
       "2026-09-20": {
         "shows": 10,
         "seats": 1818,
-        "sold": 81,
-        "available": 1689,
-        "gross": 1921.0,
-        "occupancy": 4.455445544554455
+        "sold": 70,
+        "available": 1700,
+        "gross": 1614.0,
+        "occupancy": 3.850385038503851
       }
     },
-    "occupancy": 5.779010633379565
+    "occupancy": 5.732778548312529
   },
   "21481": {
     "movieName": "Vibe (Hindi)",
@@ -551,36 +559,36 @@
       "2026-09-20"
     ],
     "totalShows": 28,
-    "totalSeats": 5269,
+    "totalSeats": 5299,
     "totalSold": 208,
-    "totalAvailable": 4918,
+    "totalAvailable": 4948,
     "totalGross": 5061.0,
     "days": {
       "2026-09-18": {
         "shows": 10,
-        "seats": 1788,
+        "seats": 1798,
         "sold": 71,
-        "available": 1666,
+        "available": 1676,
         "gross": 1763.0,
-        "occupancy": 3.9709172259507834
+        "occupancy": 3.9488320355951054
       },
       "2026-09-19": {
         "shows": 10,
-        "seats": 1788,
+        "seats": 1798,
         "sold": 72,
-        "available": 1665,
+        "available": 1675,
         "gross": 1742.0,
-        "occupancy": 4.026845637583892
+        "occupancy": 4.004449388209121
       },
       "2026-09-20": {
         "shows": 8,
-        "seats": 1693,
+        "seats": 1703,
         "sold": 65,
-        "available": 1587,
+        "available": 1597,
         "gross": 1556.0,
-        "occupancy": 3.83933845245127
+        "occupancy": 3.816793893129771
       }
     },
-    "occupancy": 3.947618143860315
+    "occupancy": 3.9252689186638987
   }
 }
