@@ -14,36 +14,36 @@
     ],
     "totalShows": 153,
     "totalSeats": 36082,
-    "totalSold": 4564,
-    "totalAvailable": 30678,
-    "totalGross": 128437.0,
+    "totalSold": 4591,
+    "totalAvailable": 30651,
+    "totalGross": 129143.0,
     "days": {
       "2026-09-17": {
         "shows": 50,
         "seats": 12154,
-        "sold": 1731,
-        "available": 10141,
-        "gross": 48861.0,
-        "occupancy": 14.242224781964785
+        "sold": 1749,
+        "available": 10123,
+        "gross": 49357.0,
+        "occupancy": 14.390324173111733
       },
       "2026-09-18": {
         "shows": 51,
         "seats": 11867,
-        "sold": 1559,
-        "available": 10029,
-        "gross": 43521.0,
-        "occupancy": 13.137271424959973
+        "sold": 1564,
+        "available": 10024,
+        "gross": 43639.0,
+        "occupancy": 13.179405072891212
       },
       "2026-09-19": {
         "shows": 52,
         "seats": 12061,
-        "sold": 1274,
-        "available": 10508,
-        "gross": 36055.0,
-        "occupancy": 10.562971561230412
+        "sold": 1278,
+        "available": 10504,
+        "gross": 36147.0,
+        "occupancy": 10.596136307105548
       }
     },
-    "occupancy": 12.648966243556345
+    "occupancy": 12.723795798459065
   },
   "21475": {
     "movieName": "Daayra",
@@ -108,23 +108,23 @@
     "totalSeats": 5291,
     "totalSold": 423,
     "totalAvailable": 4729,
-    "totalGross": 10054.0,
+    "totalGross": 10055.0,
     "days": {
       "2026-09-18": {
         "shows": 10,
         "seats": 1815,
-        "sold": 235,
-        "available": 1535,
-        "gross": 5814.0,
-        "occupancy": 12.947658402203857
+        "sold": 236,
+        "available": 1534,
+        "gross": 5841.0,
+        "occupancy": 13.002754820936637
       },
       "2026-09-19": {
         "shows": 8,
         "seats": 1448,
-        "sold": 104,
-        "available": 1301,
-        "gross": 2314.0,
-        "occupancy": 7.18232044198895
+        "sold": 103,
+        "available": 1302,
+        "gross": 2288.0,
+        "occupancy": 7.113259668508287
       },
       "2026-09-20": {
         "shows": 11,
@@ -288,17 +288,17 @@
     ],
     "totalShows": 19,
     "totalSeats": 3368,
-    "totalSold": 121,
-    "totalAvailable": 3154,
-    "totalGross": 2748.0,
+    "totalSold": 123,
+    "totalAvailable": 3152,
+    "totalGross": 2796.0,
     "days": {
       "2026-09-17": {
         "shows": 7,
         "seats": 1375,
-        "sold": 47,
-        "available": 1293,
-        "gross": 1053.0,
-        "occupancy": 3.418181818181818
+        "sold": 49,
+        "available": 1291,
+        "gross": 1101.0,
+        "occupancy": 3.563636363636364
       },
       "2026-09-18": {
         "shows": 6,
@@ -317,7 +317,7 @@
         "occupancy": 3.6809815950920246
       }
     },
-    "occupancy": 3.5926365795724466
+    "occupancy": 3.6520190023752965
   },
   "21349": {
     "movieName": "Bethlehem Kudumba Unit (Malayalam)",
@@ -346,14 +346,6 @@
         "gross": 279.0,
         "occupancy": 3.6809815950920246
       },
-      "2026-09-19": {
-        "shows": 1,
-        "seats": 148,
-        "sold": 5,
-        "available": 143,
-        "gross": 110.0,
-        "occupancy": 3.3783783783783785
-      },
       "2026-09-18": {
         "shows": 1,
         "seats": 148,
@@ -361,6 +353,14 @@
         "available": 142,
         "gross": 132.0,
         "occupancy": 4.054054054054054
+      },
+      "2026-09-19": {
+        "shows": 1,
+        "seats": 148,
+        "sold": 5,
+        "available": 143,
+        "gross": 110.0,
+        "occupancy": 3.3783783783783785
       }
     },
     "occupancy": 3.697749196141479
