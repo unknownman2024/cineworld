@@ -14,25 +14,25 @@
     ],
     "totalShows": 143,
     "totalSeats": 34541,
-    "totalSold": 3162,
-    "totalAvailable": 30587,
-    "totalGross": 87648.0,
+    "totalSold": 3167,
+    "totalAvailable": 30582,
+    "totalGross": 87790.0,
     "days": {
       "2026-09-19": {
         "shows": 52,
         "seats": 12346,
-        "sold": 1997,
-        "available": 10068,
-        "gross": 55997.0,
-        "occupancy": 16.17527944273449
+        "sold": 1998,
+        "available": 10067,
+        "gross": 56025.0,
+        "occupancy": 16.183379232139963
       },
       "2026-09-20": {
         "shows": 46,
         "seats": 10998,
-        "sold": 878,
-        "available": 9863,
-        "gross": 24532.0,
-        "occupancy": 7.983269685397346
+        "sold": 882,
+        "available": 9859,
+        "gross": 24646.0,
+        "occupancy": 8.01963993453355
       },
       "2026-09-21": {
         "shows": 45,
@@ -43,7 +43,7 @@
         "occupancy": 2.5631865678306687
       }
     },
-    "occupancy": 9.154338322573174
+    "occupancy": 9.168813873367881
   },
   "21475": {
     "movieName": "Daayra",
@@ -338,6 +338,14 @@
     "totalAvailable": 732,
     "totalGross": 943.0,
     "days": {
+      "2026-09-20": {
+        "shows": 2,
+        "seats": 316,
+        "sold": 16,
+        "available": 296,
+        "gross": 388.0,
+        "occupancy": 5.063291139240507
+      },
       "2026-09-19": {
         "shows": 1,
         "seats": 148,
@@ -353,14 +361,6 @@
         "available": 295,
         "gross": 401.0,
         "occupancy": 5.379746835443038
-      },
-      "2026-09-20": {
-        "shows": 2,
-        "seats": 316,
-        "sold": 16,
-        "available": 296,
-        "gross": 388.0,
-        "occupancy": 5.063291139240507
       }
     },
     "occupancy": 5.128205128205128
