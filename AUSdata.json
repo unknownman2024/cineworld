@@ -2,27 +2,21 @@
   "HO00011364": {
     "movieName": "Bethlehem Kudumba Unit (Malayalam, Eng Sub)",
     "slug": "bethlehem-kudumba-unit-malayalam-eng-sub",
-    "totalShows": 12,
-    "totalSeats": 1587,
-    "totalSold": 100,
+    "totalShows": 10,
+    "totalSeats": 1288,
+    "totalSold": 33,
     "days": {
-      "2026-09-18": {
+      "2026-09-23": {
         "shows": 2,
-        "seats": 299,
-        "sold": 68,
-        "occupancy": 22.74247491638796
+        "seats": 275,
+        "sold": 0,
+        "occupancy": 0.0
       },
       "2026-09-19": {
         "shows": 2,
         "seats": 240,
-        "sold": 21,
-        "occupancy": 8.75
-      },
-      "2026-09-22": {
-        "shows": 2,
-        "seats": 275,
-        "sold": 3,
-        "occupancy": 1.090909090909091
+        "sold": 22,
+        "occupancy": 9.166666666666666
       },
       "2026-09-21": {
         "shows": 2,
@@ -36,45 +30,39 @@
         "sold": 8,
         "occupancy": 3.587443946188341
       },
-      "2026-09-23": {
+      "2026-09-22": {
         "shows": 2,
         "seats": 275,
-        "sold": 0,
-        "occupancy": 0.0
+        "sold": 3,
+        "occupancy": 1.090909090909091
       }
     },
-    "occupancy": 6.301197227473219
+    "occupancy": 2.562111801242236
   },
   "HO00011438": {
     "movieName": "Daayra (Hindi, Eng Sub)",
     "slug": "daayra-hindi-eng-sub",
-    "totalShows": 112,
-    "totalSeats": 11556,
-    "totalSold": 384,
+    "totalShows": 91,
+    "totalSeats": 9462,
+    "totalSold": 119,
     "days": {
-      "2026-09-18": {
-        "shows": 20,
-        "seats": 1995,
-        "sold": 288,
-        "occupancy": 14.43609022556391
-      },
       "2026-09-19": {
         "shows": 19,
         "seats": 1873,
-        "sold": 78,
-        "occupancy": 4.16444207154298
-      },
-      "2026-09-20": {
-        "shows": 13,
-        "seats": 1314,
-        "sold": 10,
-        "occupancy": 0.76103500761035
+        "sold": 98,
+        "occupancy": 5.232247730912974
       },
       "2026-09-22": {
         "shows": 20,
         "seats": 2206,
         "sold": 5,
         "occupancy": 0.22665457842248413
+      },
+      "2026-09-20": {
+        "shows": 12,
+        "seats": 1215,
+        "sold": 13,
+        "occupancy": 1.0699588477366255
       },
       "2026-09-21": {
         "shows": 20,
@@ -89,24 +77,18 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 3.322949117341641
+    "occupancy": 1.2576622278588037
   },
   "HO00011437": {
     "movieName": "Haiwaan (Hindi, Eng Sub)",
     "slug": "haiwaan-hindi-eng-sub",
-    "totalShows": 6,
-    "totalSeats": 434,
-    "totalSold": 5,
+    "totalShows": 5,
+    "totalSeats": 366,
+    "totalSold": 0,
     "days": {
       "2026-09-19": {
         "shows": 1,
         "seats": 68,
-        "sold": 0,
-        "occupancy": 0.0
-      },
-      "2026-09-22": {
-        "shows": 2,
-        "seats": 149,
         "sold": 0,
         "occupancy": 0.0
       },
@@ -116,11 +98,11 @@
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-09-18": {
-        "shows": 1,
-        "seats": 68,
-        "sold": 5,
-        "occupancy": 7.352941176470589
+      "2026-09-22": {
+        "shows": 2,
+        "seats": 149,
+        "sold": 0,
+        "occupancy": 0.0
       },
       "2026-09-23": {
         "shows": 1,
@@ -129,72 +111,66 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 1.1520737327188941
+    "occupancy": 0.0
   },
   "HO00011535": {
     "movieName": "Hanuman Ansh (Hindi, Eng Sub)",
     "slug": "hanuman-ansh-hindi-eng-sub",
-    "totalShows": 225,
-    "totalSeats": 25887,
-    "totalSold": 6646,
+    "totalShows": 176,
+    "totalSeats": 20169,
+    "totalSold": 4161,
     "days": {
-      "2026-09-18": {
-        "shows": 49,
-        "seats": 5718,
-        "sold": 2816,
-        "occupancy": 49.24798880727527
-      },
       "2026-09-19": {
         "shows": 49,
         "seats": 5902,
-        "sold": 2119,
-        "occupancy": 35.90308370044053
-      },
-      "2026-09-21": {
-        "shows": 30,
-        "seats": 3480,
-        "sold": 212,
-        "occupancy": 6.091954022988506
-      },
-      "2026-09-23": {
-        "shows": 31,
-        "seats": 3658,
-        "sold": 60,
-        "occupancy": 1.6402405686167305
-      },
-      "2026-09-22": {
-        "shows": 33,
-        "seats": 3728,
-        "sold": 517,
-        "occupancy": 13.868025751072963
+        "sold": 2378,
+        "occupancy": 40.29142663503897
       },
       "2026-09-20": {
         "shows": 33,
         "seats": 3401,
-        "sold": 922,
-        "occupancy": 27.10967362540429
+        "sold": 966,
+        "occupancy": 28.403410761540727
+      },
+      "2026-09-21": {
+        "shows": 30,
+        "seats": 3480,
+        "sold": 218,
+        "occupancy": 6.264367816091953
+      },
+      "2026-09-22": {
+        "shows": 33,
+        "seats": 3728,
+        "sold": 532,
+        "occupancy": 14.27038626609442
+      },
+      "2026-09-23": {
+        "shows": 31,
+        "seats": 3658,
+        "sold": 67,
+        "occupancy": 1.8316019682886824
       }
     },
-    "occupancy": 25.673117781125658
+    "occupancy": 20.630670831474042
   },
   "HO00011341": {
     "movieName": "Mirzapur: The Movie (Hindi, Eng Sub)",
     "slug": "mirzapur-the-movie-hindi-eng-sub",
-    "totalShows": 120,
-    "totalSeats": 12217,
-    "totalSold": 1145,
+    "totalShows": 97,
+    "totalSeats": 9942,
+    "totalSold": 408,
     "days": {
-      "2026-09-21": {
-        "shows": 23,
-        "seats": 2371,
-        "sold": 30,
-        "occupancy": 1.2652889076339098
+      "2026-09-19": {
+        "shows": 19,
+        "seats": 1805,
+        "sold": 314,
+        "occupancy": 17.39612188365651
       },
-      "2026-09-18": {
-        "shows": 23,
-        "seats": 2275,
-        "sold": 792,
-        "occupancy": 34.81318681318682
+      "2026-09-20": {
+        "shows": 9,
+        "seats": 960,
+        "sold": 39,
+        "occupancy": 4.0625
       },
       "2026-09-22": {
         "shows": 23,
@@ -202,45 +178,39 @@
         "sold": 19,
         "occupancy": 0.7745617611088463
       },
-      "2026-09-19": {
-        "shows": 19,
-        "seats": 1805,
-        "sold": 265,
-        "occupancy": 14.681440443213297
-      },
       "2026-09-23": {
         "shows": 23,
         "seats": 2353,
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-09-20": {
-        "shows": 9,
-        "seats": 960,
-        "sold": 39,
-        "occupancy": 4.0625
+      "2026-09-21": {
+        "shows": 23,
+        "seats": 2371,
+        "sold": 36,
+        "occupancy": 1.5183466891606916
       }
     },
-    "occupancy": 9.372186297781779
+    "occupancy": 4.103802051901026
   },
   "HO00011406": {
     "movieName": "Sardar 2 (Tamil, Eng Sub)",
     "slug": "sardar-2-tamil-eng-sub",
-    "totalShows": 8,
-    "totalSeats": 635,
-    "totalSold": 9,
+    "totalShows": 7,
+    "totalSeats": 554,
+    "totalSold": 7,
     "days": {
-      "2026-09-21": {
-        "shows": 2,
-        "seats": 162,
-        "sold": 0,
-        "occupancy": 0.0
-      },
       "2026-09-19": {
         "shows": 1,
         "seats": 81,
         "sold": 7,
         "occupancy": 8.641975308641975
+      },
+      "2026-09-21": {
+        "shows": 2,
+        "seats": 162,
+        "sold": 0,
+        "occupancy": 0.0
       },
       "2026-09-22": {
         "shows": 2,
@@ -248,12 +218,6 @@
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-09-18": {
-        "shows": 1,
-        "seats": 81,
-        "sold": 2,
-        "occupancy": 2.4691358024691357
-      },
       "2026-09-23": {
         "shows": 2,
         "seats": 162,
@@ -261,36 +225,42 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 1.4173228346456692
+    "occupancy": 1.263537906137184
   },
   "HO00011490": {
     "movieName": "The Paradise (Telugu, Eng Sub)",
     "slug": "the-paradise-telugu-eng-sub",
-    "totalShows": 35,
-    "totalSeats": 3495,
-    "totalSold": 138,
+    "totalShows": 36,
+    "totalSeats": 3727,
+    "totalSold": 180,
     "days": {
       "2026-09-24": {
-        "shows": 8,
-        "seats": 792,
-        "sold": 113,
-        "occupancy": 14.267676767676768
+        "shows": 9,
+        "seats": 1024,
+        "sold": 139,
+        "occupancy": 13.57421875
       },
       "2026-09-25": {
         "shows": 8,
         "seats": 792,
-        "sold": 25,
-        "occupancy": 3.1565656565656566
+        "sold": 39,
+        "occupancy": 4.924242424242424
       },
       "2026-09-26": {
+        "shows": 8,
+        "seats": 792,
+        "sold": 2,
+        "occupancy": 0.25252525252525254
+      },
+      "2026-09-27": {
         "shows": 8,
         "seats": 792,
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-09-27": {
-        "shows": 8,
-        "seats": 792,
+      "2026-09-29": {
+        "shows": 1,
+        "seats": 109,
         "sold": 0,
         "occupancy": 0.0
       },
@@ -305,32 +275,26 @@
         "seats": 109,
         "sold": 0,
         "occupancy": 0.0
-      },
-      "2026-09-29": {
-        "shows": 1,
-        "seats": 109,
-        "sold": 0,
-        "occupancy": 0.0
       }
     },
-    "occupancy": 3.9484978540772535
+    "occupancy": 4.829621679635095
   },
   "HO00011439": {
     "movieName": "The Vvan: Force of the Forrest (Hindi, Eng Sub)",
     "slug": "the-vvaan-force-of-the-forrest",
-    "totalShows": 21,
-    "totalSeats": 1802,
+    "totalShows": 22,
+    "totalSeats": 1897,
     "totalSold": 0,
     "days": {
-      "2026-09-26": {
-        "shows": 7,
-        "seats": 603,
+      "2026-09-25": {
+        "shows": 8,
+        "seats": 695,
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-09-25": {
+      "2026-09-26": {
         "shows": 7,
-        "seats": 600,
+        "seats": 603,
         "sold": 0,
         "occupancy": 0.0
       },
