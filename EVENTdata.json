@@ -14,17 +14,17 @@
     ],
     "totalShows": 141,
     "totalSeats": 33639,
-    "totalSold": 2470,
-    "totalAvailable": 30391,
-    "totalGross": 67929.0,
+    "totalSold": 2475,
+    "totalAvailable": 30386,
+    "totalGross": 68039.0,
     "days": {
       "2026-09-20": {
         "shows": 46,
         "seats": 10998,
-        "sold": 1297,
-        "available": 9444,
-        "gross": 35612.0,
-        "occupancy": 11.793053282414984
+        "sold": 1302,
+        "available": 9439,
+        "gross": 35722.0,
+        "occupancy": 11.838516093835242
       },
       "2026-09-21": {
         "shows": 45,
@@ -43,7 +43,7 @@
         "occupancy": 7.366305487591751
       }
     },
-    "occupancy": 7.342667736853057
+    "occupancy": 7.35753143672523
   },
   "21475": {
     "movieName": "Daayra",
@@ -106,17 +106,17 @@
     ],
     "totalShows": 40,
     "totalSeats": 7296,
-    "totalSold": 558,
-    "totalAvailable": 6544,
-    "totalGross": 13453.0,
+    "totalSold": 559,
+    "totalAvailable": 6543,
+    "totalGross": 13486.0,
     "days": {
       "2026-09-20": {
         "shows": 15,
         "seats": 2880,
-        "sold": 286,
-        "available": 2519,
-        "gross": 6909.0,
-        "occupancy": 9.930555555555555
+        "sold": 287,
+        "available": 2518,
+        "gross": 6942.0,
+        "occupancy": 9.965277777777779
       },
       "2026-09-21": {
         "shows": 11,
@@ -135,7 +135,7 @@
         "occupancy": 7.381507381507381
       }
     },
-    "occupancy": 7.6480263157894735
+    "occupancy": 7.661732456140351
   },
   "21402": {
     "movieName": "Mirzapur - The Movie",
@@ -152,17 +152,17 @@
     ],
     "totalShows": 27,
     "totalSeats": 6188,
-    "totalSold": 251,
-    "totalAvailable": 5793,
-    "totalGross": 6010.0,
+    "totalSold": 252,
+    "totalAvailable": 5792,
+    "totalGross": 6034.0,
     "days": {
       "2026-09-20": {
         "shows": 9,
         "seats": 2099,
-        "sold": 101,
-        "available": 1950,
-        "gross": 2432.0,
-        "occupancy": 4.811815150071463
+        "sold": 102,
+        "available": 1949,
+        "gross": 2456.0,
+        "occupancy": 4.859456884230586
       },
       "2026-09-21": {
         "shows": 8,
@@ -181,7 +181,7 @@
         "occupancy": 3.633060853769301
       }
     },
-    "occupancy": 4.056237879767291
+    "occupancy": 4.072398190045249
   },
   "21479": {
     "movieName": "Mitti De Putt",
@@ -196,17 +196,17 @@
     ],
     "totalShows": 22,
     "totalSeats": 3170,
-    "totalSold": 125,
-    "totalAvailable": 2939,
-    "totalGross": 2780.0,
+    "totalSold": 134,
+    "totalAvailable": 2930,
+    "totalGross": 2981.0,
     "days": {
       "2026-09-20": {
         "shows": 6,
         "seats": 882,
-        "sold": 40,
-        "available": 816,
-        "gross": 898.0,
-        "occupancy": 4.535147392290249
+        "sold": 43,
+        "available": 813,
+        "gross": 955.0,
+        "occupancy": 4.875283446712018
       },
       "2026-09-21": {
         "shows": 10,
@@ -219,13 +219,13 @@
       "2026-09-22": {
         "shows": 6,
         "seats": 807,
-        "sold": 30,
-        "available": 749,
-        "gross": 641.0,
-        "occupancy": 3.717472118959108
+        "sold": 36,
+        "available": 743,
+        "gross": 785.0,
+        "occupancy": 4.4609665427509295
       }
     },
-    "occupancy": 3.943217665615142
+    "occupancy": 4.2271293375394325
   },
   "21481": {
     "movieName": "Vibe (Hindi)",
@@ -338,14 +338,6 @@
     "totalAvailable": 892,
     "totalGross": 1052.0,
     "days": {
-      "2026-09-20": {
-        "shows": 2,
-        "seats": 316,
-        "sold": 18,
-        "available": 294,
-        "gross": 438.0,
-        "occupancy": 5.69620253164557
-      },
       "2026-09-21": {
         "shows": 2,
         "seats": 316,
@@ -353,6 +345,14 @@
         "available": 295,
         "gross": 401.0,
         "occupancy": 5.379746835443038
+      },
+      "2026-09-20": {
+        "shows": 2,
+        "seats": 316,
+        "sold": 18,
+        "available": 294,
+        "gross": 438.0,
+        "occupancy": 5.69620253164557
       },
       "2026-09-22": {
         "shows": 2,
