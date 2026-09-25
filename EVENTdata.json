@@ -12,38 +12,38 @@
       "2026-09-26",
       "2026-09-27"
     ],
-    "totalShows": 76,
-    "totalSeats": 13719,
-    "totalSold": 926,
-    "totalAvailable": 12451,
-    "totalGross": 22938.0,
+    "totalShows": 75,
+    "totalSeats": 13542,
+    "totalSold": 1180,
+    "totalAvailable": 12029,
+    "totalGross": 29541.0,
     "days": {
       "2026-09-25": {
         "shows": 25,
         "seats": 4503,
-        "sold": 405,
-        "available": 3978,
-        "gross": 10102.0,
-        "occupancy": 8.99400399733511
+        "sold": 598,
+        "available": 3785,
+        "gross": 14866.0,
+        "occupancy": 13.280035531867643
       },
       "2026-09-26": {
         "shows": 25,
-        "seats": 4458,
-        "sold": 277,
-        "available": 4072,
-        "gross": 6812.0,
-        "occupancy": 6.213548676536564
+        "seats": 4457,
+        "sold": 330,
+        "available": 4019,
+        "gross": 8459.0,
+        "occupancy": 7.404083464213597
       },
       "2026-09-27": {
-        "shows": 26,
-        "seats": 4758,
-        "sold": 244,
-        "available": 4401,
-        "gross": 6024.0,
-        "occupancy": 5.128205128205128
+        "shows": 25,
+        "seats": 4582,
+        "sold": 252,
+        "available": 4225,
+        "gross": 6216.0,
+        "occupancy": 5.4997817546922745
       }
     },
-    "occupancy": 6.749763102266929
+    "occupancy": 8.713631664451336
   },
   "21501": {
     "movieName": "The Paradise (Telugu)",
@@ -59,26 +59,26 @@
       "2026-09-27"
     ],
     "totalShows": 72,
-    "totalSeats": 14171,
-    "totalSold": 896,
-    "totalAvailable": 12907,
-    "totalGross": 21900.0,
+    "totalSeats": 14557,
+    "totalSold": 937,
+    "totalAvailable": 13244,
+    "totalGross": 22864.0,
     "days": {
       "2026-09-25": {
-        "shows": 25,
-        "seats": 5059,
-        "sold": 464,
-        "available": 4467,
-        "gross": 11630.0,
-        "occupancy": 9.171773077683337
+        "shows": 23,
+        "seats": 4786,
+        "sold": 473,
+        "available": 4191,
+        "gross": 11814.0,
+        "occupancy": 9.882992060175512
       },
       "2026-09-26": {
-        "shows": 24,
-        "seats": 4421,
-        "sold": 228,
-        "available": 4072,
-        "gross": 5485.0,
-        "occupancy": 5.157204252431576
+        "shows": 26,
+        "seats": 5080,
+        "sold": 260,
+        "available": 4685,
+        "gross": 6265.0,
+        "occupancy": 5.118110236220472
       },
       "2026-09-27": {
         "shows": 23,
@@ -89,7 +89,7 @@
         "occupancy": 4.3487529311447455
       }
     },
-    "occupancy": 6.3227718580199
+    "occupancy": 6.436765817132651
   },
   "21502": {
     "movieName": "The Vvaan: Force of the Forrest",
@@ -104,38 +104,38 @@
       "2026-09-26",
       "2026-09-27"
     ],
-    "totalShows": 51,
-    "totalSeats": 9128,
-    "totalSold": 260,
-    "totalAvailable": 8625,
-    "totalGross": 5955.0,
+    "totalShows": 49,
+    "totalSeats": 8692,
+    "totalSold": 277,
+    "totalAvailable": 8185,
+    "totalGross": 6343.0,
     "days": {
       "2026-09-25": {
         "shows": 17,
         "seats": 3042,
-        "sold": 101,
-        "available": 2860,
-        "gross": 2336.0,
-        "occupancy": 3.3201840894148584
+        "sold": 118,
+        "available": 2843,
+        "gross": 2722.0,
+        "occupancy": 3.879026955950033
       },
       "2026-09-26": {
         "shows": 17,
-        "seats": 3043,
-        "sold": 82,
-        "available": 2880,
-        "gross": 1857.0,
-        "occupancy": 2.6947091685836346
+        "seats": 2944,
+        "sold": 83,
+        "available": 2782,
+        "gross": 1883.0,
+        "occupancy": 2.8192934782608696
       },
       "2026-09-27": {
-        "shows": 17,
-        "seats": 3043,
-        "sold": 77,
-        "available": 2885,
-        "gross": 1762.0,
-        "occupancy": 2.5303976339139007
+        "shows": 15,
+        "seats": 2706,
+        "sold": 76,
+        "available": 2560,
+        "gross": 1738.0,
+        "occupancy": 2.8085735402808574
       }
     },
-    "occupancy": 2.848378615249781
+    "occupancy": 3.1868384721583065
   },
   "21480": {
     "movieName": "Pradhama Drishtiya Kuttakkar",
@@ -151,37 +151,37 @@
       "2026-09-27"
     ],
     "totalShows": 24,
-    "totalSeats": 4362,
-    "totalSold": 277,
-    "totalAvailable": 3965,
-    "totalGross": 6672.0,
+    "totalSeats": 4560,
+    "totalSold": 345,
+    "totalAvailable": 4091,
+    "totalGross": 8324.0,
     "days": {
       "2026-09-25": {
         "shows": 9,
         "seats": 1692,
-        "sold": 169,
-        "available": 1479,
-        "gross": 4144.0,
-        "occupancy": 9.988179669030734
+        "sold": 230,
+        "available": 1418,
+        "gross": 5622.0,
+        "occupancy": 13.59338061465721
       },
       "2026-09-26": {
         "shows": 8,
-        "seats": 1608,
-        "sold": 58,
-        "available": 1508,
-        "gross": 1334.0,
-        "occupancy": 3.6069651741293534
+        "seats": 1707,
+        "sold": 65,
+        "available": 1598,
+        "gross": 1508.0,
+        "occupancy": 3.8078500292911546
       },
       "2026-09-27": {
         "shows": 7,
-        "seats": 1062,
+        "seats": 1161,
         "sold": 50,
-        "available": 978,
+        "available": 1075,
         "gross": 1194.0,
-        "occupancy": 4.708097928436912
+        "occupancy": 4.3066322136089585
       }
     },
-    "occupancy": 6.350298028427328
+    "occupancy": 7.565789473684211
   },
   "21500": {
     "movieName": "The Paradise (Hindi)",
@@ -196,38 +196,38 @@
       "2026-09-26",
       "2026-09-27"
     ],
-    "totalShows": 15,
-    "totalSeats": 1937,
-    "totalSold": 106,
-    "totalAvailable": 1759,
-    "totalGross": 2585.0,
+    "totalShows": 13,
+    "totalSeats": 1729,
+    "totalSold": 127,
+    "totalAvailable": 1538,
+    "totalGross": 3089.0,
     "days": {
       "2026-09-25": {
         "shows": 5,
         "seats": 575,
-        "sold": 38,
-        "available": 513,
-        "gross": 933.0,
-        "occupancy": 6.608695652173912
+        "sold": 59,
+        "available": 492,
+        "gross": 1437.0,
+        "occupancy": 10.26086956521739
       },
       "2026-09-26": {
-        "shows": 5,
-        "seats": 787,
-        "sold": 47,
-        "available": 716,
-        "gross": 1138.0,
-        "occupancy": 5.972045743329097
+        "shows": 4,
+        "seats": 683,
+        "sold": 46,
+        "available": 617,
+        "gross": 1114.0,
+        "occupancy": 6.734992679355783
       },
       "2026-09-27": {
-        "shows": 5,
-        "seats": 575,
-        "sold": 21,
-        "available": 530,
-        "gross": 514.0,
-        "occupancy": 3.6521739130434785
+        "shows": 4,
+        "seats": 471,
+        "sold": 22,
+        "available": 429,
+        "gross": 538.0,
+        "occupancy": 4.670912951167728
       }
     },
-    "occupancy": 5.4723799690242645
+    "occupancy": 7.3452862926547136
   },
   "21499": {
     "movieName": "Meesaya Murukku 2",
@@ -235,7 +235,7 @@
     "languages": [
       "tamil"
     ],
-    "rating": "CTC",
+    "rating": "M",
     "releaseDate": "2026-09-25",
     "window": [
       "2026-09-25",
@@ -244,25 +244,17 @@
     ],
     "totalShows": 12,
     "totalSeats": 1785,
-    "totalSold": 142,
-    "totalAvailable": 1583,
-    "totalGross": 3160.0,
+    "totalSold": 171,
+    "totalAvailable": 1554,
+    "totalGross": 3736.0,
     "days": {
       "2026-09-25": {
         "shows": 4,
         "seats": 595,
-        "sold": 68,
-        "available": 507,
-        "gross": 1518.0,
-        "occupancy": 11.428571428571429
-      },
-      "2026-09-26": {
-        "shows": 4,
-        "seats": 595,
-        "sold": 38,
-        "available": 537,
-        "gross": 825.0,
-        "occupancy": 6.386554621848739
+        "sold": 87,
+        "available": 488,
+        "gross": 1904.0,
+        "occupancy": 14.6218487394958
       },
       "2026-09-27": {
         "shows": 4,
@@ -271,9 +263,17 @@
         "available": 539,
         "gross": 817.0,
         "occupancy": 6.050420168067227
+      },
+      "2026-09-26": {
+        "shows": 4,
+        "seats": 595,
+        "sold": 48,
+        "available": 527,
+        "gross": 1015.0,
+        "occupancy": 8.067226890756302
       }
     },
-    "occupancy": 7.955182072829131
+    "occupancy": 9.57983193277311
   },
   "21498": {
     "movieName": "It's a Medical Miracle",
@@ -288,38 +288,38 @@
       "2026-09-26",
       "2026-09-27"
     ],
-    "totalShows": 14,
-    "totalSeats": 3154,
-    "totalSold": 150,
-    "totalAvailable": 2945,
-    "totalGross": 3428.0,
+    "totalShows": 12,
+    "totalSeats": 2877,
+    "totalSold": 138,
+    "totalAvailable": 2686,
+    "totalGross": 3200.0,
     "days": {
       "2026-09-25": {
-        "shows": 5,
-        "seats": 1062,
-        "sold": 53,
-        "available": 988,
-        "gross": 1226.0,
-        "occupancy": 4.990583804143126
+        "shows": 4,
+        "seats": 889,
+        "sold": 40,
+        "available": 830,
+        "gross": 984.0,
+        "occupancy": 4.499437570303712
       },
       "2026-09-26": {
-        "shows": 5,
-        "seats": 1098,
-        "sold": 49,
-        "available": 1028,
-        "gross": 1104.0,
-        "occupancy": 4.462659380692167
-      },
-      "2026-09-27": {
         "shows": 4,
         "seats": 994,
         "sold": 48,
         "available": 929,
-        "gross": 1098.0,
+        "gross": 1080.0,
         "occupancy": 4.82897384305835
+      },
+      "2026-09-27": {
+        "shows": 4,
+        "seats": 994,
+        "sold": 50,
+        "available": 927,
+        "gross": 1136.0,
+        "occupancy": 5.030181086519115
       }
     },
-    "occupancy": 4.7558655675332915
+    "occupancy": 4.796663190823774
   },
   "21448": {
     "movieName": "Mandaadi",
@@ -336,9 +336,9 @@
     ],
     "totalShows": 3,
     "totalSeats": 324,
-    "totalSold": 14,
-    "totalAvailable": 298,
-    "totalGross": 336.0,
+    "totalSold": 16,
+    "totalAvailable": 296,
+    "totalGross": 384.0,
     "days": {
       "2026-09-25": {
         "shows": 1,
@@ -348,7 +348,7 @@
         "gross": 240.0,
         "occupancy": 9.25925925925926
       },
-      "2026-09-26": {
+      "2026-09-27": {
         "shows": 1,
         "seats": 108,
         "sold": 3,
@@ -356,16 +356,16 @@
         "gross": 72.0,
         "occupancy": 2.7777777777777777
       },
-      "2026-09-27": {
+      "2026-09-26": {
         "shows": 1,
         "seats": 108,
-        "sold": 1,
-        "available": 103,
-        "gross": 24.0,
-        "occupancy": 0.9259259259259258
+        "sold": 3,
+        "available": 101,
+        "gross": 72.0,
+        "occupancy": 2.7777777777777777
       }
     },
-    "occupancy": 4.320987654320987
+    "occupancy": 4.938271604938271
   },
   "21402": {
     "movieName": "Mirzapur - The Movie",
@@ -382,25 +382,17 @@
     ],
     "totalShows": 3,
     "totalSeats": 309,
-    "totalSold": 13,
-    "totalAvailable": 284,
-    "totalGross": 338.0,
+    "totalSold": 24,
+    "totalAvailable": 273,
+    "totalGross": 624.0,
     "days": {
       "2026-09-27": {
         "shows": 1,
         "seats": 103,
-        "sold": 1,
-        "available": 98,
-        "gross": 26.0,
-        "occupancy": 0.9708737864077669
-      },
-      "2026-09-25": {
-        "shows": 1,
-        "seats": 103,
-        "sold": 9,
-        "available": 90,
-        "gross": 234.0,
-        "occupancy": 8.737864077669903
+        "sold": 3,
+        "available": 96,
+        "gross": 78.0,
+        "occupancy": 2.912621359223301
       },
       "2026-09-26": {
         "shows": 1,
@@ -409,8 +401,62 @@
         "available": 96,
         "gross": 78.0,
         "occupancy": 2.912621359223301
+      },
+      "2026-09-25": {
+        "shows": 1,
+        "seats": 103,
+        "sold": 18,
+        "available": 81,
+        "gross": 468.0,
+        "occupancy": 17.475728155339805
       }
     },
-    "occupancy": 4.207119741100324
+    "occupancy": 7.766990291262135
+  },
+  "21523": {
+    "movieName": "Drishyam: The Conclusion",
+    "slug": "drishyam-the-conclusion",
+    "languages": [
+      "hindi"
+    ],
+    "rating": "CTC",
+    "releaseDate": "2026-10-02",
+    "window": [
+      "2026-10-02",
+      "2026-10-03",
+      "2026-10-04"
+    ],
+    "totalShows": 3,
+    "totalSeats": 120,
+    "totalSold": 0,
+    "totalAvailable": 120,
+    "totalGross": 0.0,
+    "days": {
+      "2026-10-04": {
+        "shows": 1,
+        "seats": 40,
+        "sold": 0,
+        "available": 40,
+        "gross": 0.0,
+        "occupancy": 0.0
+      },
+      "2026-10-02": {
+        "shows": 1,
+        "seats": 40,
+        "sold": 0,
+        "available": 40,
+        "gross": 0.0,
+        "occupancy": 0.0
+      },
+      "2026-10-03": {
+        "shows": 1,
+        "seats": 40,
+        "sold": 0,
+        "available": 40,
+        "gross": 0.0,
+        "occupancy": 0.0
+      }
+    },
+    "occupancy": 0.0
   }
 }
