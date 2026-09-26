@@ -14,17 +14,17 @@
     ],
     "totalShows": 74,
     "totalSeats": 13679,
-    "totalSold": 1011,
-    "totalAvailable": 12346,
-    "totalGross": 25963.0,
+    "totalSold": 1030,
+    "totalAvailable": 12327,
+    "totalGross": 26483.0,
     "days": {
       "2026-09-27": {
         "shows": 25,
         "seats": 4581,
-        "sold": 462,
-        "available": 4014,
-        "gross": 11968.0,
-        "occupancy": 10.085134250163721
+        "sold": 481,
+        "available": 3995,
+        "gross": 12488.0,
+        "occupancy": 10.499890853525432
       },
       "2026-09-28": {
         "shows": 24,
@@ -43,7 +43,7 @@
         "occupancy": 7.20173535791757
       }
     },
-    "occupancy": 7.3908911470136704
+    "occupancy": 7.529790189341326
   },
   "21501": {
     "movieName": "The Paradise (Telugu)",
@@ -152,17 +152,17 @@
     ],
     "totalShows": 21,
     "totalSeats": 3499,
-    "totalSold": 148,
-    "totalAvailable": 3245,
-    "totalGross": 3507.0,
+    "totalSold": 157,
+    "totalAvailable": 3236,
+    "totalGross": 3750.0,
     "days": {
       "2026-09-27": {
         "shows": 7,
         "seats": 1161,
-        "sold": 58,
-        "available": 1067,
-        "gross": 1400.0,
-        "occupancy": 4.995693367786391
+        "sold": 67,
+        "available": 1058,
+        "gross": 1643.0,
+        "occupancy": 5.770887166236004
       },
       "2026-09-28": {
         "shows": 7,
@@ -181,7 +181,7 @@
         "occupancy": 4.150943396226415
       }
     },
-    "occupancy": 4.229779937124893
+    "occupancy": 4.486996284652758
   },
   "21500": {
     "movieName": "The Paradise (Hindi)",
@@ -386,7 +386,7 @@
         "gross": 442.0,
         "occupancy": 16.50485436893204
       },
-      "2026-09-29": {
+      "2026-09-28": {
         "shows": 1,
         "seats": 103,
         "sold": 1,
@@ -394,7 +394,7 @@
         "gross": 26.0,
         "occupancy": 0.9708737864077669
       },
-      "2026-09-28": {
+      "2026-09-29": {
         "shows": 1,
         "seats": 103,
         "sold": 1,
@@ -432,14 +432,6 @@
         "gross": 500.0,
         "occupancy": 25.0
       },
-      "2026-10-04": {
-        "shows": 1,
-        "seats": 40,
-        "sold": 0,
-        "available": 40,
-        "gross": 0.0,
-        "occupancy": 0.0
-      },
       "2026-10-03": {
         "shows": 1,
         "seats": 40,
@@ -447,6 +439,14 @@
         "available": 30,
         "gross": 500.0,
         "occupancy": 25.0
+      },
+      "2026-10-04": {
+        "shows": 1,
+        "seats": 40,
+        "sold": 0,
+        "available": 40,
+        "gross": 0.0,
+        "occupancy": 0.0
       }
     },
     "occupancy": 16.666666666666664
