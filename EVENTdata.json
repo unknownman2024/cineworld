@@ -14,17 +14,17 @@
     ],
     "totalShows": 66,
     "totalSeats": 12853,
-    "totalSold": 833,
-    "totalAvailable": 11719,
-    "totalGross": 20913.0,
+    "totalSold": 837,
+    "totalAvailable": 11715,
+    "totalGross": 21009.0,
     "days": {
       "2026-09-28": {
         "shows": 24,
         "seats": 4487,
-        "sold": 280,
-        "available": 4096,
-        "gross": 6764.0,
-        "occupancy": 6.240249609984399
+        "sold": 284,
+        "available": 4092,
+        "gross": 6860.0,
+        "occupancy": 6.329396032984176
       },
       "2026-09-29": {
         "shows": 25,
@@ -43,7 +43,7 @@
         "occupancy": 3.5942492012779557
       }
     },
-    "occupancy": 6.480977203765657
+    "occupancy": 6.512098342799347
   },
   "21501": {
     "movieName": "The Paradise (Telugu)",
@@ -248,14 +248,6 @@
     "totalAvailable": 1735,
     "totalGross": 2174.0,
     "days": {
-      "2026-09-28": {
-        "shows": 3,
-        "seats": 435,
-        "sold": 26,
-        "available": 397,
-        "gross": 549.0,
-        "occupancy": 5.977011494252873
-      },
       "2026-09-29": {
         "shows": 4,
         "seats": 720,
@@ -263,6 +255,14 @@
         "available": 658,
         "gross": 787.0,
         "occupancy": 5.0
+      },
+      "2026-09-28": {
+        "shows": 3,
+        "seats": 435,
+        "sold": 26,
+        "available": 397,
+        "gross": 549.0,
+        "occupancy": 5.977011494252873
       },
       "2026-09-30": {
         "shows": 4,
@@ -274,6 +274,44 @@
       }
     },
     "occupancy": 5.232558139534884
+  },
+  "21402": {
+    "movieName": "Mirzapur - The Movie",
+    "slug": "mirzapur-the-movie",
+    "languages": [
+      "hindi"
+    ],
+    "rating": "MA15+",
+    "releaseDate": "2026-09-04",
+    "window": [
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
+    ],
+    "totalShows": 2,
+    "totalSeats": 206,
+    "totalSold": 2,
+    "totalAvailable": 196,
+    "totalGross": 52.0,
+    "days": {
+      "2026-09-28": {
+        "shows": 1,
+        "seats": 103,
+        "sold": 1,
+        "available": 98,
+        "gross": 26.0,
+        "occupancy": 0.9708737864077669
+      },
+      "2026-09-29": {
+        "shows": 1,
+        "seats": 103,
+        "sold": 1,
+        "available": 98,
+        "gross": 26.0,
+        "occupancy": 0.9708737864077669
+      }
+    },
+    "occupancy": 0.9708737864077669
   },
   "21448": {
     "movieName": "Mandaadi",
@@ -312,44 +350,6 @@
       }
     },
     "occupancy": 2.314814814814815
-  },
-  "21402": {
-    "movieName": "Mirzapur - The Movie",
-    "slug": "mirzapur-the-movie",
-    "languages": [
-      "hindi"
-    ],
-    "rating": "MA15+",
-    "releaseDate": "2026-09-04",
-    "window": [
-      "2026-09-28",
-      "2026-09-29",
-      "2026-09-30"
-    ],
-    "totalShows": 2,
-    "totalSeats": 206,
-    "totalSold": 2,
-    "totalAvailable": 196,
-    "totalGross": 52.0,
-    "days": {
-      "2026-09-29": {
-        "shows": 1,
-        "seats": 103,
-        "sold": 1,
-        "available": 98,
-        "gross": 26.0,
-        "occupancy": 0.9708737864077669
-      },
-      "2026-09-28": {
-        "shows": 1,
-        "seats": 103,
-        "sold": 1,
-        "available": 98,
-        "gross": 26.0,
-        "occupancy": 0.9708737864077669
-      }
-    },
-    "occupancy": 0.9708737864077669
   },
   "21498": {
     "movieName": "It's a Medical Miracle",
@@ -408,14 +408,6 @@
         "gross": 900.0,
         "occupancy": 45.0
       },
-      "2026-10-04": {
-        "shows": 1,
-        "seats": 40,
-        "sold": 0,
-        "available": 40,
-        "gross": 0.0,
-        "occupancy": 0.0
-      },
       "2026-10-03": {
         "shows": 1,
         "seats": 40,
@@ -423,6 +415,14 @@
         "available": 28,
         "gross": 600.0,
         "occupancy": 30.0
+      },
+      "2026-10-04": {
+        "shows": 1,
+        "seats": 40,
+        "sold": 0,
+        "available": 40,
+        "gross": 0.0,
+        "occupancy": 0.0
       }
     },
     "occupancy": 25.0
