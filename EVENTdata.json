@@ -12,38 +12,38 @@
       "2026-10-06",
       "2026-10-07"
     ],
-    "totalShows": 125,
-    "totalSeats": 26552,
-    "totalSold": 3810,
-    "totalAvailable": 22077,
-    "totalGross": 98157.0,
+    "totalShows": 128,
+    "totalSeats": 26953,
+    "totalSold": 5882,
+    "totalAvailable": 20400,
+    "totalGross": 150813.0,
     "days": {
       "2026-10-05": {
-        "shows": 40,
-        "seats": 8460,
-        "sold": 1863,
-        "available": 6381,
-        "gross": 48178.0,
-        "occupancy": 22.02127659574468
+        "shows": 39,
+        "seats": 8458,
+        "sold": 3451,
+        "available": 4797,
+        "gross": 88655.0,
+        "occupancy": 40.801607945140695
       },
       "2026-10-06": {
-        "shows": 46,
-        "seats": 9565,
-        "sold": 1620,
-        "available": 7707,
-        "gross": 42128.0,
-        "occupancy": 16.93674856246733
+        "shows": 49,
+        "seats": 9921,
+        "sold": 2049,
+        "available": 7624,
+        "gross": 53168.0,
+        "occupancy": 20.653159963713335
       },
       "2026-10-07": {
-        "shows": 39,
-        "seats": 8527,
-        "sold": 327,
-        "available": 7989,
-        "gross": 7851.0,
-        "occupancy": 3.834877448106016
+        "shows": 40,
+        "seats": 8574,
+        "sold": 382,
+        "available": 7979,
+        "gross": 8990.0,
+        "occupancy": 4.455330067646373
       }
     },
-    "occupancy": 14.34920156673697
+    "occupancy": 21.823173672689496
   },
   "21604": {
     "movieName": "Dorothy",
@@ -60,36 +60,36 @@
     ],
     "totalShows": 23,
     "totalSeats": 4124,
-    "totalSold": 360,
-    "totalAvailable": 3654,
-    "totalGross": 8893.0,
+    "totalSold": 419,
+    "totalAvailable": 3595,
+    "totalGross": 10408.0,
     "days": {
       "2026-10-05": {
         "shows": 8,
         "seats": 1309,
-        "sold": 183,
-        "available": 1087,
-        "gross": 4655.0,
-        "occupancy": 13.980137509549273
+        "sold": 220,
+        "available": 1050,
+        "gross": 5602.0,
+        "occupancy": 16.80672268907563
       },
       "2026-10-06": {
         "shows": 7,
         "seats": 1492,
-        "sold": 116,
-        "available": 1342,
-        "gross": 2814.0,
-        "occupancy": 7.774798927613941
+        "sold": 130,
+        "available": 1328,
+        "gross": 3175.0,
+        "occupancy": 8.713136729222521
       },
       "2026-10-07": {
         "shows": 8,
         "seats": 1323,
-        "sold": 61,
-        "available": 1225,
-        "gross": 1424.0,
-        "occupancy": 4.610733182161754
+        "sold": 69,
+        "available": 1217,
+        "gross": 1631.0,
+        "occupancy": 5.215419501133787
       }
     },
-    "occupancy": 8.729388942774007
+    "occupancy": 10.16003879728419
   },
   "21468": {
     "movieName": "Hanuman Ansh",
@@ -104,27 +104,27 @@
       "2026-10-06",
       "2026-10-07"
     ],
-    "totalShows": 21,
-    "totalSeats": 3169,
-    "totalSold": 214,
-    "totalAvailable": 2857,
-    "totalGross": 5333.0,
+    "totalShows": 20,
+    "totalSeats": 2936,
+    "totalSold": 184,
+    "totalAvailable": 2660,
+    "totalGross": 4321.0,
     "days": {
       "2026-10-05": {
-        "shows": 8,
-        "seats": 1188,
-        "sold": 150,
-        "available": 1002,
-        "gross": 3879.0,
-        "occupancy": 12.626262626262626
+        "shows": 7,
+        "seats": 955,
+        "sold": 114,
+        "available": 811,
+        "gross": 2732.0,
+        "occupancy": 11.937172774869111
       },
       "2026-10-06": {
         "shows": 6,
         "seats": 951,
-        "sold": 43,
-        "available": 878,
-        "gross": 1003.0,
-        "occupancy": 4.52155625657203
+        "sold": 49,
+        "available": 872,
+        "gross": 1138.0,
+        "occupancy": 5.152471083070452
       },
       "2026-10-07": {
         "shows": 7,
@@ -135,7 +135,7 @@
         "occupancy": 2.0388349514563107
       }
     },
-    "occupancy": 6.752918901861786
+    "occupancy": 6.267029972752043
   },
   "21522": {
     "movieName": "Dhoomakethu",
@@ -152,17 +152,17 @@
     ],
     "totalShows": 15,
     "totalSeats": 2586,
-    "totalSold": 107,
-    "totalAvailable": 2412,
-    "totalGross": 2589.0,
+    "totalSold": 119,
+    "totalAvailable": 2400,
+    "totalGross": 2895.0,
     "days": {
       "2026-10-05": {
         "shows": 6,
         "seats": 1162,
-        "sold": 44,
-        "available": 1089,
-        "gross": 1069.0,
-        "occupancy": 3.7865748709122204
+        "sold": 56,
+        "available": 1077,
+        "gross": 1375.0,
+        "occupancy": 4.819277108433735
       },
       "2026-10-06": {
         "shows": 5,
@@ -181,7 +181,7 @@
         "occupancy": 4.291287386215865
       }
     },
-    "occupancy": 4.137664346481052
+    "occupancy": 4.60170146945089
   },
   "21524": {
     "movieName": "Prem Keetanu",
@@ -197,37 +197,37 @@
       "2026-10-07"
     ],
     "totalShows": 11,
-    "totalSeats": 2265,
+    "totalSeats": 2271,
     "totalSold": 74,
-    "totalAvailable": 2123,
+    "totalAvailable": 2129,
     "totalGross": 1785.0,
     "days": {
       "2026-10-05": {
         "shows": 3,
-        "seats": 638,
+        "seats": 640,
         "sold": 19,
-        "available": 599,
+        "available": 601,
         "gross": 460.0,
-        "occupancy": 2.978056426332288
+        "occupancy": 2.96875
       },
       "2026-10-06": {
         "shows": 5,
-        "seats": 989,
+        "seats": 991,
         "sold": 36,
-        "available": 925,
+        "available": 927,
         "gross": 869.0,
-        "occupancy": 3.640040444893832
+        "occupancy": 3.632694248234107
       },
       "2026-10-07": {
         "shows": 3,
-        "seats": 638,
+        "seats": 640,
         "sold": 19,
-        "available": 599,
+        "available": 601,
         "gross": 456.0,
-        "occupancy": 2.978056426332288
+        "occupancy": 2.96875
       }
     },
-    "occupancy": 3.2671081677704197
+    "occupancy": 3.258476442095993
   },
   "21527": {
     "movieName": "Yezhu Kadal Yezhu Malai",
@@ -290,25 +290,25 @@
     ],
     "totalShows": 9,
     "totalSeats": 1640,
-    "totalSold": 145,
-    "totalAvailable": 1453,
-    "totalGross": 3363.0,
+    "totalSold": 197,
+    "totalAvailable": 1401,
+    "totalGross": 4615.0,
     "days": {
       "2026-10-05": {
         "shows": 3,
         "seats": 466,
-        "sold": 61,
-        "available": 393,
-        "gross": 1402.0,
-        "occupancy": 13.090128755364807
+        "sold": 102,
+        "available": 352,
+        "gross": 2390.0,
+        "occupancy": 21.888412017167383
       },
       "2026-10-06": {
         "shows": 3,
         "seats": 713,
-        "sold": 49,
-        "available": 648,
-        "gross": 1176.0,
-        "occupancy": 6.872370266479663
+        "sold": 60,
+        "available": 637,
+        "gross": 1440.0,
+        "occupancy": 8.415147265077138
       },
       "2026-10-07": {
         "shows": 3,
@@ -319,7 +319,7 @@
         "occupancy": 7.592190889370933
       }
     },
-    "occupancy": 8.841463414634147
+    "occupancy": 12.012195121951219
   },
   "21525": {
     "movieName": "Sigma (Telugu)",
@@ -381,19 +381,19 @@
       "2026-10-06",
       "2026-10-07"
     ],
-    "totalShows": 7,
-    "totalSeats": 1250,
-    "totalSold": 89,
-    "totalAvailable": 1129,
-    "totalGross": 2164.0,
+    "totalShows": 6,
+    "totalSeats": 1085,
+    "totalSold": 93,
+    "totalAvailable": 966,
+    "totalGross": 2298.0,
     "days": {
       "2026-10-05": {
-        "shows": 2,
-        "seats": 258,
-        "sold": 29,
-        "available": 221,
-        "gross": 724.0,
-        "occupancy": 11.24031007751938
+        "shows": 1,
+        "seats": 93,
+        "sold": 33,
+        "available": 58,
+        "gross": 858.0,
+        "occupancy": 35.483870967741936
       },
       "2026-10-06": {
         "shows": 3,
@@ -412,7 +412,7 @@
         "occupancy": 7.751937984496124
       }
     },
-    "occupancy": 7.12
+    "occupancy": 8.571428571428571
   },
   "21501": {
     "movieName": "The Paradise (Telugu)",
@@ -427,19 +427,19 @@
       "2026-10-06",
       "2026-10-07"
     ],
-    "totalShows": 5,
-    "totalSeats": 1585,
-    "totalSold": 22,
-    "totalAvailable": 1523,
-    "totalGross": 576.0,
+    "totalShows": 4,
+    "totalSeats": 1268,
+    "totalSold": 18,
+    "totalAvailable": 1218,
+    "totalGross": 468.0,
     "days": {
-      "2026-10-05": {
-        "shows": 1,
-        "seats": 317,
-        "sold": 4,
-        "available": 305,
-        "gross": 108.0,
-        "occupancy": 1.2618296529968454
+      "2026-10-06": {
+        "shows": 2,
+        "seats": 634,
+        "sold": 14,
+        "available": 604,
+        "gross": 364.0,
+        "occupancy": 2.2082018927444795
       },
       "2026-10-07": {
         "shows": 2,
@@ -448,17 +448,9 @@
         "available": 614,
         "gross": 104.0,
         "occupancy": 0.6309148264984227
-      },
-      "2026-10-06": {
-        "shows": 2,
-        "seats": 634,
-        "sold": 14,
-        "available": 604,
-        "gross": 364.0,
-        "occupancy": 2.2082018927444795
       }
     },
-    "occupancy": 1.38801261829653
+    "occupancy": 1.4195583596214512
   },
   "21526": {
     "movieName": "Sigma (Tamil)",
@@ -479,13 +471,13 @@
     "totalAvailable": 426,
     "totalGross": 1152.0,
     "days": {
-      "2026-10-07": {
+      "2026-10-05": {
         "shows": 1,
         "seats": 164,
-        "sold": 15,
-        "available": 143,
-        "gross": 360.0,
-        "occupancy": 9.146341463414634
+        "sold": 17,
+        "available": 141,
+        "gross": 408.0,
+        "occupancy": 10.365853658536585
       },
       "2026-10-06": {
         "shows": 1,
@@ -495,13 +487,13 @@
         "gross": 384.0,
         "occupancy": 9.75609756097561
       },
-      "2026-10-05": {
+      "2026-10-07": {
         "shows": 1,
         "seats": 164,
-        "sold": 17,
-        "available": 141,
-        "gross": 408.0,
-        "occupancy": 10.365853658536585
+        "sold": 15,
+        "available": 143,
+        "gross": 360.0,
+        "occupancy": 9.146341463414634
       }
     },
     "occupancy": 9.75609756097561
@@ -519,20 +511,12 @@
       "2026-10-06",
       "2026-10-07"
     ],
-    "totalShows": 3,
-    "totalSeats": 384,
-    "totalSold": 31,
-    "totalAvailable": 347,
-    "totalGross": 770.0,
+    "totalShows": 2,
+    "totalSeats": 256,
+    "totalSold": 18,
+    "totalAvailable": 234,
+    "totalGross": 432.0,
     "days": {
-      "2026-10-05": {
-        "shows": 1,
-        "seats": 128,
-        "sold": 13,
-        "available": 113,
-        "gross": 338.0,
-        "occupancy": 10.15625
-      },
       "2026-10-06": {
         "shows": 1,
         "seats": 128,
@@ -550,7 +534,7 @@
         "occupancy": 7.03125
       }
     },
-    "occupancy": 8.072916666666668
+    "occupancy": 7.03125
   },
   "21480": {
     "movieName": "Pradhama Drishtiya Kuttakkar",
