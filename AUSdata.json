@@ -4,27 +4,15 @@
     "slug": "aadarsha-kutumbam-house-no-47-ak47-telugu-eng-sub",
     "totalShows": 7,
     "totalSeats": 680,
-    "totalSold": 12,
+    "totalSold": 14,
     "days": {
       "2026-10-09": {
         "shows": 2,
         "seats": 235,
-        "sold": 12,
-        "occupancy": 5.106382978723404
-      },
-      "2026-10-12": {
-        "shows": 1,
-        "seats": 89,
-        "sold": 0,
-        "occupancy": 0.0
+        "sold": 14,
+        "occupancy": 5.957446808510639
       },
       "2026-10-10": {
-        "shows": 1,
-        "seats": 89,
-        "sold": 0,
-        "occupancy": 0.0
-      },
-      "2026-10-11": {
         "shows": 1,
         "seats": 89,
         "sold": 0,
@@ -41,34 +29,40 @@
         "seats": 89,
         "sold": 0,
         "occupancy": 0.0
+      },
+      "2026-10-11": {
+        "shows": 1,
+        "seats": 89,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-10-12": {
+        "shows": 1,
+        "seats": 89,
+        "sold": 0,
+        "occupancy": 0.0
       }
     },
-    "occupancy": 1.7647058823529411
+    "occupancy": 2.0588235294117645
   },
   "HO00011582": {
     "movieName": "Baththa (Tamil, Eng Sub)",
     "slug": "baththa-tamil-eng-sub",
     "totalShows": 7,
     "totalSeats": 581,
-    "totalSold": 38,
+    "totalSold": 46,
     "days": {
+      "2026-10-08": {
+        "shows": 1,
+        "seats": 53,
+        "sold": 20,
+        "occupancy": 37.735849056603776
+      },
       "2026-10-10": {
         "shows": 1,
         "seats": 88,
-        "sold": 6,
-        "occupancy": 6.8181818181818175
-      },
-      "2026-10-12": {
-        "shows": 1,
-        "seats": 88,
-        "sold": 0,
-        "occupancy": 0.0
-      },
-      "2026-10-11": {
-        "shows": 1,
-        "seats": 88,
-        "sold": 0,
-        "occupancy": 0.0
+        "sold": 7,
+        "occupancy": 7.954545454545454
       },
       "2026-10-09": {
         "shows": 1,
@@ -76,57 +70,63 @@
         "sold": 15,
         "occupancy": 17.045454545454543
       },
-      "2026-10-13": {
+      "2026-10-12": {
         "shows": 1,
         "seats": 88,
         "sold": 0,
         "occupancy": 0.0
-      },
-      "2026-10-08": {
-        "shows": 1,
-        "seats": 53,
-        "sold": 17,
-        "occupancy": 32.075471698113205
       },
       "2026-10-14": {
         "shows": 1,
         "seats": 88,
         "sold": 0,
         "occupancy": 0.0
+      },
+      "2026-10-11": {
+        "shows": 1,
+        "seats": 88,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-10-13": {
+        "shows": 1,
+        "seats": 88,
+        "sold": 4,
+        "occupancy": 4.545454545454546
       }
     },
-    "occupancy": 6.540447504302927
+    "occupancy": 7.917383820998279
   },
   "HO00011535": {
     "movieName": "Hanuman Ansh (Hindi, Eng Sub)",
     "slug": "hanuman-ansh-hindi-eng-sub",
-    "totalShows": 53,
-    "totalSeats": 5230,
-    "totalSold": 46,
+    "totalShows": 52,
+    "totalSeats": 5144,
+    "totalSold": 76,
     "days": {
       "2026-10-08": {
-        "shows": 7,
-        "seats": 679,
-        "sold": 10,
-        "occupancy": 1.4727540500736376
+        "shows": 6,
+        "seats": 593,
+        "sold": 33,
+        "occupancy": 5.564924114671164
       },
       "2026-10-09": {
         "shows": 7,
         "seats": 698,
-        "sold": 11,
-        "occupancy": 1.5759312320916905
+        "sold": 13,
+        "occupancy": 1.8624641833810889
+      },
+      "2026-10-10": {
+        "shows": 8,
+        "seats": 779,
+        "sold": 20,
+        "occupancy": 2.5673940949935816
       },
       "2026-10-11": {
         "shows": 8,
         "seats": 767,
         "sold": 8,
         "occupancy": 1.0430247718383312
-      },
-      "2026-10-10": {
-        "shows": 8,
-        "seats": 779,
-        "sold": 15,
-        "occupancy": 1.9255455712451863
       },
       "2026-10-12": {
         "shows": 8,
@@ -147,22 +147,22 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 0.8795411089866157
+    "occupancy": 1.4774494556765163
   },
   "HO00011441": {
     "movieName": "Jailer 2 (Tamil, Eng Sub)",
     "slug": "jailer-2-tamil-eng-sub",
-    "totalShows": 22,
-    "totalSeats": 3424,
-    "totalSold": 348,
+    "totalShows": 23,
+    "totalSeats": 3682,
+    "totalSold": 427,
     "days": {
       "2026-10-15": {
-        "shows": 22,
-        "seats": 3424,
-        "sold": 348,
-        "occupancy": 10.163551401869158
+        "shows": 23,
+        "seats": 3682,
+        "sold": 427,
+        "occupancy": 11.596958174904943
       }
     },
-    "occupancy": 10.163551401869158
+    "occupancy": 11.596958174904943
   }
 }
