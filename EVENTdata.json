@@ -14,36 +14,36 @@
     ],
     "totalShows": 180,
     "totalSeats": 42653,
-    "totalSold": 6570,
-    "totalAvailable": 35170,
-    "totalGross": 185836.0,
+    "totalSold": 6633,
+    "totalAvailable": 35107,
+    "totalGross": 187597.0,
     "days": {
       "2026-10-15": {
         "shows": 64,
         "seats": 16296,
-        "sold": 3298,
-        "available": 12659,
-        "gross": 90763.0,
-        "occupancy": 20.238095238095237
+        "sold": 3349,
+        "available": 12608,
+        "gross": 92228.0,
+        "occupancy": 20.551055473735886
       },
       "2026-10-16": {
         "shows": 59,
         "seats": 13516,
-        "sold": 2035,
-        "available": 11189,
-        "gross": 59560.0,
-        "occupancy": 15.05622965374371
+        "sold": 2043,
+        "available": 11181,
+        "gross": 59751.0,
+        "occupancy": 15.11541876294762
       },
       "2026-10-17": {
         "shows": 57,
         "seats": 12841,
-        "sold": 1237,
-        "available": 11322,
-        "gross": 35513.0,
-        "occupancy": 9.633206136593724
+        "sold": 1241,
+        "available": 11318,
+        "gross": 35618.0,
+        "occupancy": 9.664356358539054
       }
     },
-    "occupancy": 15.403371392399128
+    "occupancy": 15.551074953696107
   },
   "21523": {
     "movieName": "Drishyam: The Conclusion",
@@ -60,36 +60,36 @@
     ],
     "totalShows": 69,
     "totalSeats": 12475,
-    "totalSold": 586,
-    "totalAvailable": 11568,
-    "totalGross": 13740.0,
+    "totalSold": 594,
+    "totalAvailable": 11560,
+    "totalGross": 13990.0,
     "days": {
       "2026-10-15": {
         "shows": 28,
         "seats": 5107,
-        "sold": 221,
-        "available": 4753,
-        "gross": 5079.0,
-        "occupancy": 4.327393773252399
+        "sold": 225,
+        "available": 4749,
+        "gross": 5179.0,
+        "occupancy": 4.405717642451537
       },
       "2026-10-16": {
         "shows": 21,
         "seats": 3795,
-        "sold": 194,
-        "available": 3503,
-        "gross": 4538.0,
-        "occupancy": 5.111989459815547
+        "sold": 196,
+        "available": 3501,
+        "gross": 4590.0,
+        "occupancy": 5.1646903820816865
       },
       "2026-10-17": {
         "shows": 20,
         "seats": 3573,
-        "sold": 171,
-        "available": 3312,
-        "gross": 4123.0,
-        "occupancy": 4.785894206549118
+        "sold": 173,
+        "available": 3310,
+        "gross": 4221.0,
+        "occupancy": 4.841869577385951
       }
     },
-    "occupancy": 4.697394789579159
+    "occupancy": 4.761523046092185
   },
   "21552": {
     "movieName": "Ranabaali (Telugu)",
@@ -368,14 +368,6 @@
     "totalAvailable": 486,
     "totalGross": 594.0,
     "days": {
-      "2026-10-18": {
-        "shows": 1,
-        "seats": 175,
-        "sold": 9,
-        "available": 162,
-        "gross": 198.0,
-        "occupancy": 5.142857142857142
-      },
       "2026-10-17": {
         "shows": 1,
         "seats": 175,
@@ -385,6 +377,14 @@
         "occupancy": 5.142857142857142
       },
       "2026-10-19": {
+        "shows": 1,
+        "seats": 175,
+        "sold": 9,
+        "available": 162,
+        "gross": 198.0,
+        "occupancy": 5.142857142857142
+      },
+      "2026-10-18": {
         "shows": 1,
         "seats": 175,
         "sold": 9,
@@ -410,17 +410,17 @@
     ],
     "totalShows": 2,
     "totalSeats": 288,
-    "totalSold": 9,
-    "totalAvailable": 270,
-    "totalGross": 234.0,
+    "totalSold": 12,
+    "totalAvailable": 267,
+    "totalGross": 312.0,
     "days": {
       "2026-10-15": {
         "shows": 1,
         "seats": 102,
-        "sold": 1,
-        "available": 97,
-        "gross": 26.0,
-        "occupancy": 0.9803921568627451
+        "sold": 4,
+        "available": 94,
+        "gross": 104.0,
+        "occupancy": 3.9215686274509802
       },
       "2026-10-16": {
         "shows": 1,
@@ -431,7 +431,7 @@
         "occupancy": 4.301075268817205
       }
     },
-    "occupancy": 3.125
+    "occupancy": 4.166666666666666
   },
   "21604": {
     "movieName": "Dorothy",
