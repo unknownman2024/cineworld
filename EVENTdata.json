@@ -12,38 +12,38 @@
       "2026-10-16",
       "2026-10-17"
     ],
-    "totalShows": 180,
-    "totalSeats": 42653,
-    "totalSold": 6633,
-    "totalAvailable": 35107,
-    "totalGross": 187597.0,
+    "totalShows": 174,
+    "totalSeats": 40815,
+    "totalSold": 7036,
+    "totalAvailable": 32904,
+    "totalGross": 197001.0,
     "days": {
       "2026-10-15": {
-        "shows": 64,
-        "seats": 16296,
-        "sold": 3349,
-        "available": 12608,
-        "gross": 92228.0,
-        "occupancy": 20.551055473735886
+        "shows": 58,
+        "seats": 14395,
+        "sold": 3468,
+        "available": 10626,
+        "gross": 93889.0,
+        "occupancy": 24.091698506425843
       },
       "2026-10-16": {
         "shows": 59,
-        "seats": 13516,
-        "sold": 2043,
-        "available": 11181,
-        "gross": 59751.0,
-        "occupancy": 15.11541876294762
+        "seats": 13583,
+        "sold": 2228,
+        "available": 11063,
+        "gross": 64849.0,
+        "occupancy": 16.402856511816243
       },
       "2026-10-17": {
         "shows": 57,
-        "seats": 12841,
-        "sold": 1241,
-        "available": 11318,
-        "gross": 35618.0,
-        "occupancy": 9.664356358539054
+        "seats": 12837,
+        "sold": 1340,
+        "available": 11215,
+        "gross": 38263.0,
+        "occupancy": 10.43857599127522
       }
     },
-    "occupancy": 15.551074953696107
+    "occupancy": 17.238760259708442
   },
   "21523": {
     "movieName": "Drishyam: The Conclusion",
@@ -59,37 +59,37 @@
       "2026-10-17"
     ],
     "totalShows": 69,
-    "totalSeats": 12475,
-    "totalSold": 594,
-    "totalAvailable": 11560,
-    "totalGross": 13990.0,
+    "totalSeats": 12536,
+    "totalSold": 668,
+    "totalAvailable": 11547,
+    "totalGross": 15828.0,
     "days": {
       "2026-10-15": {
         "shows": 28,
-        "seats": 5107,
-        "sold": 225,
-        "available": 4749,
-        "gross": 5179.0,
-        "occupancy": 4.405717642451537
+        "seats": 5168,
+        "sold": 268,
+        "available": 4767,
+        "gross": 6243.0,
+        "occupancy": 5.185758513931889
       },
       "2026-10-16": {
         "shows": 21,
         "seats": 3795,
-        "sold": 196,
-        "available": 3501,
-        "gross": 4590.0,
-        "occupancy": 5.1646903820816865
+        "sold": 205,
+        "available": 3492,
+        "gross": 4816.0,
+        "occupancy": 5.401844532279315
       },
       "2026-10-17": {
         "shows": 20,
         "seats": 3573,
-        "sold": 173,
-        "available": 3310,
-        "gross": 4221.0,
-        "occupancy": 4.841869577385951
+        "sold": 195,
+        "available": 3288,
+        "gross": 4769.0,
+        "occupancy": 5.4575986565911
       }
     },
-    "occupancy": 4.761523046092185
+    "occupancy": 5.328653477983408
   },
   "21552": {
     "movieName": "Ranabaali (Telugu)",
@@ -104,27 +104,27 @@
       "2026-10-18",
       "2026-10-19"
     ],
-    "totalShows": 53,
-    "totalSeats": 10187,
-    "totalSold": 400,
-    "totalAvailable": 9529,
-    "totalGross": 9362.0,
+    "totalShows": 54,
+    "totalSeats": 10388,
+    "totalSold": 404,
+    "totalAvailable": 9720,
+    "totalGross": 9466.0,
     "days": {
       "2026-10-17": {
-        "shows": 20,
-        "seats": 4075,
-        "sold": 160,
-        "available": 3809,
-        "gross": 3728.0,
-        "occupancy": 3.92638036809816
+        "shows": 21,
+        "seats": 4276,
+        "sold": 162,
+        "available": 4002,
+        "gross": 3780.0,
+        "occupancy": 3.7885874649204863
       },
       "2026-10-18": {
         "shows": 17,
         "seats": 3152,
-        "sold": 123,
-        "available": 2953,
-        "gross": 2883.0,
-        "occupancy": 3.9022842639593907
+        "sold": 125,
+        "available": 2951,
+        "gross": 2935.0,
+        "occupancy": 3.965736040609137
       },
       "2026-10-19": {
         "shows": 16,
@@ -135,7 +135,7 @@
         "occupancy": 3.9527027027027026
       }
     },
-    "occupancy": 3.9265730833415136
+    "occupancy": 3.889102810935695
   },
   "21620": {
     "movieName": "Nayyi Navelli",
@@ -151,37 +151,37 @@
       "2026-10-18"
     ],
     "totalShows": 41,
-    "totalSeats": 6843,
-    "totalSold": 217,
-    "totalAvailable": 6426,
-    "totalGross": 5202.0,
+    "totalSeats": 6260,
+    "totalSold": 211,
+    "totalAvailable": 5847,
+    "totalGross": 5072.0,
     "days": {
       "2026-10-16": {
         "shows": 15,
-        "seats": 2465,
-        "sold": 89,
-        "available": 2301,
-        "gross": 2180.0,
-        "occupancy": 3.610547667342799
+        "seats": 2462,
+        "sold": 104,
+        "available": 2281,
+        "gross": 2554.0,
+        "occupancy": 4.224207961007311
       },
       "2026-10-17": {
         "shows": 12,
-        "seats": 1989,
-        "sold": 54,
-        "available": 1876,
-        "gross": 1292.0,
-        "occupancy": 2.7149321266968327
+        "seats": 1699,
+        "sold": 44,
+        "available": 1596,
+        "gross": 1052.0,
+        "occupancy": 2.5897586815773983
       },
       "2026-10-18": {
         "shows": 14,
-        "seats": 2389,
-        "sold": 74,
-        "available": 2249,
-        "gross": 1730.0,
-        "occupancy": 3.097530347425701
+        "seats": 2099,
+        "sold": 63,
+        "available": 1970,
+        "gross": 1466.0,
+        "occupancy": 3.001429252024774
       }
     },
-    "occupancy": 3.1711237761215845
+    "occupancy": 3.3706070287539935
   },
   "21337": {
     "movieName": "Prahaar - The Untold Story Of Ujjwal Nakim",
@@ -198,17 +198,17 @@
     ],
     "totalShows": 32,
     "totalSeats": 5289,
-    "totalSold": 169,
-    "totalAvailable": 4955,
-    "totalGross": 4092.0,
+    "totalSold": 174,
+    "totalAvailable": 4950,
+    "totalGross": 4218.0,
     "days": {
       "2026-10-16": {
         "shows": 12,
         "seats": 1877,
-        "sold": 62,
-        "available": 1755,
-        "gross": 1520.0,
-        "occupancy": 3.303143313798615
+        "sold": 65,
+        "available": 1752,
+        "gross": 1598.0,
+        "occupancy": 3.4629728289824193
       },
       "2026-10-17": {
         "shows": 11,
@@ -221,13 +221,13 @@
       "2026-10-18": {
         "shows": 9,
         "seats": 1639,
-        "sold": 44,
-        "available": 1546,
-        "gross": 1048.0,
-        "occupancy": 2.684563758389262
+        "sold": 46,
+        "available": 1544,
+        "gross": 1096.0,
+        "occupancy": 2.8065893837705915
       }
     },
-    "occupancy": 3.1953110228776707
+    "occupancy": 3.2898468519568915
   },
   "21621": {
     "movieName": "Thaapi",
@@ -241,75 +241,37 @@
       "2026-10-18"
     ],
     "totalShows": 23,
-    "totalSeats": 4546,
-    "totalSold": 193,
-    "totalAvailable": 4241,
-    "totalGross": 4506.0,
+    "totalSeats": 4555,
+    "totalSold": 196,
+    "totalAvailable": 4253,
+    "totalGross": 4563.0,
     "days": {
       "2026-10-16": {
         "shows": 9,
-        "seats": 1773,
+        "seats": 1776,
         "sold": 72,
-        "available": 1655,
+        "available": 1660,
         "gross": 1674.0,
-        "occupancy": 4.060913705583756
+        "occupancy": 4.054054054054054
       },
       "2026-10-17": {
         "shows": 9,
-        "seats": 1679,
-        "sold": 73,
-        "available": 1564,
-        "gross": 1690.0,
-        "occupancy": 4.3478260869565215
+        "seats": 1682,
+        "sold": 76,
+        "available": 1566,
+        "gross": 1747.0,
+        "occupancy": 4.5184304399524375
       },
       "2026-10-18": {
         "shows": 5,
-        "seats": 1094,
+        "seats": 1097,
         "sold": 48,
-        "available": 1022,
+        "available": 1027,
         "gross": 1142.0,
-        "occupancy": 4.387568555758683
+        "occupancy": 4.375569735642662
       }
     },
-    "occupancy": 4.245490541135063
-  },
-  "18347": {
-    "movieName": "Jailer - Hindi",
-    "slug": "jailer-hindi",
-    "languages": [
-      "hindi"
-    ],
-    "rating": "MA15+",
-    "releaseDate": "2023-08-11",
-    "window": [
-      "2026-10-15",
-      "2026-10-16",
-      "2026-10-17"
-    ],
-    "totalShows": 2,
-    "totalSeats": 320,
-    "totalSold": 18,
-    "totalAvailable": 290,
-    "totalGross": 432.0,
-    "days": {
-      "2026-10-16": {
-        "shows": 1,
-        "seats": 160,
-        "sold": 9,
-        "available": 145,
-        "gross": 216.0,
-        "occupancy": 5.625
-      },
-      "2026-10-17": {
-        "shows": 1,
-        "seats": 160,
-        "sold": 9,
-        "available": 145,
-        "gross": 216.0,
-        "occupancy": 5.625
-      }
-    },
-    "occupancy": 5.625
+    "occupancy": 4.302963776070253
   },
   "21625": {
     "movieName": "Jailer 2 (Hindi)",
@@ -324,30 +286,38 @@
       "2026-10-16",
       "2026-10-17"
     ],
-    "totalShows": 2,
-    "totalSeats": 392,
-    "totalSold": 0,
-    "totalAvailable": 384,
-    "totalGross": 0.0,
+    "totalShows": 5,
+    "totalSeats": 812,
+    "totalSold": 15,
+    "totalAvailable": 783,
+    "totalGross": 375.0,
     "days": {
-      "2026-10-16": {
+      "2026-10-15": {
         "shows": 1,
-        "seats": 196,
-        "sold": 0,
-        "available": 192,
-        "gross": 0.0,
-        "occupancy": 0.0
+        "seats": 140,
+        "sold": 5,
+        "available": 133,
+        "gross": 125.0,
+        "occupancy": 3.571428571428571
+      },
+      "2026-10-16": {
+        "shows": 2,
+        "seats": 336,
+        "sold": 5,
+        "available": 325,
+        "gross": 125.0,
+        "occupancy": 1.488095238095238
       },
       "2026-10-17": {
-        "shows": 1,
-        "seats": 196,
-        "sold": 0,
-        "available": 192,
-        "gross": 0.0,
-        "occupancy": 0.0
+        "shows": 2,
+        "seats": 336,
+        "sold": 5,
+        "available": 325,
+        "gross": 125.0,
+        "occupancy": 1.488095238095238
       }
     },
-    "occupancy": 0.0
+    "occupancy": 1.8472906403940887
   },
   "21551": {
     "movieName": "Ranabaali (Hindi)",
@@ -376,7 +346,7 @@
         "gross": 198.0,
         "occupancy": 5.142857142857142
       },
-      "2026-10-19": {
+      "2026-10-18": {
         "shows": 1,
         "seats": 175,
         "sold": 9,
@@ -384,7 +354,7 @@
         "gross": 198.0,
         "occupancy": 5.142857142857142
       },
-      "2026-10-18": {
+      "2026-10-19": {
         "shows": 1,
         "seats": 175,
         "sold": 9,
@@ -394,44 +364,6 @@
       }
     },
     "occupancy": 5.142857142857142
-  },
-  "21607": {
-    "movieName": "Premada Oorali",
-    "slug": "premada-oorali",
-    "languages": [
-      "kannada"
-    ],
-    "rating": "M",
-    "releaseDate": "2026-10-09",
-    "window": [
-      "2026-10-15",
-      "2026-10-16",
-      "2026-10-17"
-    ],
-    "totalShows": 2,
-    "totalSeats": 288,
-    "totalSold": 12,
-    "totalAvailable": 267,
-    "totalGross": 312.0,
-    "days": {
-      "2026-10-15": {
-        "shows": 1,
-        "seats": 102,
-        "sold": 4,
-        "available": 94,
-        "gross": 104.0,
-        "occupancy": 3.9215686274509802
-      },
-      "2026-10-16": {
-        "shows": 1,
-        "seats": 186,
-        "sold": 8,
-        "available": 173,
-        "gross": 208.0,
-        "occupancy": 4.301075268817205
-      }
-    },
-    "occupancy": 4.166666666666666
   },
   "21604": {
     "movieName": "Dorothy",
@@ -448,19 +380,103 @@
     ],
     "totalShows": 1,
     "totalSeats": 102,
-    "totalSold": 5,
-    "totalAvailable": 94,
-    "totalGross": 130.0,
+    "totalSold": 7,
+    "totalAvailable": 92,
+    "totalGross": 182.0,
     "days": {
       "2026-10-16": {
         "shows": 1,
         "seats": 102,
-        "sold": 5,
-        "available": 94,
-        "gross": 130.0,
-        "occupancy": 4.901960784313726
+        "sold": 7,
+        "available": 92,
+        "gross": 182.0,
+        "occupancy": 6.862745098039216
       }
     },
-    "occupancy": 4.901960784313726
+    "occupancy": 6.862745098039216
+  },
+  "21607": {
+    "movieName": "Premada Oorali",
+    "slug": "premada-oorali",
+    "languages": [
+      "kannada"
+    ],
+    "rating": "M",
+    "releaseDate": "2026-10-09",
+    "window": [
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17"
+    ],
+    "totalShows": 2,
+    "totalSeats": 288,
+    "totalSold": 13,
+    "totalAvailable": 266,
+    "totalGross": 338.0,
+    "days": {
+      "2026-10-15": {
+        "shows": 1,
+        "seats": 102,
+        "sold": 5,
+        "available": 93,
+        "gross": 130.0,
+        "occupancy": 4.901960784313726
+      },
+      "2026-10-16": {
+        "shows": 1,
+        "seats": 186,
+        "sold": 8,
+        "available": 173,
+        "gross": 208.0,
+        "occupancy": 4.301075268817205
+      }
+    },
+    "occupancy": 4.513888888888888
+  },
+  "21459": {
+    "movieName": "Ramayana - Rise of a Legend (Hindi)",
+    "slug": "ramayana-hindi",
+    "languages": [
+      "hindi"
+    ],
+    "rating": "CTC",
+    "releaseDate": "2026-11-05",
+    "window": [
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07"
+    ],
+    "totalShows": 6,
+    "totalSeats": 972,
+    "totalSold": 0,
+    "totalAvailable": 936,
+    "totalGross": 0.0,
+    "days": {
+      "2026-11-06": {
+        "shows": 2,
+        "seats": 324,
+        "sold": 0,
+        "available": 312,
+        "gross": 0.0,
+        "occupancy": 0.0
+      },
+      "2026-11-05": {
+        "shows": 2,
+        "seats": 324,
+        "sold": 0,
+        "available": 312,
+        "gross": 0.0,
+        "occupancy": 0.0
+      },
+      "2026-11-07": {
+        "shows": 2,
+        "seats": 324,
+        "sold": 0,
+        "available": 312,
+        "gross": 0.0,
+        "occupancy": 0.0
+      }
+    },
+    "occupancy": 0.0
   }
 }
