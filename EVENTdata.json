@@ -14,36 +14,36 @@
     ],
     "totalShows": 142,
     "totalSeats": 33463,
-    "totalSold": 3558,
-    "totalAvailable": 29209,
-    "totalGross": 97386.0,
+    "totalSold": 3584,
+    "totalAvailable": 29183,
+    "totalGross": 98130.0,
     "days": {
       "2026-10-18": {
         "shows": 51,
         "seats": 11492,
-        "sold": 2070,
-        "available": 9183,
-        "gross": 56275.0,
-        "occupancy": 18.01253045596937
+        "sold": 2086,
+        "available": 9167,
+        "gross": 56770.0,
+        "occupancy": 18.151757744517926
       },
       "2026-10-19": {
         "shows": 37,
         "seats": 8790,
-        "sold": 337,
-        "available": 8269,
-        "gross": 8551.0,
-        "occupancy": 3.8339021615472126
+        "sold": 344,
+        "available": 8262,
+        "gross": 8721.0,
+        "occupancy": 3.91353811149033
       },
       "2026-10-20": {
         "shows": 54,
         "seats": 13181,
-        "sold": 1151,
-        "available": 11757,
-        "gross": 32560.0,
-        "occupancy": 8.732266140657007
+        "sold": 1154,
+        "available": 11754,
+        "gross": 32639.0,
+        "occupancy": 8.755026174038388
       }
     },
-    "occupancy": 10.63263903415713
+    "occupancy": 10.710336789887338
   },
   "21552": {
     "movieName": "Ranabaali (Telugu)",
@@ -410,17 +410,17 @@
     ],
     "totalShows": 298,
     "totalSeats": 76535,
-    "totalSold": 2363,
-    "totalAvailable": 72439,
-    "totalGross": 54654.0,
+    "totalSold": 2366,
+    "totalAvailable": 72436,
+    "totalGross": 54746.0,
     "days": {
       "2026-11-05": {
         "shows": 101,
         "seats": 26028,
-        "sold": 817,
-        "available": 24621,
-        "gross": 18966.0,
-        "occupancy": 3.13892730905179
+        "sold": 820,
+        "available": 24618,
+        "gross": 19058.0,
+        "occupancy": 3.1504533579222374
       },
       "2026-11-06": {
         "shows": 102,
@@ -439,7 +439,7 @@
         "occupancy": 3.010903684123575
       }
     },
-    "occupancy": 3.087476318024433
+    "occupancy": 3.0913960932906512
   },
   "21646": {
     "movieName": "Ramayana - Rise of a Legend (Telugu)",
