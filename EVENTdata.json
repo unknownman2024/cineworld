@@ -14,17 +14,17 @@
     ],
     "totalShows": 101,
     "totalSeats": 22159,
-    "totalSold": 1105,
-    "totalAvailable": 20532,
-    "totalGross": 28552.0,
+    "totalSold": 1110,
+    "totalAvailable": 20527,
+    "totalGross": 28723.0,
     "days": {
       "2026-10-25": {
         "shows": 35,
         "seats": 7265,
-        "sold": 497,
-        "available": 6590,
-        "gross": 13077.0,
-        "occupancy": 6.841018582243634
+        "sold": 502,
+        "available": 6585,
+        "gross": 13248.0,
+        "occupancy": 6.90984170681349
       },
       "2026-10-26": {
         "shows": 29,
@@ -43,7 +43,7 @@
         "occupancy": 4.724035608308606
       }
     },
-    "occupancy": 4.986687124870256
+    "occupancy": 5.009251320005415
   },
   "21545": {
     "movieName": "Udta Teer",
@@ -198,17 +198,17 @@
     ],
     "totalShows": 11,
     "totalSeats": 1977,
-    "totalSold": 57,
-    "totalAvailable": 1866,
-    "totalGross": 1212.0,
+    "totalSold": 61,
+    "totalAvailable": 1862,
+    "totalGross": 1318.0,
     "days": {
       "2026-10-25": {
         "shows": 4,
         "seats": 675,
-        "sold": 18,
-        "available": 637,
-        "gross": 377.0,
-        "occupancy": 2.666666666666667
+        "sold": 20,
+        "available": 635,
+        "gross": 431.0,
+        "occupancy": 2.9629629629629632
       },
       "2026-10-26": {
         "shows": 3,
@@ -221,13 +221,13 @@
       "2026-10-27": {
         "shows": 4,
         "seats": 777,
-        "sold": 25,
-        "available": 732,
-        "gross": 557.0,
-        "occupancy": 3.2175032175032174
+        "sold": 27,
+        "available": 730,
+        "gross": 609.0,
+        "occupancy": 3.474903474903475
       }
     },
-    "occupancy": 2.8831562974203337
+    "occupancy": 3.0854830551340413
   },
   "21650": {
     "movieName": "Jailer 2 - Telugu",
@@ -248,14 +248,6 @@
     "totalAvailable": 880,
     "totalGross": 2112.0,
     "days": {
-      "2026-10-25": {
-        "shows": 2,
-        "seats": 456,
-        "sold": 46,
-        "available": 396,
-        "gross": 1200.0,
-        "occupancy": 10.087719298245613
-      },
       "2026-10-26": {
         "shows": 1,
         "seats": 139,
@@ -263,6 +255,14 @@
         "available": 119,
         "gross": 336.0,
         "occupancy": 10.071942446043165
+      },
+      "2026-10-25": {
+        "shows": 2,
+        "seats": 456,
+        "sold": 46,
+        "available": 396,
+        "gross": 1200.0,
+        "occupancy": 10.087719298245613
       },
       "2026-10-27": {
         "shows": 2,
@@ -290,17 +290,17 @@
     ],
     "totalShows": 279,
     "totalSeats": 69903,
-    "totalSold": 3856,
-    "totalAvailable": 64455,
+    "totalSold": 3855,
+    "totalAvailable": 64456,
     "totalGross": 98024.0,
     "days": {
       "2026-11-05": {
         "shows": 96,
         "seats": 24222,
-        "sold": 1450,
-        "available": 22225,
+        "sold": 1449,
+        "available": 22226,
         "gross": 37491.0,
-        "occupancy": 5.986293452233507
+        "occupancy": 5.982164973990587
       },
       "2026-11-06": {
         "shows": 96,
@@ -319,7 +319,7 @@
         "occupancy": 5.231537110638691
       }
     },
-    "occupancy": 5.516215326953064
+    "occupancy": 5.5147847731857
   },
   "21337": {
     "movieName": "Prahaar - The Untold Story Of Ujjwal Nakim",
@@ -514,7 +514,7 @@
         "gross": 225.0,
         "occupancy": 5.625
       },
-      "2026-11-07": {
+      "2026-11-06": {
         "shows": 1,
         "seats": 160,
         "sold": 9,
@@ -522,7 +522,7 @@
         "gross": 225.0,
         "occupancy": 5.625
       },
-      "2026-11-06": {
+      "2026-11-07": {
         "shows": 1,
         "seats": 160,
         "sold": 9,
