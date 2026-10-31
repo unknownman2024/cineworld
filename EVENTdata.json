@@ -14,17 +14,17 @@
     ],
     "totalShows": 57,
     "totalSeats": 11230,
-    "totalSold": 693,
-    "totalAvailable": 10249,
-    "totalGross": 16793.0,
+    "totalSold": 703,
+    "totalAvailable": 10239,
+    "totalGross": 17043.0,
     "days": {
       "2026-11-01": {
         "shows": 19,
         "seats": 3621,
-        "sold": 426,
-        "available": 3099,
-        "gross": 10557.0,
-        "occupancy": 11.76470588235294
+        "sold": 436,
+        "available": 3089,
+        "gross": 10807.0,
+        "occupancy": 12.040872687103011
       },
       "2026-11-02": {
         "shows": 16,
@@ -43,7 +43,7 @@
         "occupancy": 3.822384985122454
       }
     },
-    "occupancy": 6.170970614425646
+    "occupancy": 6.260017809439003
   },
   "21543": {
     "movieName": "Jailer 2 (Tamil)",
@@ -188,36 +188,36 @@
     ],
     "totalShows": 275,
     "totalSeats": 68823,
-    "totalSold": 6435,
-    "totalAvailable": 60811,
-    "totalGross": 180969.0,
+    "totalSold": 6467,
+    "totalAvailable": 60779,
+    "totalGross": 181902.0,
     "days": {
       "2026-11-05": {
         "shows": 97,
         "seats": 24486,
-        "sold": 2406,
-        "available": 21523,
-        "gross": 68183.0,
-        "occupancy": 9.826023033570204
+        "sold": 2421,
+        "available": 21508,
+        "gross": 68637.0,
+        "occupancy": 9.887282528791964
       },
       "2026-11-06": {
         "shows": 93,
         "seats": 23402,
-        "sold": 2119,
-        "available": 20751,
-        "gross": 59594.0,
-        "occupancy": 9.05478164259465
+        "sold": 2123,
+        "available": 20747,
+        "gross": 59720.0,
+        "occupancy": 9.071874198786428
       },
       "2026-11-07": {
         "shows": 85,
         "seats": 20935,
-        "sold": 1910,
-        "available": 18537,
-        "gross": 53192.0,
-        "occupancy": 9.123477430140913
+        "sold": 1923,
+        "available": 18524,
+        "gross": 53545.0,
+        "occupancy": 9.185574396942918
       }
     },
-    "occupancy": 9.350071923630182
+    "occupancy": 9.396568007788094
   },
   "21622": {
     "movieName": "Titans",
@@ -264,9 +264,9 @@
     ],
     "totalShows": 23,
     "totalSeats": 5329,
-    "totalSold": 255,
-    "totalAvailable": 4909,
-    "totalGross": 6770.0,
+    "totalSold": 260,
+    "totalAvailable": 4904,
+    "totalGross": 6895.0,
     "days": {
       "2026-11-05": {
         "shows": 9,
@@ -279,10 +279,10 @@
       "2026-11-06": {
         "shows": 9,
         "seats": 2217,
-        "sold": 88,
-        "available": 2064,
-        "gross": 2291.0,
-        "occupancy": 3.9693279206134413
+        "sold": 93,
+        "available": 2059,
+        "gross": 2416.0,
+        "occupancy": 4.194857916102842
       },
       "2026-11-07": {
         "shows": 5,
@@ -293,7 +293,7 @@
         "occupancy": 3.282275711159737
       }
     },
-    "occupancy": 4.785137924563708
+    "occupancy": 4.8789641583786825
   },
   "21648": {
     "movieName": "Ramayana - Rise of a Legend (Tamil)",
@@ -446,25 +446,25 @@
     ],
     "totalShows": 32,
     "totalSeats": 7779,
-    "totalSold": 494,
-    "totalAvailable": 7101,
-    "totalGross": 11875.0,
+    "totalSold": 502,
+    "totalAvailable": 7093,
+    "totalGross": 12083.0,
     "days": {
       "2026-11-06": {
         "shows": 12,
         "seats": 2962,
-        "sold": 301,
-        "available": 2591,
-        "gross": 7339.0,
-        "occupancy": 10.162052667116813
+        "sold": 307,
+        "available": 2585,
+        "gross": 7493.0,
+        "occupancy": 10.36461850101283
       },
       "2026-11-07": {
         "shows": 12,
         "seats": 3002,
-        "sold": 134,
-        "available": 2798,
-        "gross": 3204.0,
-        "occupancy": 4.463690872751499
+        "sold": 136,
+        "available": 2796,
+        "gross": 3258.0,
+        "occupancy": 4.5303131245836115
       },
       "2026-11-08": {
         "shows": 8,
@@ -475,6 +475,6 @@
         "occupancy": 3.2506887052341593
       }
     },
-    "occupancy": 6.350430646612675
+    "occupancy": 6.453271628744055
   }
 }
