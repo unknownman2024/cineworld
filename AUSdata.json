@@ -2,23 +2,17 @@
   "HO00011618": {
     "movieName": "Aadarsha Kutumbam House No: 47 #AK47 (Telugu, Eng Sub)",
     "slug": "aadarsha-kutumbam-house-no-47-ak47-telugu-eng-sub",
-    "totalShows": 23,
-    "totalSeats": 2081,
-    "totalSold": 36,
+    "totalShows": 14,
+    "totalSeats": 1172,
+    "totalSold": 1,
     "days": {
-      "2026-11-10": {
-        "shows": 9,
-        "seats": 909,
-        "sold": 35,
-        "occupancy": 3.850385038503851
+      "2026-11-15": {
+        "shows": 1,
+        "seats": 70,
+        "sold": 0,
+        "occupancy": 0.0
       },
-      "2026-11-11": {
-        "shows": 7,
-        "seats": 682,
-        "sold": 1,
-        "occupancy": 0.1466275659824047
-      },
-      "2026-11-12": {
+      "2026-11-14": {
         "shows": 1,
         "seats": 70,
         "sold": 0,
@@ -30,7 +24,13 @@
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-11-15": {
+      "2026-11-11": {
+        "shows": 7,
+        "seats": 682,
+        "sold": 1,
+        "occupancy": 0.1466275659824047
+      },
+      "2026-11-12": {
         "shows": 1,
         "seats": 70,
         "sold": 0,
@@ -53,29 +53,17 @@
         "seats": 70,
         "sold": 0,
         "occupancy": 0.0
-      },
-      "2026-11-14": {
-        "shows": 1,
-        "seats": 70,
-        "sold": 0,
-        "occupancy": 0.0
       }
     },
-    "occupancy": 1.7299375300336377
+    "occupancy": 0.08532423208191127
   },
   "HO00011621": {
     "movieName": "Jailer 2 (Hindi, Eng Sub)",
     "slug": "jailer-2-hindi-eng-sub",
-    "totalShows": 2,
-    "totalSeats": 168,
+    "totalShows": 1,
+    "totalSeats": 84,
     "totalSold": 0,
     "days": {
-      "2026-11-10": {
-        "shows": 1,
-        "seats": 84,
-        "sold": 0,
-        "occupancy": 0.0
-      },
       "2026-11-11": {
         "shows": 1,
         "seats": 84,
@@ -88,38 +76,26 @@
   "HO00011557": {
     "movieName": "Ramayana: Rise Of A Legend (Telugu, Eng Sub)",
     "slug": "ramayana-telugu-eng-sub",
-    "totalShows": 24,
-    "totalSeats": 3077,
-    "totalSold": 730,
+    "totalShows": 12,
+    "totalSeats": 1577,
+    "totalSold": 121,
     "days": {
       "2026-11-11": {
         "shows": 12,
         "seats": 1577,
-        "sold": 118,
-        "occupancy": 7.482561826252378
-      },
-      "2026-11-10": {
-        "shows": 12,
-        "seats": 1500,
-        "sold": 612,
-        "occupancy": 40.8
+        "sold": 121,
+        "occupancy": 7.67279644895371
       }
     },
-    "occupancy": 23.724406889827755
+    "occupancy": 7.67279644895371
   },
   "HO00011558": {
     "movieName": "Ramayana: Rise Of A Legend (Tamil, Eng Sub)",
     "slug": "ramayana-tamil-eng-sub",
-    "totalShows": 3,
-    "totalSeats": 301,
-    "totalSold": 78,
+    "totalShows": 1,
+    "totalSeats": 59,
+    "totalSold": 0,
     "days": {
-      "2026-11-10": {
-        "shows": 2,
-        "seats": 242,
-        "sold": 78,
-        "occupancy": 32.231404958677686
-      },
       "2026-11-11": {
         "shows": 1,
         "seats": 59,
@@ -127,13 +103,13 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 25.91362126245847
+    "occupancy": 0.0
   },
   "HO00011441": {
     "movieName": "Jailer 2 (Tamil, Eng Sub)",
     "slug": "jailer-2-tamil-eng-sub",
-    "totalShows": 4,
-    "totalSeats": 494,
+    "totalShows": 2,
+    "totalSeats": 247,
     "totalSold": 2,
     "days": {
       "2026-11-11": {
@@ -141,46 +117,34 @@
         "seats": 247,
         "sold": 2,
         "occupancy": 0.8097165991902834
-      },
-      "2026-11-10": {
-        "shows": 2,
-        "seats": 247,
-        "sold": 0,
-        "occupancy": 0.0
       }
     },
-    "occupancy": 0.4048582995951417
+    "occupancy": 0.8097165991902834
   },
   "HO00011666": {
     "movieName": "Scene (Tamil, Eng Sub)",
     "slug": "scene-tamil-eng-sub",
-    "totalShows": 104,
-    "totalSeats": 10649,
-    "totalSold": 2038,
+    "totalShows": 77,
+    "totalSeats": 7675,
+    "totalSold": 578,
     "days": {
-      "2026-11-10": {
-        "shows": 27,
-        "seats": 2974,
-        "sold": 1506,
-        "occupancy": 50.63887020847344
-      },
       "2026-11-11": {
         "shows": 24,
         "seats": 2747,
-        "sold": 323,
-        "occupancy": 11.758281761922097
-      },
-      "2026-11-13": {
-        "shows": 8,
-        "seats": 704,
-        "sold": 99,
-        "occupancy": 14.0625
+        "sold": 353,
+        "occupancy": 12.850382235165636
       },
       "2026-11-12": {
         "shows": 8,
         "seats": 704,
-        "sold": 35,
-        "occupancy": 4.971590909090909
+        "sold": 36,
+        "occupancy": 5.113636363636364
+      },
+      "2026-11-14": {
+        "shows": 8,
+        "seats": 766,
+        "sold": 64,
+        "occupancy": 8.355091383812011
       },
       "2026-11-15": {
         "shows": 9,
@@ -188,17 +152,17 @@
         "sold": 6,
         "occupancy": 0.7326007326007326
       },
+      "2026-11-13": {
+        "shows": 8,
+        "seats": 704,
+        "sold": 111,
+        "occupancy": 15.767045454545455
+      },
       "2026-11-16": {
         "shows": 8,
         "seats": 704,
         "sold": 6,
         "occupancy": 0.8522727272727272
-      },
-      "2026-11-14": {
-        "shows": 8,
-        "seats": 766,
-        "sold": 61,
-        "occupancy": 7.963446475195822
       },
       "2026-11-17": {
         "shows": 8,
@@ -213,30 +177,18 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 19.13794722509156
+    "occupancy": 7.530944625407166
   },
   "HO00011316": {
     "movieName": "Udta Teer (Hindi, Eng Sub)",
     "slug": "udta-teer-hindi-eng-sub",
-    "totalShows": 10,
-    "totalSeats": 680,
-    "totalSold": 13,
+    "totalShows": 8,
+    "totalSeats": 523,
+    "totalSold": 0,
     "days": {
-      "2026-11-10": {
-        "shows": 2,
-        "seats": 157,
-        "sold": 13,
-        "occupancy": 8.280254777070063
-      },
       "2026-11-11": {
         "shows": 2,
         "seats": 157,
-        "sold": 0,
-        "occupancy": 0.0
-      },
-      "2026-11-13": {
-        "shows": 1,
-        "seats": 61,
         "sold": 0,
         "occupancy": 0.0
       },
@@ -247,6 +199,12 @@
         "occupancy": 0.0
       },
       "2026-11-14": {
+        "shows": 1,
+        "seats": 61,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-11-13": {
         "shows": 1,
         "seats": 61,
         "sold": 0,
@@ -271,6 +229,6 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 1.911764705882353
+    "occupancy": 0.0
   }
 }
