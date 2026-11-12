@@ -6,19 +6,7 @@
     "totalSeats": 490,
     "totalSold": 0,
     "days": {
-      "2026-11-17": {
-        "shows": 1,
-        "seats": 70,
-        "sold": 0,
-        "occupancy": 0.0
-      },
       "2026-11-12": {
-        "shows": 1,
-        "seats": 70,
-        "sold": 0,
-        "occupancy": 0.0
-      },
-      "2026-11-13": {
         "shows": 1,
         "seats": 70,
         "sold": 0,
@@ -30,19 +18,31 @@
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-11-18": {
-        "shows": 1,
-        "seats": 70,
-        "sold": 0,
-        "occupancy": 0.0
-      },
       "2026-11-16": {
         "shows": 1,
         "seats": 70,
         "sold": 0,
         "occupancy": 0.0
       },
+      "2026-11-13": {
+        "shows": 1,
+        "seats": 70,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-11-17": {
+        "shows": 1,
+        "seats": 70,
+        "sold": 0,
+        "occupancy": 0.0
+      },
       "2026-11-15": {
+        "shows": 1,
+        "seats": 70,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-11-18": {
         "shows": 1,
         "seats": 70,
         "sold": 0,
@@ -56,31 +56,31 @@
     "slug": "scene-tamil-eng-sub",
     "totalShows": 53,
     "totalSeats": 4928,
-    "totalSold": 512,
+    "totalSold": 586,
     "days": {
+      "2026-11-13": {
+        "shows": 8,
+        "seats": 704,
+        "sold": 229,
+        "occupancy": 32.528409090909086
+      },
       "2026-11-14": {
         "shows": 8,
         "seats": 766,
-        "sold": 134,
-        "occupancy": 17.4934725848564
+        "sold": 156,
+        "occupancy": 20.365535248041773
       },
       "2026-11-12": {
         "shows": 8,
         "seats": 704,
-        "sold": 139,
-        "occupancy": 19.744318181818183
+        "sold": 159,
+        "occupancy": 22.585227272727273
       },
-      "2026-11-13": {
-        "shows": 8,
-        "seats": 704,
-        "sold": 197,
-        "occupancy": 27.982954545454547
-      },
-      "2026-11-17": {
-        "shows": 8,
-        "seats": 704,
-        "sold": 14,
-        "occupancy": 1.9886363636363635
+      "2026-11-15": {
+        "shows": 9,
+        "seats": 819,
+        "sold": 24,
+        "occupancy": 2.93040293040293
       },
       "2026-11-16": {
         "shows": 8,
@@ -88,11 +88,11 @@
         "sold": 6,
         "occupancy": 0.8522727272727272
       },
-      "2026-11-15": {
-        "shows": 9,
-        "seats": 819,
-        "sold": 22,
-        "occupancy": 2.6862026862026864
+      "2026-11-17": {
+        "shows": 8,
+        "seats": 704,
+        "sold": 12,
+        "occupancy": 1.7045454545454544
       },
       "2026-11-18": {
         "shows": 4,
@@ -101,7 +101,7 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 10.38961038961039
+    "occupancy": 11.891233766233766
   },
   "HO00011316": {
     "movieName": "Udta Teer (Hindi, Eng Sub)",
@@ -110,18 +110,6 @@
     "totalSeats": 366,
     "totalSold": 8,
     "days": {
-      "2026-11-13": {
-        "shows": 1,
-        "seats": 61,
-        "sold": 7,
-        "occupancy": 11.475409836065573
-      },
-      "2026-11-15": {
-        "shows": 1,
-        "seats": 61,
-        "sold": 0,
-        "occupancy": 0.0
-      },
       "2026-11-12": {
         "shows": 1,
         "seats": 61,
@@ -129,6 +117,18 @@
         "occupancy": 1.639344262295082
       },
       "2026-11-14": {
+        "shows": 1,
+        "seats": 61,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-11-13": {
+        "shows": 1,
+        "seats": 61,
+        "sold": 7,
+        "occupancy": 11.475409836065573
+      },
+      "2026-11-15": {
         "shows": 1,
         "seats": 61,
         "sold": 0,
