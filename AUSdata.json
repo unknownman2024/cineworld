@@ -4,9 +4,21 @@
     "slug": "aadarsha-kutumbam-house-no-47-ak47-telugu-eng-sub",
     "totalShows": 6,
     "totalSeats": 420,
-    "totalSold": 0,
+    "totalSold": 4,
     "days": {
+      "2026-11-18": {
+        "shows": 1,
+        "seats": 70,
+        "sold": 0,
+        "occupancy": 0.0
+      },
       "2026-11-13": {
+        "shows": 1,
+        "seats": 70,
+        "sold": 4,
+        "occupancy": 5.714285714285714
+      },
+      "2026-11-16": {
         "shows": 1,
         "seats": 70,
         "sold": 0,
@@ -18,91 +30,209 @@
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-11-15": {
-        "shows": 1,
-        "seats": 70,
-        "sold": 0,
-        "occupancy": 0.0
-      },
       "2026-11-14": {
         "shows": 1,
         "seats": 70,
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-11-16": {
+      "2026-11-15": {
         "shows": 1,
         "seats": 70,
         "sold": 0,
         "occupancy": 0.0
+      }
+    },
+    "occupancy": 0.9523809523809524
+  },
+  "HO00011688": {
+    "movieName": "Aakasamlo Oka Tara (Telugu, Eng Sub)",
+    "slug": "aakasamlo-oka-tara-telugu-eng-sub",
+    "totalShows": 20,
+    "totalSeats": 2062,
+    "totalSold": 0,
+    "days": {
+      "2026-11-20": {
+        "shows": 7,
+        "seats": 716,
+        "sold": 0,
+        "occupancy": 0.0
       },
-      "2026-11-18": {
-        "shows": 1,
-        "seats": 70,
+      "2026-11-21": {
+        "shows": 7,
+        "seats": 716,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-11-22": {
+        "shows": 6,
+        "seats": 630,
         "sold": 0,
         "occupancy": 0.0
       }
     },
     "occupancy": 0.0
   },
+  "HO00011689": {
+    "movieName": "Aakasamlo Oka Tara (Malayalam, Eng Sub)",
+    "slug": "aakasamlo-oka-tara-malayalam-eng-sub",
+    "totalShows": 3,
+    "totalSeats": 283,
+    "totalSold": 0,
+    "days": {
+      "2026-11-21": {
+        "shows": 1,
+        "seats": 90,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-11-20": {
+        "shows": 1,
+        "seats": 90,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-11-22": {
+        "shows": 1,
+        "seats": 103,
+        "sold": 0,
+        "occupancy": 0.0
+      }
+    },
+    "occupancy": 0.0
+  },
+  "HO00011694": {
+    "movieName": "OM - Chapter 1: Udhiram - The Blood Wood (Tamil, Eng Sub)",
+    "slug": "om---chapter-1-udhiram---the-blood-wood-tamil-eng-sub",
+    "totalShows": 36,
+    "totalSeats": 3754,
+    "totalSold": 49,
+    "days": {
+      "2026-11-20": {
+        "shows": 13,
+        "seats": 1366,
+        "sold": 47,
+        "occupancy": 3.4407027818448026
+      },
+      "2026-11-21": {
+        "shows": 11,
+        "seats": 1093,
+        "sold": 2,
+        "occupancy": 0.18298261665141813
+      },
+      "2026-11-19": {
+        "shows": 1,
+        "seats": 169,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-11-22": {
+        "shows": 11,
+        "seats": 1126,
+        "sold": 0,
+        "occupancy": 0.0
+      }
+    },
+    "occupancy": 1.3052743740010655
+  },
+  "HO00011690": {
+    "movieName": "OM - Chapter 1: Udhiram - The Blood Wood (Telugu, Eng Sub)",
+    "slug": "om---chapter-1-udhiram---the-blood-wood-telugu-eng-sub",
+    "totalShows": 14,
+    "totalSeats": 1474,
+    "totalSold": 6,
+    "days": {
+      "2026-11-20": {
+        "shows": 4,
+        "seats": 402,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-11-21": {
+        "shows": 6,
+        "seats": 675,
+        "sold": 6,
+        "occupancy": 0.8888888888888888
+      },
+      "2026-11-22": {
+        "shows": 4,
+        "seats": 397,
+        "sold": 0,
+        "occupancy": 0.0
+      }
+    },
+    "occupancy": 0.40705563093622793
+  },
   "HO00011666": {
     "movieName": "Scene (Tamil, Eng Sub)",
     "slug": "scene-tamil-eng-sub",
-    "totalShows": 50,
-    "totalSeats": 5033,
-    "totalSold": 597,
+    "totalShows": 54,
+    "totalSeats": 5436,
+    "totalSold": 876,
     "days": {
-      "2026-11-15": {
+      "2026-11-14": {
         "shows": 11,
-        "seats": 1145,
-        "sold": 36,
-        "occupancy": 3.14410480349345
+        "seats": 1031,
+        "sold": 283,
+        "occupancy": 27.449078564500486
       },
       "2026-11-16": {
         "shows": 9,
         "seats": 861,
-        "sold": 6,
-        "occupancy": 0.6968641114982579
+        "sold": 17,
+        "occupancy": 1.9744483159117305
+      },
+      "2026-11-13": {
+        "shows": 8,
+        "seats": 704,
+        "sold": 485,
+        "occupancy": 68.89204545454545
+      },
+      "2026-11-15": {
+        "shows": 13,
+        "seats": 1434,
+        "sold": 57,
+        "occupancy": 3.9748953974895396
       },
       "2026-11-17": {
         "shows": 9,
         "seats": 879,
-        "sold": 17,
-        "occupancy": 1.9340159271899888
+        "sold": 27,
+        "occupancy": 3.0716723549488054
       },
       "2026-11-18": {
         "shows": 4,
         "seats": 527,
         "sold": 7,
         "occupancy": 1.3282732447817838
-      },
-      "2026-11-13": {
-        "shows": 8,
-        "seats": 704,
-        "sold": 334,
-        "occupancy": 47.44318181818182
-      },
-      "2026-11-14": {
-        "shows": 9,
-        "seats": 917,
-        "sold": 197,
-        "occupancy": 21.483097055616142
       }
     },
-    "occupancy": 11.861712696205046
+    "occupancy": 16.114790286975715
   },
   "HO00011316": {
     "movieName": "Udta Teer (Hindi, Eng Sub)",
     "slug": "udta-teer-hindi-eng-sub",
     "totalShows": 5,
     "totalSeats": 305,
-    "totalSold": 12,
+    "totalSold": 17,
     "days": {
+      "2026-11-16": {
+        "shows": 1,
+        "seats": 61,
+        "sold": 0,
+        "occupancy": 0.0
+      },
       "2026-11-13": {
         "shows": 1,
         "seats": 61,
-        "sold": 7,
-        "occupancy": 11.475409836065573
+        "sold": 12,
+        "occupancy": 19.672131147540984
+      },
+      "2026-11-15": {
+        "shows": 1,
+        "seats": 61,
+        "sold": 0,
+        "occupancy": 0.0
       },
       "2026-11-14": {
         "shows": 1,
@@ -110,25 +240,13 @@
         "sold": 5,
         "occupancy": 8.19672131147541
       },
-      "2026-11-15": {
-        "shows": 1,
-        "seats": 61,
-        "sold": 0,
-        "occupancy": 0.0
-      },
       "2026-11-17": {
-        "shows": 1,
-        "seats": 61,
-        "sold": 0,
-        "occupancy": 0.0
-      },
-      "2026-11-16": {
         "shows": 1,
         "seats": 61,
         "sold": 0,
         "occupancy": 0.0
       }
     },
-    "occupancy": 3.934426229508197
+    "occupancy": 5.573770491803279
   }
 }
