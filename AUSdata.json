@@ -4,15 +4,15 @@
     "slug": "aadarsha-kutumbam-house-no-47-ak47-telugu-eng-sub",
     "totalShows": 4,
     "totalSeats": 280,
-    "totalSold": 0,
+    "totalSold": 2,
     "days": {
-      "2026-11-16": {
+      "2026-11-18": {
         "shows": 1,
         "seats": 70,
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-11-18": {
+      "2026-11-16": {
         "shows": 1,
         "seats": 70,
         "sold": 0,
@@ -21,8 +21,8 @@
       "2026-11-15": {
         "shows": 1,
         "seats": 70,
-        "sold": 0,
-        "occupancy": 0.0
+        "sold": 2,
+        "occupancy": 2.857142857142857
       },
       "2026-11-17": {
         "shows": 1,
@@ -31,14 +31,14 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 0.0
+    "occupancy": 0.7142857142857143
   },
   "HO00011688": {
     "movieName": "Aakasamlo Oka Tara (Telugu, Eng Sub)",
     "slug": "aakasamlo-oka-tara-telugu-eng-sub",
     "totalShows": 20,
     "totalSeats": 2062,
-    "totalSold": 6,
+    "totalSold": 15,
     "days": {
       "2026-11-22": {
         "shows": 6,
@@ -46,20 +46,20 @@
         "sold": 0,
         "occupancy": 0.0
       },
+      "2026-11-20": {
+        "shows": 7,
+        "seats": 716,
+        "sold": 13,
+        "occupancy": 1.8156424581005588
+      },
       "2026-11-21": {
         "shows": 7,
         "seats": 716,
         "sold": 2,
         "occupancy": 0.27932960893854747
-      },
-      "2026-11-20": {
-        "shows": 7,
-        "seats": 716,
-        "sold": 4,
-        "occupancy": 0.5586592178770949
       }
     },
-    "occupancy": 0.2909796314258002
+    "occupancy": 0.7274490785645005
   },
   "HO00011689": {
     "movieName": "Aakasamlo Oka Tara (Malayalam, Eng Sub)",
@@ -74,15 +74,15 @@
         "sold": 0,
         "occupancy": 0.0
       },
-      "2026-11-22": {
-        "shows": 1,
-        "seats": 103,
-        "sold": 0,
-        "occupancy": 0.0
-      },
       "2026-11-20": {
         "shows": 1,
         "seats": 90,
+        "sold": 0,
+        "occupancy": 0.0
+      },
+      "2026-11-22": {
+        "shows": 1,
+        "seats": 103,
         "sold": 0,
         "occupancy": 0.0
       }
@@ -94,53 +94,53 @@
     "slug": "om---chapter-1-udhiram---the-blood-wood-tamil-eng-sub",
     "totalShows": 36,
     "totalSeats": 3754,
-    "totalSold": 261,
+    "totalSold": 337,
     "days": {
       "2026-11-20": {
         "shows": 13,
         "seats": 1366,
-        "sold": 218,
-        "occupancy": 15.95900439238653
+        "sold": 280,
+        "occupancy": 20.497803806734993
+      },
+      "2026-11-21": {
+        "shows": 11,
+        "seats": 1093,
+        "sold": 40,
+        "occupancy": 3.6596523330283626
+      },
+      "2026-11-22": {
+        "shows": 11,
+        "seats": 1126,
+        "sold": 17,
+        "occupancy": 1.5097690941385435
       },
       "2026-11-19": {
         "shows": 1,
         "seats": 169,
         "sold": 0,
         "occupancy": 0.0
-      },
-      "2026-11-21": {
-        "shows": 11,
-        "seats": 1093,
-        "sold": 36,
-        "occupancy": 3.293687099725526
-      },
-      "2026-11-22": {
-        "shows": 11,
-        "seats": 1126,
-        "sold": 7,
-        "occupancy": 0.6216696269982238
       }
     },
-    "occupancy": 6.952583910495472
+    "occupancy": 8.977091102823655
   },
   "HO00011690": {
     "movieName": "OM - Chapter 1: Udhiram - The Blood Wood (Telugu, Eng Sub)",
     "slug": "om---chapter-1-udhiram---the-blood-wood-telugu-eng-sub",
     "totalShows": 14,
     "totalSeats": 1474,
-    "totalSold": 31,
+    "totalSold": 34,
     "days": {
       "2026-11-20": {
         "shows": 4,
         "seats": 402,
-        "sold": 14,
-        "occupancy": 3.482587064676617
+        "sold": 19,
+        "occupancy": 4.72636815920398
       },
       "2026-11-21": {
         "shows": 6,
         "seats": 675,
-        "sold": 17,
-        "occupancy": 2.5185185185185186
+        "sold": 15,
+        "occupancy": 2.2222222222222223
       },
       "2026-11-22": {
         "shows": 4,
@@ -149,56 +149,56 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 2.1031207598371777
+    "occupancy": 2.3066485753052914
   },
   "HO00011666": {
     "movieName": "Scene (Tamil, Eng Sub)",
     "slug": "scene-tamil-eng-sub",
-    "totalShows": 35,
-    "totalSeats": 3550,
-    "totalSold": 392,
+    "totalShows": 33,
+    "totalSeats": 3342,
+    "totalSold": 628,
     "days": {
       "2026-11-16": {
-        "shows": 9,
-        "seats": 861,
-        "sold": 26,
-        "occupancy": 3.0197444831591174
-      },
-      "2026-11-18": {
-        "shows": 4,
-        "seats": 527,
-        "sold": 11,
-        "occupancy": 2.0872865275142316
+        "shows": 8,
+        "seats": 757,
+        "sold": 45,
+        "occupancy": 5.9445178335535
       },
       "2026-11-15": {
         "shows": 13,
         "seats": 1283,
-        "sold": 295,
-        "occupancy": 22.992985190958688
+        "sold": 491,
+        "occupancy": 38.269680436477
+      },
+      "2026-11-18": {
+        "shows": 4,
+        "seats": 527,
+        "sold": 13,
+        "occupancy": 2.4667931688804554
       },
       "2026-11-17": {
-        "shows": 9,
-        "seats": 879,
-        "sold": 60,
-        "occupancy": 6.825938566552901
+        "shows": 8,
+        "seats": 775,
+        "sold": 79,
+        "occupancy": 10.193548387096774
       }
     },
-    "occupancy": 11.04225352112676
+    "occupancy": 18.791143028126868
   },
   "HO00011316": {
     "movieName": "Udta Teer (Hindi, Eng Sub)",
     "slug": "udta-teer-hindi-eng-sub",
     "totalShows": 3,
     "totalSeats": 183,
-    "totalSold": 0,
+    "totalSold": 2,
     "days": {
-      "2026-11-16": {
+      "2026-11-15": {
         "shows": 1,
         "seats": 61,
-        "sold": 0,
-        "occupancy": 0.0
+        "sold": 2,
+        "occupancy": 3.278688524590164
       },
-      "2026-11-15": {
+      "2026-11-16": {
         "shows": 1,
         "seats": 61,
         "sold": 0,
@@ -211,6 +211,6 @@
         "occupancy": 0.0
       }
     },
-    "occupancy": 0.0
+    "occupancy": 1.092896174863388
   }
 }
